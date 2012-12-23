@@ -1,0 +1,3 @@
+#!/system/bin/sh
+logwrapper bash -c "vanirtweakapply
+echo \"DONE\""

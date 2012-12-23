@@ -1,0 +1,21 @@
+#!/system/bin/sh
+# DroidTheory + DHO
+
+
+# File System Mounts
+#
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /dev
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /proc
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /sys
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nodev,data=writeback,barrier=0 -t auto /system
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/data
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /cache
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /acct
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /dev/pts
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /dev/cpuctl
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /mnt/asec
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /mnt/obb
+busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/media/0
+
