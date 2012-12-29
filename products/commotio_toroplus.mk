@@ -7,6 +7,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ring.delay=0 \
     ro.telephony.call_ring.delay=50 \
     ro.ril.fast.dormancy.rule=0
+    
+#Commotio theme files
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
@@ -156,7 +159,7 @@ $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 PRODUCT_LOCALES := en_US
 
 # Inherit common product files.
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toroplus

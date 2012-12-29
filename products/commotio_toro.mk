@@ -16,6 +16,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.stack-trace-file=/data/anr/traces.txt \
     dalvik.vm.verify-bytecode=false \
     ro.config.vc_call_vol_steps=12 
+    
+#Commotio theme files
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
@@ -229,18 +232,8 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
     vendor/commotio/proprietary/system/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
     vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/commotio/proprietary/system/tts/lang_pico/de-DE_gl0_sg.bin:system/tts/lang_pico/de-DE_gl0_sg.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/de-DE_ta.bin:system/tts/lang_pico/de-DE_ta.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/en-GB_kh0_sg.bin:system/tts/lang_pico/en-GB_kh0_sg.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/en-GB_ta.bin:system/tts/lang_pico/en-GB_ta.bin \
     vendor/commotio/proprietary/system/tts/lang_pico/en-US_lh0_sg.bin:system/tts/lang_pico/en-US_lh0_sg.bin \
     vendor/commotio/proprietary/system/tts/lang_pico/en-US_ta.bin:system/tts/lang_pico/en-US_ta.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/es-ES_ta.bin:system/tts/lang_pico/es-ES_ta.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/es-ES_zl0_sg.bin:system/tts/lang_pico/es-ES_zl0_sg.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/fr-FR_nk0_sg.bin:system/tts/lang_pico/fr-FR_nk0_sg.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/fr-FR_ta.bin:system/tts/lang_pico/fr-FR_ta.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/it-IT_cm0_sg.bin:system/tts/lang_pico/.it-IT_cm0_sgbin \
-    vendor/commotio/proprietary/system/tts/lang_pico/it-IT_ta.bin:system/tts/lang_pico/it-IT_ta.bin \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
     vendor/commotio/proprietary/data/app/Term.apk:data/app/Term.apk \

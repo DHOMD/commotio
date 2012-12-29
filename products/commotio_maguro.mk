@@ -16,6 +16,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.stack-trace-file=/data/anr/traces.txt \
     dalvik.vm.verify-bytecode=false \
     ro.config.vc_call_vol_steps=12 
+    
+#Commotio theme files
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
@@ -165,7 +168,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/samsung/maguro/full_maguro.mk)
 
 # Inherit common product files.
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_maguro

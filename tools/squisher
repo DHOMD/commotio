@@ -109,19 +109,6 @@ if [ "$WANT_SQUASHFS" -eq 1 ]; then
 	squash_opts="-force-uid 1000 -force-gid 1000 -no-progress -noappend -no-exports -no-recovery"
 	updater=$REPACK/ota/META-INF/com/google/android/updater-script
 
-	# Relocate su
-	cp -a $REPACK/ota/system/xbin $REPACK/_xbin/
-	rm -f $REPACK/_xbin/su $REPACK/ota/system/bin/su
-	mv $REPACK/ota/system/xbin/su $REPACK/ota/system/bin/su
-	chmod -R 555 $REPACK/_xbin/*
-
-	# Create symlinks for su and busybox (since updater-script can't work on the squashfs filesystem).
-	# Forgive me for the regex hell here.
-	ln -s ../bin/su $REPACK/_xbin/su
-	for link in `sed -n -e's/,//g' -e'/symlink(.*busybox/,/xbin.*);/p' $updater | tr '"' '\n' | sed -n -e'\,/system/xbin/,s,/system/xbin/,,p'`
-	do
-		ln -s busybox $REPACK/_xbin/$link
-	done
 
 	# Create the squashfs with new and improved symlinkage!
 	mksquashfs $REPACK/_xbin/* $REPACK/_xbin.sqf $squash_opts
@@ -133,22 +120,8 @@ if [ "$WANT_SQUASHFS" -eq 1 ]; then
 	$SED -i -e's,system/xbin/su,system/bin/su,g' -e'/xbin/d' $updater
 fi
 
-# Fix build.prop
-$SED -i \
-	-e '/ro\.kernel\.android\.checkjni/d' \
-	-e '/ro\.build\.type/s/eng/user/' \
-	$REPACK/ota/system/build.prop
-	
-# Fix build.prop step 2
-echo "Fixing \"move hyst\" property name... whoever put a space in it is a butthead."
-$SED 's/movehyst/move hyst/g' -i $REPACK/ota/system/build.prop
-
 # No need for recovery
 rm -rf $REPACK/ota/recovery
-
-# Strip modules
-[ -d $REPACK/ota/system/lib/modules ] && \
-	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Fix Beats
 rm -f $REPACK/ota/system/etc/audio_effects.conf
@@ -170,23 +143,8 @@ cp -f $ANDROID_BUILD_TOP/vendor/vanir/proprietary/tuna/lib/libSR_AudioIn.so $REP
 
 # Commotio files
 # Need to do vanirice
-rm -f $REPACK/ota/system/etc/init.d/09cron
-rm -f $REPACK/ota/system/etc/init.d/98SONIC_SHOCK
-rm -f $REPACK/ota/system/etc/init.d/99vanir
-rm -f $REPACK/ota/system/etc/init.d/ZZafterboot
 rm -f $REPACK/ota/system/xbin/vanirnice
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/01dhotheory $REPACK/ota/system/etc/init.d/01dhotheory
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/02dhokernel $REPACK/ota/system/etc/init.d/02dhokernel
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/05cmplxfilesystem $REPACK/ota/system/etc/init.d/05cmplxfilesystem
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/91cmplxzipalign $REPACK/ota/system/etc/init.d/91cmplxzipalign
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory $REPACK/ota/system/etc/init.d/98cmplxth3ory
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/99vanir $REPACK/ota/system/etc/init.d/99vanir
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/etc/init.d/ZZafterboot $REPACK/ota/system/etc/init.d/ZZafterboot
 cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/xbin/vanirnice $REPACK/ota/system/xbin/vanirnice
-
-# Other files
-# rm -f $REPACK/ota/system/vendor/firmware/ducati-m3.bin
-# cp -f $ANDROID_BUILD_TOP/vendor/vanir/proprietary/tuna/vendor/firmware/ducati-m3.bin $REPACK/ota/system/vendor/firmware/ducati-m3.bin
 
 # Determine what to name the new signed package
 GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $REPACK/ota/system/build.prop`
