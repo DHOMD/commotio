@@ -154,17 +154,17 @@ OUTVERSION=B"$GOOVERSION"-Dirty-"$GOOROM"
 OUTFILE=$OUT/$OUTVERSION.zip
 
 # Pack it up and sign
-printf "Zipping package..."
+echo $CL_CYN"Zipping package..."$CL_RST
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
 echo
-printf "Signing package..."
+echo $CL_CYN"Signing package..."$CL_RST
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
 echo
-printf "Cleaning up..."
+echo $CL_CYN"Cleaning up..."$CL_RST
 rm -rf $REPACK
 echo
 
@@ -174,8 +174,8 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo "Package complete: $OUTFILE"
-cat $img.md5sum
+echo $CL_CYN"Package complete:"$CL_MAG" $OUTFILE"$CL_RST
+echo $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
 echo
 )
 

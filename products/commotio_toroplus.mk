@@ -2,11 +2,20 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.config.vc_call_vol_steps=7 \
-    ring.delay=0 \
-    ro.telephony.call_ring.delay=50 \
-    ro.ril.fast.dormancy.rule=0
+    ro.config.ringtone=CanisMajor.ogg \
+    ro.config.notification_sound=Proxima.ogg \
+    ro.config.alarm_alert=Cesium.ogg \
+    dalvik.vm.dexopt-flags=v=n,o=v,u=n,m=y \
+    dalvik.vm.heapstartsize=16m \
+    dalvik.vm.heapgrowthlimit=128m \
+    dalvik.vm.heapsize=320m \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.lockprof.threshold=500 \
+    dalvik.vm.stack-trace-file=/data/anr/traces.txt \
+    dalvik.vm.verify-bytecode=false \
+    ro.config.vc_call_vol_steps=12 
     
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
@@ -229,3 +238,31 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
     vendor/commotio/proprietary/data/app/Term.apk:data/app/Term.apk \
     vendor/commotio/proprietary/data/app/TitaniumBackup.apk:data/app/TitaniumBackup.apk 
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    ro.ril.fast.dormancy.rule=0 \
+    debug.sf.hw=1 \
+    debug.performance.tuning=1 \
+    video.accelerate.hw=1 \
+    persist.sys.purgeable_assets=1 \
+    persist.sys.use_dithering=0 \
+    pm.sleep_mode=1 \
+    ro.kernel.android.checkjni=0 \
+    ro.ril.disable.power.collapse=0 \
+    ro.HOME_APP_ADJ=1 \
+    wifi.supplicant_scan_interval=300 \
+    windowsmgr.max_events_per_sec=280 \
+    ro.mot.eri.losalert.delay=800 \
+    persist.sys.camera-sound=0 \
+    ro.media.enc.jpeg.quality=100 \
+    ro.media.dec.jpeg.memcap=8000000 \
+    ro.media.enc.hprof.vid.bps=8000000 \
+    ro.media.enc.hprof.vid.fps=65 \
+    ro.semc.xloud.supported=true \
+    persist.service.xloud.enable=1 \
+    ro.semc.sound_effects_enabled=true \
+    ro.service.swiqi.supported=true \
+    persist.service.swiqi.enable=1 \
+    ro.telephony.call_ring.delay=50 \
+    ro.goo.rom=Commotio-TOROPLUS
