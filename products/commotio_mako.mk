@@ -1,6 +1,5 @@
-# Run these first or they will not stick
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-GROUPER
+#Squisher Choosing
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
@@ -29,18 +28,14 @@ PRODUCT_COPY_FILES +=  \
    vendor/vanir/proprietary/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
    vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
 
-# Copy grouper specific prebuilt files
-## FIX ME: bootanimation
+# Copy missing apps
 PRODUCT_COPY_FILES +=  \
-    vendor/vanir/proprietary/smalltab/media/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/vanir/proprietary/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/vanir/proprietary/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/vanir/proprietary/tuna/app/SpeakerProximity.apk:system/app/SpeakerProximity.apk
 
 # Beats Audio
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/app/AudioEffectService.apk:system/app/AudioEffectService.apk \
     vendor/vanir/proprietary/tuna/app/DSPManager.apk:system/app/DSPManager.apk \
-    vendor/vanir/proprietary/tuna/media/bootanimation.zip:system/media/bootanimation.zip \
     vendor/vanir/proprietary/tuna/bin/basimage_gec.bin:system/bin/basimage_gec.bin \
     vendor/vanir/proprietary/tuna/bin/basimage_gec_x.bin:system/bin/basimage_gec_x.bin \
     vendor/vanir/proprietary/tuna/bin/basimage_ibeats.bin:system/bin/basimage_ibeats.bin \
@@ -160,22 +155,25 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/lib/bluez-plugin/audio.so:system/lib/bluez-plugin/audio.so \
     vendor/vanir/proprietary/tuna/lib/hw/hwcomposer.msm8660.so:system/lib/hw/hwcomposer.msm8660.so \
     vendor/vanir/proprietary/tuna/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    
+# Inherit AOSP device configuration for mako.
+$(call inherit-product, device/lge/mako/full_mako.mk)
+
+#... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
+PRODUCT_LOCALES := en_US
 
 # Inherit common product files.
-$(call inherit-product, vendor/commotio/products/common_tabs.mk)
-
-# Inherit AOSP device configuration for grouper
-$(call inherit-product, device/asus/grouper/full_grouper.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := commotio_grouper
+PRODUCT_NAME := commotio_mako
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := grouper
-PRODUCT_MODEL := Nexus 7
-PRODUCT_MANUFACTURER := asus
+PRODUCT_DEVICE := mako
+PRODUCT_MODEL := Nexus 4
+PRODUCT_MANUFACTURER := lge
 
-PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.2.1/JOP40D/405518:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.2.1 JOP40D 405518 release-keys" BUILD_NUMBER=405518
-
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/mako:4.2/JOP40C/527662:user/release-keys PRIVATE_BUILD_DESC="occam-user 4.2 JOP40C 527662 release-keys" BUILD_NUMBER=527662
+    
 # Commotio
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
@@ -228,13 +226,14 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     vendor/commotio/proprietary/system/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
     vendor/commotio/proprietary/system/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
+    vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip \
     vendor/commotio/proprietary/system/tts/lang_pico/en-US_lh0_sg.bin:system/tts/lang_pico/en-US_lh0_sg.bin \
     vendor/commotio/proprietary/system/tts/lang_pico/en-US_ta.bin:system/tts/lang_pico/en-US_ta.bin \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
     vendor/commotio/proprietary/data/app/Term.apk:data/app/Term.apk \
     vendor/commotio/proprietary/data/app/TitaniumBackup.apk:data/app/TitaniumBackup.apk 
-
+    
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.ril.fast.dormancy.rule=0 \
@@ -261,4 +260,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.service.swiqi.supported=true \
     persist.service.swiqi.enable=1 \
     ro.telephony.call_ring.delay=50 \
-    ro.goo.rom=Commotio-GROUPER 
+    ro.goo.rom=Commotio-TOROPLUS
