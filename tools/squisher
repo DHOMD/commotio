@@ -141,11 +141,6 @@ cp -f $ANDROID_BUILD_TOP/vendor/vanir/proprietary/tuna/lib/soundfx/libreverbwrap
 cp -f $ANDROID_BUILD_TOP/vendor/vanir/proprietary/tuna/lib/soundfx/libvisualizer.so $REPACK/ota/system/lib/soundfx/libvisualizer.so
 cp -f $ANDROID_BUILD_TOP/vendor/vanir/proprietary/tuna/lib/libSR_AudioIn.so $REPACK/ota/system/lib/libSR_AudioIn.so
 
-# Commotio files
-# Need to do vanirice
-rm -f $REPACK/ota/system/xbin/vanirnice
-cp -f $ANDROID_BUILD_TOP/vendor/commotio/proprietary/system/xbin/vanirnice $REPACK/ota/system/xbin/vanirnice
-
 # Determine what to name the new signed package
 GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $REPACK/ota/system/build.prop`
 GOOVERSION=`sed -n -e'/ro\.goo\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
