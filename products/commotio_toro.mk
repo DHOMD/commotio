@@ -34,8 +34,8 @@ PRODUCT_COPY_FILES +=  \
     vendor/vanir/proprietary/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Copy Speaker Proximity App
-PRODUCT_COPY_FILES +=  \
-    vendor/vanir/proprietary/tuna/app/SpeakerProximity.apk:system/app/SpeakerProximity.apk
+# PRODUCT_COPY_FILES +=  \
+#    vendor/vanir/proprietary/tuna/app/SpeakerProximity.apk:system/app/SpeakerProximity.apk
 
 # Beats Audio
 PRODUCT_COPY_FILES += \

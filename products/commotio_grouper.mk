@@ -1,7 +1,3 @@
-# Run these first or they will not stick
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-GROUPER
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \

@@ -7,6 +7,7 @@ PRODUCT_DEVICE := generic
 PRODUCT_PACKAGES += \
     AppWidgetPicker \
     Email \
+    SpeakerProximity \
     busybox
 
 # Build Properties
@@ -42,8 +43,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B30 \
-    ro.goo.version=30
+    ro.modversion=Commotio-B32 \
+    ro.goo.version=32
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40C BUILD_ID=JOP40C BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
