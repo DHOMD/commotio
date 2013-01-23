@@ -19,7 +19,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
-   vendor/vanir/proprietary/common/lib/libfrsdk.so:system/lib/libfrsdk.so \
    vendor/vanir/proprietary/common/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
    vendor/vanir/proprietary/common/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
    vendor/vanir/proprietary/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
@@ -29,14 +28,10 @@ PRODUCT_COPY_FILES +=  \
 ## FIX ME: bootanimation
 PRODUCT_COPY_FILES +=  \
     vendor/vanir/proprietary/smalltab/media/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/vanir/proprietary/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/vanir/proprietary/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Beats Audio
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/app/AudioEffectService.apk:system/app/AudioEffectService.apk \
-    vendor/vanir/proprietary/tuna/app/DSPManager.apk:system/app/DSPManager.apk \
-    vendor/vanir/proprietary/tuna/media/bootanimation.zip:system/media/bootanimation.zip \
     vendor/vanir/proprietary/tuna/bin/basimage_gec.bin:system/bin/basimage_gec.bin \
     vendor/vanir/proprietary/tuna/bin/basimage_gec_x.bin:system/bin/basimage_gec_x.bin \
     vendor/vanir/proprietary/tuna/bin/basimage_ibeats.bin:system/bin/basimage_ibeats.bin \
@@ -72,7 +67,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/etc/audio/stream_earpiece.txt:system/etc/audio/stream_earpiece.txt \
     vendor/vanir/proprietary/tuna/etc/audio/stream_headset.txt:system/etc/audio/stream_headset.txt \
     vendor/vanir/proprietary/tuna/etc/audio/stream_speaker.txt:system/etc/audio/stream_speaker.txt \
-    vendor/vanir/proprietary/tuna/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
     vendor/vanir/proprietary/tuna/etc/permissions/com.sonyericsson.audioeffectif.xml:system/etc/permissions/com.sonyericsson.audioeffectif.xml \
     vendor/vanir/proprietary/tuna/etc/soundimage/Sound_Bass_Booster.txt:system/etc/soundimage/Sound_Bass_Booster.txt \
     vendor/vanir/proprietary/tuna/etc/soundimage/Sound_Blues.txt:system/etc/soundimage/Sound_Blues.txt \
@@ -132,7 +126,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/etc/media_profiles.xml:system/etc/media_profiles.xml \
     vendor/vanir/proprietary/tuna/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
     vendor/vanir/proprietary/tuna/etc/TPA2051_CFG_BEATS_HW.csv:system/etc/TPA2051_CFG_BEATS_HW.csv \
-    vendor/vanir/proprietary/tuna/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
     vendor/vanir/proprietary/tuna/framework/com.srs.fusion.fx.jar:system/framework/com.srs.fusion.fx.jar \
     vendor/vanir/proprietary/tuna/framework/semc_audioeffectif.jar:system/framework/semc_audioeffectif.jar \
     vendor/vanir/proprietary/tuna/lib/libacdbmapper.so:system/lib/libacdbmapper.so \
