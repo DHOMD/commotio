@@ -19,9 +19,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
-    
-#Attempt to fix data in 4.2.1
-    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/toroplus_vendors
 
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
