@@ -197,7 +197,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/Talk.apk:system/app/Talk.apk \
     vendor/commotio/proprietary/system/app/Talkback.apk:system/app/Talkback.apk \
     vendor/commotio/proprietary/system/app/Thinkfree.apk:system/app/Thinkfree.apk \
-    vendor/commotio/proprietary/system/app/Vending.apk:system/app/Vending.apk \
+    vendor/commotio/proprietary/system/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/commotio/proprietary/system/etc/gps.conf.old:system/etc/gps.conf.old \
     vendor/commotio/proprietary/system/etc/gps.conf.old2:system/etc/gps.conf.old2 \
     vendor/commotio/proprietary/system/etc/sysctl.conf:system/etc/sysctl.conf \

@@ -44,8 +44,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B33 \
-    ro.goo.version=33
+    ro.modversion=Commotio-B36 \
+    ro.goo.version=36
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40C BUILD_ID=JOP40C BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -77,8 +77,6 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES +=  \
     vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
     vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so \
-    vendor/vanir/proprietary/common/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so \
-    vendor/vanir/proprietary/common/lib/libjni_eglfence.so:system/lib/libjni_eglfence.so \
     vendor/vanir/proprietary/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/vanir/proprietary/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
