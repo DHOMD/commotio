@@ -27,10 +27,6 @@ PRODUCT_COPY_FILES +=  \
    vendor/vanir/proprietary/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
    vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
 
-# Copy missing apps
-PRODUCT_COPY_FILES +=  \
-    vendor/vanir/proprietary/tuna/app/SpeakerProximity.apk:system/app/SpeakerProximity.apk
-
 # Beats Audio
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/app/AudioEffectService.apk:system/app/AudioEffectService.apk \
