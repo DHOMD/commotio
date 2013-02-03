@@ -176,7 +176,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
     vendor/commotio/proprietary/system/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
-    vendor/commotio/proprietary/system/app/GoogleEars.apk:system/app/GoogleEars.apk \
     vendor/commotio/proprietary/system/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
     vendor/commotio/proprietary/system/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
     vendor/commotio/proprietary/system/app/GoogleNow.apk:system/app/GoogleNow.apk \
