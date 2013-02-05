@@ -44,8 +44,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B36 \
-    ro.goo.version=36
+    ro.modversion=Commotio-B37 \
+    ro.goo.version=37
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40C BUILD_ID=JOP40C BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PACKAGES += \
     Basic \
     Camera \
-    Development \
     LatinIME \
     SoundRecorder \
     VoiceDialer 
