@@ -47,13 +47,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.version=41
 
 # Version information used on all builds
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JOP40C BUILD_ID=JOP40C BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39 BUILD_ID=JDQ39 BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
 
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/app/Superuser.apk:system/app/Superuser.apk \
     vendor/vanir/proprietary/common/bin/fix_permissions:system/bin/fix_permissions \
-    vendor/vanir/proprietary/common/xbin/su:system/xbin/su \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
     vendor/vanir/proprietary/common/xbin/sysro:system/xbin/sysro \
     vendor/vanir/proprietary/common/xbin/testinitd:system/xbin/testinitd \
@@ -108,7 +106,9 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PACKAGES += \
     Camera \
     LatinIME \
-    SoundRecorder 
+    SoundRecorder \
+    Superuser \
+    su
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
