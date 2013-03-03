@@ -102,6 +102,9 @@ PRODUCT_COPY_FILES +=  \
 #LatinIME core files
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/core_dictionaries
     
+#Define thirdparty for Koush's SU
+SUPERUSER_PACKAGE := com.vanir.superuser
+    
 # Required CM packages
 PRODUCT_PACKAGES += \
     Camera \
