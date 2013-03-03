@@ -1,5 +1,22 @@
 # Vanir common
 PRODUCT_COPY_FILES += \
+    vendor/commotio/proprietary/system/etc/be_movie:system/etc/be_movie \
+    vendor/commotio/proprietary/system/etc/be_movie_setting:system/etc/be_movie_setting \
+    vendor/commotio/proprietary/system/etc/be2_album:system/etc/be2_album \
+    vendor/commotio/proprietary/system/etc/be2_album:system/etc/be_album \
+    vendor/commotio/proprietary/system/etc/be2_album:system/etc/be_album \
+    vendor/commotio/proprietary/system/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml:system/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml \
+    vendor/commotio/proprietary/system/lib/libiwi.so:system/lib/libiwi.so \
+    vendor/commotio/proprietary/system/lib/libiwiOmx.so:system/lib/libiwiOmx.so \
+    vendor/commotio/proprietary/system/lib/libiwiOmxUtil.so:system/lib/libiwiOmxUtil.so \
+    vendor/commotio/proprietary/system/lib/libmbe.so:system/lib/libmbe.so \
+    vendor/commotio/proprietary/system/lib/libmbe_paramselector.so:system/lib/libmbe_paramselector.so \
+    vendor/commotio/proprietary/system/lib/libSwiqiController.so:system/lib/libSwiqiController.so \
+    vendor/commotio/proprietary/system/lib/libswiqisettinghelper.so:system/lib/libswiqisettinghelper.so \
+    vendor/commotio/proprietary/system/framework/com.sonyericsson.android.SwIqiBmp.jar:system/framework/com.sonyericsson.android.SwIqiBmp.jar
+
+# Vanir common
+PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/app/AudioEffectService.apk:system/app/AudioEffectService.apk \
     vendor/vanir/proprietary/tuna/bin/basimage_gec.bin:system/bin/basimage_gec.bin \
     vendor/vanir/proprietary/tuna/bin/basimage_gec_x.bin:system/bin/basimage_gec_x.bin \
@@ -89,8 +106,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/etc/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
     vendor/vanir/proprietary/tuna/etc/AIC3254_REG_XD.csv:system/etc/AIC3254_REG_XD.csv \
     vendor/vanir/proprietary/tuna/etc/audio_effects.conf:system/etc/audio_effects.conf \
-    vendor/vanir/proprietary/tuna/etc/be_movie:system/etc/be_movie \
-    vendor/vanir/proprietary/tuna/etc/be_photo:system/etc/be_photo \
     vendor/vanir/proprietary/tuna/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
     vendor/vanir/proprietary/tuna/etc/media_profiles.xml:system/etc/media_profiles.xml \
     vendor/vanir/proprietary/tuna/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
