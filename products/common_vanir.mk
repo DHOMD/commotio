@@ -3,8 +3,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/etc/be_movie:system/etc/be_movie \
     vendor/commotio/proprietary/system/etc/be_movie_setting:system/etc/be_movie_setting \
     vendor/commotio/proprietary/system/etc/be2_album:system/etc/be2_album \
-    vendor/commotio/proprietary/system/etc/be2_album:system/etc/be_album \
-    vendor/commotio/proprietary/system/etc/be2_album:system/etc/be_album \
+    vendor/commotio/proprietary/system/etc/be_album:system/etc/be_album \
     vendor/commotio/proprietary/system/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml:system/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml \
     vendor/commotio/proprietary/system/lib/libiwi.so:system/lib/libiwi.so \
     vendor/commotio/proprietary/system/lib/libiwiOmx.so:system/lib/libiwiOmx.so \
