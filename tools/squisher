@@ -127,7 +127,7 @@ rm -rf $REPACK/ota/recovery
 GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $REPACK/ota/system/build.prop`
 GOOVERSION=`sed -n -e'/ro\.goo\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTVERSION=B"$GOOVERSION"-Dirty-"$GOOROM"
+OUTVERSION=B"$GOOVERSION"-"$GOOROM"
 OUTFILE=$OUT/$OUTVERSION.zip
 
 # Pack it up and sign
