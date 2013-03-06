@@ -2,7 +2,6 @@
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/commotio/proprietary/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
-    vendor/commotio/proprietary/system/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
     vendor/commotio/proprietary/system/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/commotio/proprietary/system/app/Gmail.apk:system/app/Gmail.apk \
     vendor/commotio/proprietary/system/app/GmsCore.apk:system/app/GmsCore.apk \
@@ -42,7 +41,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/commotio/proprietary/system/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     vendor/commotio/proprietary/system/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
-    vendor/commotio/proprietary/system/lib/liblightcycle.so:system/lib/liblightcycle.so \
     vendor/commotio/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
