@@ -2,7 +2,6 @@
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/commotio/proprietary/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
-    vendor/commotio/proprietary/system/app/DashClockWidget.apk:system/app/DashClockWidget.apk \
     vendor/commotio/proprietary/system/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
     vendor/commotio/proprietary/system/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/commotio/proprietary/system/app/Gmail.apk:system/app/Gmail.apk \
@@ -38,25 +37,22 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
     vendor/commotio/proprietary/system/lib/libfacelock_jni.so:system/lib/libfacelock_jni.so \
     vendor/commotio/proprietary/system/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
-    vendor/commotio/proprietary/system/lib/libflint_engine_jni_api.so:system/lib/libflint_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libfrsdk.so:system/lib/libfrsdk.so \
     vendor/commotio/proprietary/system/lib/libgcomm_jni.so:system/lib/libgcomm_jni.so \
-    vendor/commotio/proprietary/system/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
+    vendor/commotio/proprietary/system/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/commotio/proprietary/system/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
-    vendor/commotio/proprietary/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/commotio/proprietary/system/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
     vendor/commotio/proprietary/system/lib/liblightcycle.so:system/lib/liblightcycle.so \
+    vendor/commotio/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
-    vendor/commotio/proprietary/system/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
-    vendor/commotio/proprietary/system/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
-    vendor/commotio/proprietary/system/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
-    vendor/commotio/proprietary/system/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
-    vendor/commotio/proprietary/system/tts/lang_pico/en-US_lh0_sg.bin:system/tts/lang_pico/en-US_lh0_sg.bin \
-    vendor/commotio/proprietary/system/tts/lang_pico/en-US_ta.bin:system/tts/lang_pico/en-US_ta.bin \
+    vendor/commotio/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
+    vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
     vendor/commotio/proprietary/data/app/Term.apk:data/app/Term.apk \
     vendor/commotio/proprietary/data/app/TitaniumBackup.apk:data/app/TitaniumBackup.apk 
+    
     
 # Tail prop edits, see firsties and in common
 PRODUCT_PROPERTY_OVERRIDES += \
