@@ -1,21 +1,8 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=CanisMajor.ogg \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg \
-    dalvik.vm.dexopt-flags=v=n,o=v,u=n,m=y \
-    dalvik.vm.heapstartsize=16m \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heapsize=320m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.lockprof.threshold=500 \
-    dalvik.vm.stack-trace-file=/data/anr/traces.txt \
-    dalvik.vm.verify-bytecode=false \
-    ro.config.vc_call_vol_steps=12 
+# Commotio
+$(call inherit-product, vendor/commotio/products/common_commotio.mk)
     
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
@@ -48,9 +35,6 @@ PRODUCT_MODEL := Nexus 4
 PRODUCT_MANUFACTURER := lge
 
 PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/mako:4.2/JOP40C/527662:user/release-keys PRIVATE_BUILD_DESC="occam-user 4.2 JOP40C 527662 release-keys" BUILD_NUMBER=527662
-    
-# Commotio
-$(call inherit-product, vendor/commotio/products/common_commotio.mk)
     
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=Commotio-MAKO
