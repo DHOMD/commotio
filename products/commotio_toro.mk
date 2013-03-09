@@ -3,9 +3,18 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
-    
+
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
+
+# Beats Audio
+$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+
+# Inherit common product files.
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+
+# Inherit AOSP device configuration for toro.
+$(call inherit-product, device/samsung/toro/full_toro.mk)
 
 # Blobs necessary for drm + Bootanimation
 PRODUCT_COPY_FILES +=  \
@@ -15,17 +24,8 @@ PRODUCT_COPY_FILES +=  \
    vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
    vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
 
-# Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
-    
-# Inherit AOSP device configuration for toro.
-$(call inherit-product, device/samsung/toro/full_toro.mk)
-
 #... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
 PRODUCT_LOCALES := en_US
-
-# Inherit common product files.
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toro
@@ -38,5 +38,4 @@ PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=mysid BUILD_FINGERPRINT=google/mysi
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=Commotio-TORO 
-
 

@@ -3,9 +3,15 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
-    
+
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
+
+# Beats Audio
+$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+
+# Make Phone
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Blobs necessary for drm + Bootanimation
 PRODUCT_COPY_FILES +=  \
@@ -15,17 +21,14 @@ PRODUCT_COPY_FILES +=  \
    vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
    vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
 
-# Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
-
 # More Language support for Maguro LatinIME
-    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
-    
-# Inherit AOSP device configuration for maguro.
-$(call inherit-product, device/samsung/maguro/full_maguro.mk)
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
 
 # Inherit common product files.
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/vanir/products/vanir_tuna.mk)
+
+# Inherit AOSP device configuration for maguro.
+$(call inherit-product, device/samsung/maguro/full_maguro.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_maguro

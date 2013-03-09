@@ -1,9 +1,14 @@
 add_lunch_combo commotio_toro-userdebug
 add_lunch_combo commotio_maguro-userdebug
 add_lunch_combo commotio_toroplus-userdebug
+add_lunch_combo commotio_tilapia-userdebug
+add_lunch_combo commotio_grouper-userdebug
+add_lunch_combo commotio_manta-userdebug
 add_lunch_combo commotio_mako-userdebug
 add_lunch_combo commotio_toro-user
 add_lunch_combo commotio_maguro-user
 add_lunch_combo commotio_toroplus-user
 add_lunch_combo commotio_grouper-user
+add_lunch_combo commotio_tilapia-user
+add_lunch_combo commotio_manta-user
 add_lunch_combo commotio_mako-user

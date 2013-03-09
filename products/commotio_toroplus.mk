@@ -3,9 +3,15 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
-    
+
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
+
+# Beats Audio
+$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+
+# Make Phone
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Blobs necessary for drm + Bootanimation
 PRODUCT_COPY_FILES +=  \
@@ -15,17 +21,11 @@ PRODUCT_COPY_FILES +=  \
    vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
    vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
 
-# Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
-    
 # Inherit AOSP device configuration for toroplus.
 $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 
 #... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
 PRODUCT_LOCALES := en_US
-
-# Inherit common product files.
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toroplus
@@ -35,6 +35,6 @@ PRODUCT_MODEL := Galaxy Nexus
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=mysidspr BUILD_FINGERPRINT=google/mysidspr/toroplus:4.2.2/JDQ39/336647:user/release-keys PRIVATE_BUILD_DESC="mysidspr-user 4.2.2 JDQ39 336647 release-keys" BUILD_NUMBER=235179
-    
+        
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=Commotio-TOROPLUS

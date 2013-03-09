@@ -3,10 +3,10 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
-
+    
 # Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
-
+    
 # Beats Audio
 $(call inherit-product, vendor/commotio/products/common_vanir.mk)
 
@@ -23,26 +23,27 @@ PRODUCT_COPY_FILES += \
    vendor/vanir/proprietary/common/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
    vendor/vanir/proprietary/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
    vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
-    
+
+# bootanimation
+PRODUCT_COPY_FILES += \
+   vendor/vanir/proprietary/manta/media/bootanimation.zip:system/media/bootanimation.zip
+
 # Tablet Overlays no radios
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
-# Copy grouper specific prebuilt files
-## FIX ME: bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/smalltab/media/bootanimation.zip:system/media/bootanimation.zip
+# Inherit AOSP device configuration for Manta.
+$(call inherit-product, device/samsung/manta/full_manta.mk)
 
-# Inherit AOSP device configuration for grouper
-$(call inherit-product, device/asus/grouper/full_grouper.mk)
+# More Language support for International LatinIME
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
 
-# Setup device specific product configuration.
-PRODUCT_NAME := commotio_grouper
-PRODUCT_BRAND := google
-PRODUCT_DEVICE := grouper
-PRODUCT_MODEL := Nexus 7
-PRODUCT_MANUFACTURER := asus
+PRODUCT_NAME := commotio_manta
+PRODUCT_DEVICE := manta
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Nexus 10
+PRODUCT_MANUFACTURER := Samsung
 
-PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.2.2/JDQ39/405518:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.2.2 JDQ39 405518 release-keys" BUILD_NUMBER=405518
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=mantaray BUILD_FINGERPRINT=google/mantaray/manta:4.2.2/JDQ39/573038:user/release-keys PRIVATE_BUILD_DESC="mantaray-user 4.2.2 JDQ39 573038 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=Commotio-GROUPER 
+    ro.goo.rom=Commotio-MANTA

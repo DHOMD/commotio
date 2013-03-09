@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
     busybox \
     DSPManager \
 	Email 
-    
+
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -59,7 +59,8 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/vanirtweakapply:system/xbin/vanirtweakapply \
     vendor/vanir/proprietary/common/xbin/vanir:system/xbin/vanir \
     vendor/vanir/proprietary/common/xbin/vanirflash:system/xbin/vanirflash \
-    vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice
+    vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice \
+    vendor/vanir/proprietary/common/xbin/vanirinteractivegovernorgovernor:system/xbin/vanirinteractivegovernorgovernor
 
 # Imoseyon's zram script
 PRODUCT_COPY_FILES += \
@@ -98,6 +99,11 @@ PRODUCT_COPY_FILES +=  \
     vendor/commotio/proprietary/system/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
     vendor/vanir/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
     vendor/vanir/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
+
+#RNGD MODS
+PRODUCT_COPY_FILES += \
+    vendor/vanir/proprietary/common/xbin/vanirentropy:system/xbin/vanirentropy \
+    vendor/vanir/proprietary/common/xbin/rngd:system/xbin/rngd
 
 #LatinIME core files
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/core_dictionaries
