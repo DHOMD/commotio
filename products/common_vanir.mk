@@ -181,7 +181,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/lib/libsrscorehtc.so:system/lib/libsrscorehtc.so \
     vendor/vanir/proprietary/tuna/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
     vendor/vanir/proprietary/tuna/lib/libswiqisettinghelper.so:system/lib/libswiqisettinghelper.so \
-    vendor/vanir/proprietary/tuna/lib/libtinyalsa.so:system/lib/libtinyalsa.so \
     vendor/vanir/proprietary/tuna/lib/soundfx/libaudiopreprocessing.so:system/lib/soundfx/libaudiopreprocessing.so \
     vendor/vanir/proprietary/tuna/lib/soundfx/libbeatsbass.so:system/lib/soundfx/libbeatsbass.so \
     vendor/vanir/proprietary/tuna/lib/soundfx/libbundlewrapper.so:system/lib/soundfx/libbundlewrapper.so \
@@ -201,3 +200,5 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/lib/soundfx/libvptwrapper.so:system/lib/soundfx/libvptwrapper.so \
     vendor/vanir/proprietary/tuna/lib/soundfx/libxloudwrapper.so:system/lib/soundfx/libxloudwrapper.so \
     vendor/vanir/proprietary/tuna/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    
+#    vendor/vanir/proprietary/tuna/lib/libtinyalsa.so:system/lib/libtinyalsa.so \

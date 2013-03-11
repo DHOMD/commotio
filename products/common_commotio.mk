@@ -1,10 +1,14 @@
+# Commotio OTA Packaging
+TARGET_PROVIDES_RELEASETOOLS := true
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota_from_target_files
+
 # Also see overrides in common
 # Sound 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \
     ro.config.alarm_alert=Cesium.ogg \
-    ro.config.vc_call_vol_steps=12 \
+    ro.config.vc_call_vol_steps=9 \
     ro.telephony.call_ring.delay=50 \
     persist.sys.camera-sound=0 
 
