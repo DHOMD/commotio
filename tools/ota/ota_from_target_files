@@ -378,7 +378,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
   script.Print("   |     Commotio - 4.2.2 Edition    | ")
   script.Print("   |     A DHO Production            | ")
-  script.Print("   | Team Vanir                      | ")
+  script.Print("   | Team Vanir  - Test Edi          | ")
   script.Print("   |                                 | ")
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
   script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
