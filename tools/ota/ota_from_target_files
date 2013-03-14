@@ -374,11 +374,17 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.ShowProgress(0.5, 0)
 
-  #says: VANIR
+  #says: Commotio
+  
+  
+  script.Print("    _   _             _ ___ ___  _  ")
+  script.Print("   / ` / ) )\/) )\/) / ) )   )  / ) ")
+  script.Print("  (_. (_/ (  ( (  ( (_/ (  _(_ (_/  ")
+
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
   script.Print("   |     Commotio - 4.2.2 Edition    | ")
   script.Print("   |     A DHO Production            | ")
-  script.Print("   | Team Vanir  - Test Edi          | ")
+  script.Print("   | Team Vanir                      | ")
   script.Print("   |                                 | ")
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
   script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
