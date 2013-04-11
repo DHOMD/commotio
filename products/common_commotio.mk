@@ -68,6 +68,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Commotio common
 PRODUCT_COPY_FILES += \
+    vendor/commotio/proprietary/system/app/Amazon_Appstore-release.apk:system/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/commotio/proprietary/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GenieWidget.apk:system/app/GenieWidget.apk \
