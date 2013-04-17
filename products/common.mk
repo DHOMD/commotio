@@ -8,7 +8,8 @@ PRODUCT_PACKAGES += \
     AppWidgetPicker \
     busybox \
     DSPManager \
-	Email 
+	Email \
+    mGerrit
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -43,8 +44,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B47 \
-    ro.goo.version=47
+    ro.modversion=Commotio-B48 \
+    ro.goo.version=48
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39 BUILD_ID=JDQ39 BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
