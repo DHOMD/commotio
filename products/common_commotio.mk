@@ -68,7 +68,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Commotio common
 PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/system/app/Amazon_Appstore-release.apk:system/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/commotio/proprietary/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GenieWidget.apk:system/app/GenieWidget.apk \
@@ -115,6 +114,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
     vendor/commotio/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
+    vendor/commotio/proprietary/data/app/Amazon_Appstore-release.apk:data/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
