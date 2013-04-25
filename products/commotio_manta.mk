@@ -8,7 +8,7 @@ $(call inherit-product, vendor/commotio/products/common_commotio.mk)
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
     
 # Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+# $(call inherit-product, vendor/commotio/products/common_vanir.mk)
 
 # Make Tabs
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
