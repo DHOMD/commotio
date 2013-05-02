@@ -27,6 +27,10 @@ $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 #... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
 PRODUCT_LOCALES := en_US
 
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
+
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toroplus
 PRODUCT_BRAND := google

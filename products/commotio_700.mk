@@ -37,6 +37,10 @@ $(call inherit-product, device/asus/tf700t/full_tf700t.mk)
 # More Language support for International LatinIME
 # PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
 
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
+
 PRODUCT_NAME := commotio_700
 PRODUCT_DEVICE := tf700t
 PRODUCT_BRAND := Asus

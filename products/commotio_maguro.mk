@@ -30,6 +30,10 @@ $(call inherit-product, vendor/vanir/products/vanir_tuna.mk)
 # Inherit AOSP device configuration for maguro.
 $(call inherit-product, device/samsung/maguro/full_maguro.mk)
 
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
+
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_maguro
 PRODUCT_BRAND := google

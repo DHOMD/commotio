@@ -27,6 +27,10 @@ PRODUCT_LOCALES := en_US
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/mako-vanir.cfg:system/etc/vanir.cfg
+
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_mako
 PRODUCT_BRAND := google

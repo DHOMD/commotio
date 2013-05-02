@@ -42,6 +42,10 @@ $(call inherit-product, vendor/vanir/products/gsm.mk)
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/tilapia/full_tilapia.mk)
 
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
+
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_tilapia
 PRODUCT_BRAND := google

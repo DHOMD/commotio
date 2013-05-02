@@ -37,6 +37,10 @@ $(call inherit-product, device/samsung/manta/full_manta.mk)
 # More Language support for International LatinIME
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
 
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
+
 PRODUCT_NAME := commotio_manta
 PRODUCT_DEVICE := manta
 PRODUCT_BRAND := Google
