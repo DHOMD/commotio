@@ -8,8 +8,7 @@ PRODUCT_PACKAGES += \
     AppWidgetPicker \
     busybox \
     DSPManager \
-	Email \
-    mGerrit
+	Email
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
