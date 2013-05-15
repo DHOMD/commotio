@@ -113,7 +113,9 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
+    vendor/commotio/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
     vendor/commotio/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
+    vendor/commotio/proprietary/system/xbin/zipalign:system/xbin/zipalign \
     vendor/commotio/proprietary/data/app/Amazon_Appstore-release.apk:data/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \

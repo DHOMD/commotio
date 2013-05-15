@@ -3,6 +3,9 @@ PRODUCT_NAME := vanir
 PRODUCT_BRAND := vanir
 PRODUCT_DEVICE := generic
 
+#Commotio Header
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/commotio
+
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
     AppWidgetPicker \
