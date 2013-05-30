@@ -3,15 +3,15 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
+$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+$(call inherit-product, vendor/commotio/products/common_tabs.mk)
     
 # Commotio theme files
 #    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
-    
-# Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
 
-# Make Tabs
-$(call inherit-product, vendor/commotio/products/common_tabs.mk)
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
 
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
@@ -36,10 +36,6 @@ $(call inherit-product, device/asus/tf700t/full_tf700t.mk)
 
 # More Language support for International LatinIME
 # PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
-
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
 
 PRODUCT_NAME := commotio_700
 PRODUCT_DEVICE := tf700t

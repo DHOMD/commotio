@@ -3,15 +3,15 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
+$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
-# Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
-
-# Make Phone
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
 
 # Blobs necessary for drm + Bootanimation
 PRODUCT_COPY_FILES +=  \
@@ -29,10 +29,6 @@ $(call inherit-product, vendor/vanir/products/vanir_tuna.mk)
 
 # Inherit AOSP device configuration for maguro.
 $(call inherit-product, device/samsung/maguro/full_maguro.mk)
-
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_maguro

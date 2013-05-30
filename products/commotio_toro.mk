@@ -3,15 +3,15 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
+$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
-# Beats Audio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
-
-# Inherit common product files.
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
+# Vanir Config = awesome
+PRODUCT_COPY_FILES +=  \
+    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
 
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/samsung/toro/full_toro.mk)
@@ -26,10 +26,6 @@ PRODUCT_COPY_FILES +=  \
 
 #... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
 PRODUCT_LOCALES := en_US
-
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toro
