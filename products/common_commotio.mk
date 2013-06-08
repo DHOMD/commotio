@@ -82,13 +82,13 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
     vendor/commotio/proprietary/system/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/commotio/proprietary/system/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
+    vendor/commotio/proprietary/system/app/Hangouts.apk:system/app/Hangouts.apk \
     vendor/commotio/proprietary/system/app/HTMLViewer.apk:system/app/HTMLViewer.apk \
     vendor/commotio/proprietary/system/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     vendor/commotio/proprietary/system/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/commotio/proprietary/system/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/commotio/proprietary/system/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/commotio/proprietary/system/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/commotio/proprietary/system/app/Talk.apk:system/app/Talk.apk \
     vendor/commotio/proprietary/system/app/Talkback.apk:system/app/Talkback.apk \
     vendor/commotio/proprietary/system/app/Thinkfree.apk:system/app/Thinkfree.apk \
     vendor/commotio/proprietary/system/app/Phonesky.apk:system/app/Phonesky.apk \
@@ -114,6 +114,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
     vendor/commotio/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
+    vendor/commotio/proprietary/system/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     vendor/commotio/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
     vendor/commotio/proprietary/system/xbin/zipalign:system/xbin/zipalign \
     vendor/commotio/proprietary/data/app/Amazon_Appstore-release.apk:data/app/Amazon_Appstore-release.apk \

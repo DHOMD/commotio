@@ -2,7 +2,8 @@
 DHO_VENDOR := commotio
 
 # Commotio
-$(call inherit-product, vendor/commotio/products/common_vanir.mk)
+$(call inherit-product, vendor/commotio/products/common_commotio.mk)
+# $(call inherit-product, vendor/commotio/products/common_vanir.mk)
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 #Commotio theme files
@@ -32,10 +33,7 @@ PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := SCH-I605
 
-PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=t0ltevzw BUILD_FINGERPRINT=Verizon/t0ltevzw/t0ltevzw:4.2.2/JZO54K/I605VRAMC3:user/release-keys PRIVATE_BUILD_DESC="t0ltevzw-user 4.2.2 JZO54K I605VRAMC3 release-keys" BUILD_NUMBER=235179
-
-#I do not want this here,.. but if it works
-$(call inherit-product, vendor/commotio/products/common_commotio.mk)
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=t0ltevzw TARGET_DEVICE=t0ltevzw BUILD_FINGERPRINT="Verizon/t0ltevzw/t0ltevzw:4.2.2/JOP40C/527662:user/release-keys" PRIVATE_BUILD_DESC="t0ltevzw-user 4.2.2 JOP40C 527662 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=Commotio-I605 
