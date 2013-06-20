@@ -46,8 +46,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B53 \
-    ro.goo.version=53
+    ro.modversion=Commotio-B54 \
+    ro.goo.version=54
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39 BUILD_ID=JDQ39 BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -85,24 +85,23 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES +=  \
     vendor/vanir/proprietary/common/init.vanir.rc:root/init.vanir.rc \
     vendor/vanir/proprietary/common/bin/sysinit:system/bin/sysinit \
-    vendor/vanir/proprietary/common/bin/cronlogger:system/bin/cronlogger
+    vendor/vanir/proprietary/common/bin/cronlogger:system/bin/cronlogger \
+    vendor/vanir/proprietary/common/xbin/CB_RunHaveged:system/xbin/CB_RunHaveged \
+    vendor/vanir/proprietary/common/xbin/haveged:system/xbin/haveged \
+    vendor/vanir/proprietary/common/xbin/vanirentropy:system/xbin/vanirentropy 
 
 # init.d Tweaks
 PRODUCT_COPY_FILES +=  \
     vendor/commotio/proprietary/system/etc/init.d/01dhotheory:system/etc/init.d/01dhotheory \
     vendor/commotio/proprietary/system/etc/init.d/02dhokernel:system/etc/init.d/02dhokernel \
     vendor/commotio/proprietary/system/etc/init.d/05cmplxfilesystem:system/etc/init.d/05cmplxfilesystem \
+    vendor/vanir/proprietary/common/etc/init.d/06ENTROPY:system/etc/init.d/06ENTROPY \
     vendor/commotio/proprietary/system/etc/init.d/91cmplxzipalign:system/etc/init.d/91cmplxzipalign \
     vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
     vendor/commotio/proprietary/system/etc/init.d/99vanir:system/etc/init.d/99vanir \
     vendor/commotio/proprietary/system/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
     vendor/vanir/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
     vendor/vanir/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
-
-#RNGD MODS
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/xbin/vanirentropy:system/xbin/vanirentropy \
-    vendor/vanir/proprietary/common/xbin/rngd:system/xbin/rngd
 
 #LatinIME core files
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/core_dictionaries
