@@ -120,6 +120,10 @@ if [ "$WANT_SQUASHFS" -eq 1 ]; then
 	$SED -i -e's,system/xbin/su,system/bin/su,g' -e'/xbin/d' $updater
 fi
 
+# Reduce size of beats effects by ALOT (these soundimage text files are more than 50% comments, and there ARE LOADS OF THEM)
+echo "66% of Beats' configs are comments... which are USELESS. BUH BYE BEATS COMMENTS!"
+for x in $REPACK/ota/system/etc/soundimage/*.txt; do $SED -i 's/ *\#.*//g' $x; done 
+
 # No need for recovery
 rm -rf $REPACK/ota/recovery
 
@@ -150,8 +154,10 @@ echo
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
+ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
 echo
 echo $CL_CYN"Package complete:"$CL_MAG" $OUTFILE"$CL_RST
+echo $CL_BLU"Package Size: "$CL_YLW"$ZIPSIZE "
 echo $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
 echo
 )
