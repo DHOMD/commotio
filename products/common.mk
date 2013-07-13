@@ -107,7 +107,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/vanir/proprietary/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/vanir/proprietary/common/bin/50-cm.sh:system/addon.d/50-vanir.sh
+    vendor/vanir/proprietary/common/bin/50-vanir.sh:system/addon.d/50-vanir.sh
 
 #LatinIME core files
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/core_dictionaries
