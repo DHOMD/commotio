@@ -62,7 +62,7 @@ REPACK=$OUT/repack.d
 printf "Sanitizing environment..."
 rm -rf $REPACK
 mkdir -p $REPACK
-echo
+echo ""
 
 # Unpack the otapackage and opticharge all apks
 mkdir $REPACK/ota
@@ -71,7 +71,7 @@ cd $REPACK/ota
 printf "Unpacking $OTAPACKAGE..."
 unzip $QUIET $OTAPACKAGE
 ln -s  $OUT/data $REPACK/ota/data
-echo
+echo ""
 
 # Move all apks to the same directory so xargs can
 # use also with framework-res.apk. This allow process
@@ -115,17 +115,17 @@ OUTVERSION=B"$GOOVERSION"-"$GOOROM"
 OUTFILE=$OUT/$OUTVERSION.zip
 
 # Pack it up and sign
-echo $CL_CYN"Zipping package..."$CL_RST
+echo -e $CL_CYN"Zipping package..."$CL_RST
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
-echo
-echo $CL_CYN"Signing package..."$CL_RST
+echo ""
+echo -e $CL_CYN"Signing package..."$CL_RST
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx2048m \
     -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
     -w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
     $REPACK/update.zip $OUTFILE
-echo
-echo $CL_CYN"Cleaning up..."$CL_RST
+echo ""
+echo -e $CL_CYN"Cleaning up..."$CL_RST
 rm -rf $REPACK
 echo
 
@@ -135,11 +135,11 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
-echo
-echo $CL_CYN"Package complete:"$CL_MAG" $OUTFILE"$CL_RST
-echo $CL_BLU"Package Size: "$CL_YLW"$ZIPSIZE "
-echo $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
-echo
+echo ""
+echo -e $CL_CYN"Package complete:"$CL_MAG" $OUTFILE"$CL_RST
+echo -e $CL_BLU"Package Size: "$CL_YLW"$ZIPSIZE "
+echo -e $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo ""
 )
 
 exit 0
