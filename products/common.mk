@@ -46,8 +46,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B55 \
-    ro.goo.version=55
+    ro.modversion=Commotio-B56 \
+    ro.goo.version=56
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39 BUILD_ID=JDQ39 BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -102,6 +102,12 @@ PRODUCT_COPY_FILES +=  \
     vendor/commotio/proprietary/system/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
     vendor/vanir/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
     vendor/vanir/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
+
+# Backup Tools
+PRODUCT_COPY_FILES += \
+    vendor/vanir/proprietary/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/vanir/proprietary/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/vanir/proprietary/common/bin/50-cm.sh:system/addon.d/50-vanir.sh
 
 #LatinIME core files
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/core_dictionaries
