@@ -9,6 +9,10 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
+# Vanir CDMA overlay
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/vanir/overlay/cdma_phone
+
 # Vanir Config = awesome
 PRODUCT_COPY_FILES +=  \
     vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
