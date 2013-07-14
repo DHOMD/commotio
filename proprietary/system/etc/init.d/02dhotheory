@@ -12,6 +12,6 @@ echo "6" > /sys/devices/platform/omapdss/manager0/gamma
 
 # Nuking run once scripts
  busybox mount -o rw,remount /system
- rm /system/etc/init.d/01dhotheory
+ rm /system/etc/init.d/02dhotheory
  #! /bin/rm -f
  busybox mount -o ro,remount /system

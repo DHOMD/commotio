@@ -1,0 +1,23 @@
+#!/system/xbin/bash
+# DHO
+
+
+if [ ! -f /system/etc/init.d/02dhotheory ]; then
+
+# Mounting
+busybox mount -o rw,remount /system
+
+# Search and Destroy
+ rm /system/app/Provision.apk
+ rm /system/app/SetupWizard.apk
+
+# Nuking run once scripts
+ rm /system/etc/init.d/01hunter
+ #! /bin/rm -f
+ busybox mount -o ro,remount /system
+
+else
+ echo 'Lying in wait'
+fi
+
+# Goodbye

@@ -1,6 +1,8 @@
 #!/system/bin/sh
 # DroidTheory + DHO
 
+sync
+sysrw
 
 # File System Mounts
 #
@@ -19,3 +21,5 @@ busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev
 busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /mnt/obb
 busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/media/0
 
+sync
+sysro

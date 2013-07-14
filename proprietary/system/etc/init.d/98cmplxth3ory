@@ -7,33 +7,6 @@ sysrw
 # enable sysctl tweaks
 sysctl -p /system/etc/sysctl.conf
 
-# Start crond
-if busybox [ ! -d /system/etc/cron/cron.hourly ] || [ ! -d /system/etc/cron/cron.daily ] || [ ! -d /system/etc/cron/cron.weekly ]; then
-	busybox mount -o remount,rw /system
-    busybox mkdir -p /system/etc/cron/cron.minutely
-	busybox mkdir -p /system/etc/cron/cron.hourly
-	busybox mkdir -p /system/etc/cron/cron.daily
-	busybox mkdir -p /system/etc/cron/cron.weekly
-	busybox mount -o remount,ro /system
-fi
-busybox crond -c /data/cron
-
-# set timezone (if you're not between -0500 and -0800 you get PST)
-# todo - support other timezones
-timezone=`date +%z`
-if busybox [ $timezone = "-0800" ]; then
-  TZ=PST8PDT
-elif busybox [ $timezone = "-0700" ]; then
-  TZ=MST7MDT
-elif busybox [ $timezone = "-0600" ]; then
-  TZ=CST6CDT
-elif busybox [ $timezone = "-0500" ]; then
-  TZ=EST5EDT
-else
-	TZ=PST8PDT
-fi
-export TZ
-
 # HyperTh3ory
 busybox rm -f /cache/*.apk
 busybox rm -f /cache/*.tmp
@@ -91,5 +64,3 @@ fi
 
 sync
 sysro
-
-
