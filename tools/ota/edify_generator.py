@@ -126,6 +126,12 @@ class EdifyGenerator(object):
     [0,1]."""
     self.script.append("set_progress(%f);" % (frac,))
 
+  def Unmount(self, mount_point):
+    """Unmount the partiiton with the given mount_point."""
+    if mount_point in self.mounts:
+      self.mounts.remove(mount_point)
+      self.script.append('unmount("%s");' % (mount_point,))
+
   def PatchCheck(self, filename, *sha1):
     """Check that the given file (or MTD reference) has one of the
     given *sha1 hashes, checking the version saved in cache if the
@@ -188,6 +194,12 @@ class EdifyGenerator(object):
     """Delete all files in file_list."""
     if not file_list: return
     cmd = "delete(" + ",\0".join(['"%s"' % (i,) for i in file_list]) + ");"
+    self.script.append(self._WordWrap(cmd))
+
+  def DeleteRecursive(self, file_list):
+    """Delete all dirs, their files, and files in file_list."""
+    if not file_list: return
+    cmd = "delete_recursive(" + ",\0".join(['"%s"' % (i,) for i in file_list]) + ");"
     self.script.append(self._WordWrap(cmd))
 
   def ApplyPatch(self, srcfile, tgtfile, tgtsize, tgtsha1, *patchpairs):

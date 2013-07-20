@@ -400,10 +400,13 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("**     All Installs now 'Dirty'      **")
   script.Print("**                                   **")
   script.Print("** A clean module can be found in OP **")  
-  script.DeleteFiles(["/cache"])
-  script.DeleteFiles(["/data/cron"])
-  script.DeleteFiles(["/data/dalvik-cache"])
-  script.DeleteFiles(["/data/media/0/Android/data/com.amazon.venezia"])
+  script.DeleteRecursive(["/cache"])
+  script.DeleteRecursive(["/data/cron"])
+  script.DeleteRecursive(["/data/dalvik-cache"])
+  script.DeleteRecursive(["/data/tombstones/"])
+  script.DeleteFiles(["/data/system/usagestats/*"])
+  script.DeleteFiles(["/data/system/dropbox/*.txt"])
+  script.DeleteRecursive(["/data/media/0/Android/data/com.amazon.venezia/files/apks"])
   
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")

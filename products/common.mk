@@ -137,7 +137,13 @@ PRODUCT_PACKAGES += \
     vim \
     nano \
     htop \
-    powertop
+    powertop \
+    lsof \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    ntfsfix \
+    ntfs-3g 
 
 # Openssh
 PRODUCT_PACKAGES += \
