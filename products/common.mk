@@ -89,12 +89,12 @@ PRODUCT_COPY_FILES +=  \
     vendor/vanir/proprietary/common/bin/cronlogger:system/bin/cronlogger \
     vendor/vanir/proprietary/common/xbin/CB_RunHaveged:system/xbin/CB_RunHaveged \
     vendor/vanir/proprietary/common/xbin/haveged:system/xbin/haveged \
+    vendor/vanir/proprietary/common/xbin/hunter:system/xbin/hunter \
     vendor/vanir/proprietary/common/xbin/vanirentropy:system/xbin/vanirentropy 
 
 # init.d Tweaks
 PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/init.d/01hunter:system/etc/init.d/01hunter \
-    vendor/commotio/proprietary/system/etc/init.d/02dhotheory:system/etc/init.d/02dhotheory \
+    vendor/commotio/proprietary/system/etc/init.d/01dhotheory:system/etc/init.d/01dhotheory \
     vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
     vendor/vanir/proprietary/common/etc/init.d/06ENTROPY:system/etc/init.d/06ENTROPY \
     vendor/vanir/proprietary/common/etc/init.d/09cron:system/etc/init.d/09cron \
