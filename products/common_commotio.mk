@@ -69,12 +69,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Commotio common
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
-    vendor/commotio/proprietary/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
+    vendor/commotio/proprietary/system/app/CellBroadcastReceiver.apk:system/app/CellBroadcastReceiver.apk \
     vendor/commotio/proprietary/system/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/commotio/proprietary/system/app/Gmail.apk:system/app/Gmail.apk \
     vendor/commotio/proprietary/system/app/GmsCore.apk:system/app/GmsCore.apk \
     vendor/commotio/proprietary/system/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
-    vendor/commotio/proprietary/system/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
     vendor/commotio/proprietary/system/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
@@ -83,14 +82,13 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/commotio/proprietary/system/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
     vendor/commotio/proprietary/system/app/Hangouts.apk:system/app/Hangouts.apk \
-    vendor/commotio/proprietary/system/app/HTMLViewer.apk:system/app/HTMLViewer.apk \
-    vendor/commotio/proprietary/system/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     vendor/commotio/proprietary/system/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/commotio/proprietary/system/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/commotio/proprietary/system/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/commotio/proprietary/system/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/commotio/proprietary/system/app/Talkback.apk:system/app/Talkback.apk \
     vendor/commotio/proprietary/system/app/Thinkfree.apk:system/app/Thinkfree.apk \
+    vendor/commotio/proprietary/system/app/PlayGames.apk:system/app/PlayGames.apk \
     vendor/commotio/proprietary/system/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/commotio/proprietary/system/etc/gps.conf.old:system/etc/gps.conf.old \
     vendor/commotio/proprietary/system/etc/gps.conf.old2:system/etc/gps.conf.old2 \
@@ -104,18 +102,16 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
     vendor/commotio/proprietary/system/lib/libfacelock_jni.so:system/lib/libfacelock_jni.so \
     vendor/commotio/proprietary/system/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
-    vendor/commotio/proprietary/system/lib/libfrsdk.so:system/lib/libfrsdk.so \
-    vendor/commotio/proprietary/system/lib/libgcomm_jni.so:system/lib/libgcomm_jni.so \
     vendor/commotio/proprietary/system/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
     vendor/commotio/proprietary/system/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
     vendor/commotio/proprietary/system/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     vendor/commotio/proprietary/system/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
-    vendor/commotio/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/commotio/proprietary/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/commotio/proprietary/system/lib/liblightcycle.so:system/lib/liblightcycle.so \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
     vendor/commotio/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
     vendor/commotio/proprietary/system/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
-    vendor/commotio/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
     vendor/commotio/proprietary/system/xbin/zipalign:system/xbin/zipalign \
     vendor/commotio/proprietary/data/app/Amazon_Appstore-release.apk:data/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
