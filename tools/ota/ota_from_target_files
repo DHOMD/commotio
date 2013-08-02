@@ -382,7 +382,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("  (_. (_/ (  ( (  ( (_/ (  _(_ (_/  ")
 
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
-  script.Print("   |     Commotio - 4.2.2 Edition    | ")
+  script.Print("   |     Commotio - 4.3   Edition    | ")
   script.Print("   |     A DHO Production            | ")
   script.Print("   | Team Vanir                      | ")
   script.Print("   |                                 | ")
