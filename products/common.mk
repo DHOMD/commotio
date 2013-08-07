@@ -4,10 +4,9 @@
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
     AppWidgetPicker \
-    Babel \
     busybox \
     DSPManager \
-	Email
+    Email
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -48,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.version=57
 
 # Version information used on all builds
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39E BUILD_ID=JDQ39E BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JWR66V BUILD_ID=JWR66V BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
@@ -131,7 +130,9 @@ PRODUCT_PACKAGES += \
     LatinIME \
     SoundRecorder\
     Superuser \
-    su
+    su \
+    VoicePlus \
+
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
