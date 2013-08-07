@@ -1,8 +1,3 @@
-# Generic product
-PRODUCT_NAME := vanir
-PRODUCT_BRAND := vanir
-PRODUCT_DEVICE := generic
-
 #Commotio Header
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/commotio
 
@@ -28,7 +23,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \
     ro.config.alarm_alert=Cesium.ogg \
-    ro.build.selinux=1
+    ro.build.selinux=1 \
+    persist.sys.root_access=3
 
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -53,7 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.version=57
 
 # Version information used on all builds
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39 BUILD_ID=JDQ39 BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JDQ39E BUILD_ID=JDQ39E BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
@@ -62,6 +58,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/vanirflash:system/xbin/vanirflash \
     vendor/vanir/proprietary/common/init.vanir.rc:root/init.vanir.rc \
     vendor/vanir/proprietary/common/bin/sysinit:system/bin/sysinit \
+    vendor/vanir/proprietary/common/etc/init.d/00firsties:system/etc/init.d/00firsties \
     vendor/vanir/proprietary/common/xbin/purgethumbnails:system/xbin/purgethumbnails
 
 PRODUCT_COPY_FILES += \
@@ -78,7 +75,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/vanir:system/xbin/vanir \
     vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice
 
-# Imoseyon's zram script
+#Imoseyon's zram script
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/zram:system/xbin/zram
 
@@ -119,20 +116,27 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/vanir/proprietary/common/bin/50-vanir.sh:system/addon.d/50-vanir.sh
 
-#LatinIME core files
-    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/core_dictionaries
-    
+# LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/vanir/overlay/dictionaries
+
 #Define thirdparty for Koush's SU
 #SUPERUSER_PACKAGE := com.vanir.superuser
 SUPERUSER_EMBEDDED := true
-    
+
 # Required CM packages
 PRODUCT_PACKAGES += \
     Camera \
+    Development \
+    Focal \
     LatinIME \
-    SoundRecorder \
     Superuser \
     su
+
+# Optional CM packages
+PRODUCT_PACKAGES += \
+    Basic \
+    SoundRecorder
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
