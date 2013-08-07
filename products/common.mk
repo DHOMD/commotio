@@ -7,8 +7,7 @@ PRODUCT_PACKAGES += \
     Babel \
     busybox \
     DSPManager \
-	Email \
-	Focal
+	Email
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -126,17 +125,13 @@ SUPERUSER_EMBEDDED := true
 
 # Required CM packages
 PRODUCT_PACKAGES += \
+    Basic \
     Camera \
-    Development \
     Focal \
     LatinIME \
+    SoundRecorder\
     Superuser \
     su
-
-# Optional CM packages
-PRODUCT_PACKAGES += \
-    Basic \
-    SoundRecorder
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
