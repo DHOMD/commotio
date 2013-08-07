@@ -374,9 +374,6 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.ShowProgress(0.5, 0)
 
-  #says: Commotio
-  
-  
   script.Print("    _   _             _ ___ ___  _  ")
   script.Print("   / ` / ) )\/) )\/) / ) )   )  / ) ")
   script.Print("  (_. (_/ (  ( (  ( (_/ (  _(_ (_/  ")
@@ -390,6 +387,12 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
   script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+
+  if OPTIONS.wipe_user_data:
+    script.FormatPartition("/data")
+
+  if "selinux_fc" in OPTIONS.info_dict:
+    WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
   script.FormatPartition("/system")
   script.Mount("/system")
@@ -407,10 +410,13 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.DeleteFiles(["/data/system/usagestats/*"])
   script.DeleteFiles(["/data/system/dropbox/*.txt"])
   script.DeleteRecursive(["/data/media/0/Android/data/com.amazon.venezia/files/apks"])
-  
-  if OPTIONS.wipe_user_data:
-    script.FormatPartition("/data")
-  
+
+  script.Print(" ")
+  script.Print("Copying files")
+  script.UnpackPackageDir("system", "/system")
+  script.DeleteFiles(["/data/cron/root"])
+  script.UnpackPackageDir("data", "/data")
+
   script.Print("**      Nice and Tidy                **")
 
   script.Print("**     Installing Vanir              **")
@@ -425,15 +431,6 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print(" ")
   script.Print(" ")
   script.Print("Installing the ROM...")
-
-  if "selinux_fc" in OPTIONS.info_dict:
-    WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
-
-  script.Print(" ")
-  script.Print("Copying files")
-  script.UnpackPackageDir("system", "/system")
-  script.DeleteFiles(["/data/cron/root"])
-  script.UnpackPackageDir("data", "/data")
 
   script.Print(" ")
   script.Print("Symlinking")
@@ -457,10 +454,9 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   common.CheckSize(boot_img.data, "boot.img", OPTIONS.info_dict)
   common.ZipWriteStr(output_zip, "boot.img", boot_img.data)
-  script.ShowProgress(0.2, 0)
   script.ShowProgress(0.2, 10)
-  script.WriteRawImage("/boot", "boot.img")
-  
+  script.WriteRawImage("/boot", "boot.img")  
+
   script.Print(" ")
   script.Print("**      Time for some Cajun Voodoo   **")
   script.Print(" ")
@@ -475,7 +471,6 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("**      Mission Complete             **")
   script.Print(" ")
   script.Print(" ")
-
 
   script.ShowProgress(0.1, 0)
   device_specific.FullOTA_InstallEnd()
@@ -841,6 +836,15 @@ def main(argv):
 
   OPTIONS.target_tmp = OPTIONS.input_tmp
   OPTIONS.info_dict = common.LoadInfoDict(input_zip)
+
+  # If this image was originally labelled with SELinux contexts, make sure we
+  # also apply the labels in our new image. During building, the "file_contexts"
+  # is in the out/ directory tree, but for repacking from target-files.zip it's
+  # in the root directory of the ramdisk.
+  if "selinux_fc" in OPTIONS.info_dict:
+    OPTIONS.info_dict["selinux_fc"] = os.path.join(OPTIONS.input_tmp, "BOOT", "RAMDISK",
+        "file_contexts")
+
   if OPTIONS.verbose:
     print "--- target info ---"
     common.DumpInfoDict(OPTIONS.info_dict)

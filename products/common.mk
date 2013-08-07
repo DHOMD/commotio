@@ -68,7 +68,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
     vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
 
-ifeq ($(VANIR_FAILSAFE),)
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/fix_permissions:system/bin/fix_permissions \
@@ -77,7 +76,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/vanircheckcpu:system/xbin/vanircheckcpu \
     vendor/vanir/proprietary/common/xbin/vanirtweakapply:system/xbin/vanirtweakapply \
     vendor/vanir/proprietary/common/xbin/vanir:system/xbin/vanir \
-    vendor/commotio/proprietary/common/xbin/vanirnice:system/xbin/vanirnice
+    vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice
 
 # Imoseyon's zram script
 PRODUCT_COPY_FILES += \
@@ -175,4 +174,4 @@ PRODUCT_PACKAGES += \
     Vanir_Inverted
 
 PRODUCT_COPY_FILES += \
-       vendor/vanir/proprietary/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+    vendor/vanir/proprietary/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
