@@ -62,7 +62,7 @@ REPACK=$OUT/repack.d
 printf "Sanitizing environment..."
 rm -rf $REPACK
 mkdir -p $REPACK
-echo ""
+echo
 
 # Unpack the otapackage and opticharge all apks
 mkdir $REPACK/ota
@@ -71,7 +71,7 @@ cd $REPACK/ota
 printf "Unpacking $OTAPACKAGE..."
 unzip $QUIET $OTAPACKAGE
 ln -s  $OUT/data $REPACK/ota/data
-echo ""
+echo
 
 # Move all apks to the same directory so xargs can
 # use also with framework-res.apk. This allow process
@@ -90,18 +90,31 @@ rm -rf $REPACK/parallel
 )
 
 if [ "$WANT_SQUASHFS" -eq 1 ]; then
-	squash_opts="-force-uid 1000 -force-gid 1000 -no-progress -noappend -no-exports -no-recovery"
-	updater=$REPACK/ota/META-INF/com/google/android/updater-script
+    squash_opts="-force-uid 1000 -force-gid 1000 -no-progress -noappend -no-exports -no-recovery"
+    updater=$REPACK/ota/META-INF/com/google/android/updater-script
 
+    # Relocate su
+    cp -a $REPACK/ota/system/xbin $REPACK/_xbin/
+    rm -f $REPACK/_xbin/su $REPACK/ota/system/bin/su
+    mv $REPACK/ota/system/xbin/su $REPACK/ota/system/bin/su
+    chmod -R 555 $REPACK/_xbin/*
 
-	# Create the squashfs with new and improved symlinkage!
-	mksquashfs $REPACK/_xbin/* $REPACK/_xbin.sqf $squash_opts
-	rm -rf $REPACK/ota/system/xbin/*
-	mv $REPACK/_xbin.sqf $REPACK/ota/system/xbin/xbin.sqf
-	chmod 444 $REPACK/ota/system/xbin/xbin.sqf
+    # Create symlinks for su and busybox (since updater-script can't work on the squashfs filesystem).
+    # Forgive me for the regex hell here.
+    ln -s ../bin/su $REPACK/_xbin/su
+    for link in `sed -n -e's/,//g' -e'/symlink(.*busybox/,/xbin.*);/p' $updater | tr '"' '\n' | sed -n -e'\,/system/xbin/,s,/system/xbin/,,p'`
+    do
+        ln -s busybox $REPACK/_xbin/$link
+    done
 
-	# Remove xbin stuff and fix up updater-script
-	$SED -i -e's,system/xbin/su,system/bin/su,g' -e'/xbin/d' $updater
+    # Create the squashfs with new and improved symlinkage!
+    mksquashfs $REPACK/_xbin/* $REPACK/_xbin.sqf $squash_opts
+    rm -rf $REPACK/ota/system/xbin/*
+    mv $REPACK/_xbin.sqf $REPACK/ota/system/xbin/xbin.sqf
+    chmod 444 $REPACK/ota/system/xbin/xbin.sqf
+
+    # Remove xbin stuff and fix up updater-script
+    $SED -i -e's,system/xbin/su,system/bin/su,g' -e'/xbin/d' $updater
 fi
 
 # No need for recovery
