@@ -75,6 +75,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/ApexLauncher.apk:system/app/ApexLauncher.apk \
     vendor/commotio/proprietary/system/app/CellBroadcastReceiver.apk:system/app/CellBroadcastReceiver.apk \
+    vendor/commotio/proprietary/system/app/ConfigUpdater.apk:system/app/ConfigUpdater.apk \
+    vendor/commotio/proprietary/system/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/commotio/proprietary/system/app/Gmail.apk:system/app/Gmail.apk \
     vendor/commotio/proprietary/system/app/GmsCore.apk:system/app/GmsCore.apk \

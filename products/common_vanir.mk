@@ -176,7 +176,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/etc/soundimage/srsfx_trumedia_music_wide.cfg:system/etc/soundimage/srsfx_trumedia_music_wide.cfg \
     vendor/vanir/proprietary/tuna/etc/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
     vendor/vanir/proprietary/tuna/framework/semc_audioeffectif.jar:system/framework/semc_audioeffectif.jar \
-    vendor/vanir/proprietary/tuna/lib/libaudioeffect_jni.so:system/lib/libaudioeffect_jni.so \
     vendor/vanir/proprietary/tuna/lib/libbeatscorehtc.so:system/lib/libbeatscorehtc.so \
     vendor/vanir/proprietary/tuna/lib/libsrscorehtc.so:system/lib/libsrscorehtc.so \
     vendor/vanir/proprietary/tuna/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
@@ -200,5 +199,5 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/tuna/lib/soundfx/libvptwrapper.so:system/lib/soundfx/libvptwrapper.so \
     vendor/vanir/proprietary/tuna/lib/soundfx/libxloudwrapper.so:system/lib/soundfx/libxloudwrapper.so \
     vendor/vanir/proprietary/tuna/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
-    
-#    vendor/vanir/proprietary/tuna/lib/libtinyalsa.so:system/lib/libtinyalsa.so \
+
+#     vendor/vanir/proprietary/tuna/lib/libaudioeffect_jni.so:system/lib/libaudioeffect_jni.so \
