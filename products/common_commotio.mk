@@ -118,6 +118,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/liblightcycle.so:system/lib/liblightcycle.so \
     vendor/commotio/proprietary/system/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
     vendor/commotio/proprietary/system/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
+    vendor/commotio/proprietary/system/lib/libwebrtc_audio_coding.so:system/lib/libwebrtc_audio_coding.so \
     vendor/commotio/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
     vendor/commotio/proprietary/system/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     vendor/commotio/proprietary/system/xbin/zipalign:system/xbin/zipalign \
