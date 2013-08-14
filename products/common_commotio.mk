@@ -21,20 +21,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Beats and Bravia 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.service.clearaudio.enable=1 \
-    persist.service.clearphase.enable=1 \
-    persist.service.enhance.enable=1 \
     persist.service.swiqi2.enable=1 \
-    persist.service.xloud.enable=1 \
-    ro.semc.clearaudio.supported=true \
-    ro.semc.sound_effects_enabled=true \
-    ro.service.swiqi2.supported=true \
-    ro.semc.xloud.supported=true \
-    ro.somc.clearphase.supported=true \
-    ro.sony.walkman.logger=1 \
-    htc.audio.alc.enable=1 \
-    htc.audio.swalt.enable=1 \
-    htc.audio.swalt.mingain=14512 
+    ro.service.swiqi2.supported=true
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
