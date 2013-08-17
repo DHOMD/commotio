@@ -1,12 +1,17 @@
 #Commotio Header
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/commotio
 
+# DSPManager and bravia
+$(call inherit-product, vendor/vanir/products/media_sexificators.mk)
+$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk) 
+
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
     AppWidgetPicker \
     busybox \
     DSPManager \
-    Email
+    Email \
+    MusicFX
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -124,15 +129,14 @@ SUPERUSER_EMBEDDED := true
 
 # Required CM packages
 PRODUCT_PACKAGES += \
-    Basic \
     Camera \
-    Focal \
     LatinIME \
     SoundRecorder\
     Superuser \
-    su \
-    VoicePlus \
+    su
 
+#    Focal \
+#    VoicePlus \
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \

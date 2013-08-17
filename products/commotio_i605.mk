@@ -3,7 +3,6 @@ DHO_VENDOR := commotio
 
 # Commotio
 $(call inherit-product, vendor/commotio/products/common_commotio.mk)
-# $(call inherit-product, vendor/commotio/products/common_vanir.mk)
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 #Commotio theme files
