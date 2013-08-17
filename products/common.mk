@@ -138,6 +138,11 @@ PRODUCT_PACKAGES += \
 #    Focal \
 #    VoicePlus \
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml 
+
 # Extra tools in CM
 PRODUCT_PACKAGES += \
     openvpn \
@@ -176,6 +181,10 @@ PRODUCT_PACKAGES += \
     ThemeChooser \
     com.tmobile.themes \
     Vanir_Inverted
+
+# sqlite3 - for bad voodoo :-D
+PRODUCT_PACKAGES += \
+    sqlite3 
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
