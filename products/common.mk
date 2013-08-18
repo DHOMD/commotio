@@ -2,7 +2,7 @@
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/commotio
 
 # DSPManager and bravia
-$(call inherit-product, vendor/vanir/products/media_sexificators.mk)
+# $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk) 
 
 # Build packages included in manifest
@@ -11,7 +11,7 @@ PRODUCT_PACKAGES += \
     busybox \
     DSPManager \
     Email \
-    MusicFX
+    libcyanogen-dsp 
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -133,10 +133,11 @@ PRODUCT_PACKAGES += \
     LatinIME \
     SoundRecorder\
     Superuser \
-    su
+    su \
+    VoicePlus
 
 #    Focal \
-#    VoicePlus \
+#
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -184,7 +185,15 @@ PRODUCT_PACKAGES += \
 
 # sqlite3 - for bad voodoo :-D
 PRODUCT_PACKAGES += \
-    sqlite3 
+    sqlite3
+
+# Blobs necessary for drm
+PRODUCT_COPY_FILES += \
+   vendor/vanir/proprietary/common/lib/libfrsdk.so:system/lib/libfrsdk.so \
+   vendor/vanir/proprietary/common/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+   vendor/vanir/proprietary/common/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
+   vendor/vanir/proprietary/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+   vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml

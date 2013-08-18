@@ -12,12 +12,8 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 PRODUCT_COPY_FILES +=  \
     vendor/commotio/proprietary/system/etc/mako-vanir.cfg:system/etc/vanir.cfg
 
-# Blobs necessary for drm + Bootanimation
+# Blobs necessary for Bootanimation
 PRODUCT_COPY_FILES +=  \
-   vendor/vanir/proprietary/common/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
-   vendor/vanir/proprietary/common/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
-   vendor/vanir/proprietary/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
-   vendor/vanir/proprietary/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
    vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
     
 # Inherit AOSP device configuration for mako.
