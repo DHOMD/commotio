@@ -19,7 +19,7 @@ PRODUCT_COPY_FILES +=  \
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/samsung/toro/full_toro.mk)
 
-# Blobs necessary for Bootanimation
+# Bootanimation
 PRODUCT_COPY_FILES +=  \
    vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
 
@@ -35,5 +35,4 @@ PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=mysid BUILD_FINGERPRINT="google/mysid/toro:4.3/JSS15J/737497:user/release-keys" PRIVATE_BUILD_DESC="mysid-user 4.3 JSS15J 737497 release-keys"
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=Commotio-TORO \
-    ro.telephony.slowModem
+    ro.goo.rom=Commotio-TORO

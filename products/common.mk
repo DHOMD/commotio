@@ -48,8 +48,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B57 \
-    ro.goo.version=57
+    ro.modversion=Commotio-B58 \
+    ro.goo.version=58
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JWR66V BUILD_ID=JWR66V BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
