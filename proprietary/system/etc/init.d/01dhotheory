@@ -1,6 +1,9 @@
 #!/system/bin/sh
 # DHO
 
+# Delete this soonish
+sqlite3 /data/data/com.android.providers.settings/databases/settings.db "PRAGMA user_version = 97"
+
 #Disable color-control safety + color presents
 echo "0" > /sys/class/misc/colorcontrol/safety_enabled
 echo "-6 0 8" > /sys/class/misc/colorcontrol/v1_offset

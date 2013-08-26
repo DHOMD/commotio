@@ -130,14 +130,11 @@ SUPERUSER_EMBEDDED := true
 # Required CM packages
 PRODUCT_PACKAGES += \
     Camera \
+    Focal \
     LatinIME \
     SoundRecorder\
     Superuser \
-    su \
-    VoicePlus
-
-#    Focal \
-#
+    su
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \

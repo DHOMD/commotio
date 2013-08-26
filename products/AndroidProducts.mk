@@ -7,4 +7,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_mako.mk \
     $(LOCAL_DIR)/commotio_grouper.mk \
     $(LOCAL_DIR)/commotio_i605.mk \
-    $(LOCAL_DIR)/commotio_700.mk
+    $(LOCAL_DIR)/commotio_700.mk \
+    $(LOCAL_DIR)/commotio_yuga.mk
