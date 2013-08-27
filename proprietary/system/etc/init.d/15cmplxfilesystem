@@ -21,5 +21,8 @@ busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev
 busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /mnt/obb
 busybox mount -o remount,noatime,nodiratime,discard,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/media/0
 
+# Some apps are WICKED FUCKING STUPID... let's give them their 4.2.2 path to internal sdcard back
+[ ! -e /storage/emulated/0 ] && ln -s /mnt/shell/emulated/0 /storage/emulated/0 
+
 sync
 sysro
