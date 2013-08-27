@@ -106,6 +106,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
     vendor/vanir/proprietary/common/etc/init.d/06ENTROPY:system/etc/init.d/06ENTROPY \
     vendor/vanir/proprietary/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/commotio/proprietary/system/etc/init.d/15cmplxfilesystem:system/etc/init.d/15cmplxfilesystem \
     vendor/commotio/proprietary/system/etc/init.d/91cmplxzipalign:system/etc/init.d/91cmplxzipalign \
     vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
     vendor/commotio/proprietary/system/etc/init.d/99vanir:system/etc/init.d/99vanir \
