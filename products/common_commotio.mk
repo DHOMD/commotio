@@ -102,7 +102,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so \
     vendor/commotio/proprietary/system/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
     vendor/commotio/proprietary/system/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so \
-
     vendor/commotio/proprietary/system/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     vendor/commotio/proprietary/system/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
     vendor/commotio/proprietary/system/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
