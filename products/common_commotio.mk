@@ -76,7 +76,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
     vendor/commotio/proprietary/system/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/commotio/proprietary/system/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
-    vendor/commotio/proprietary/system/app/Hangouts.apk:system/app/Hangouts.apk \
     vendor/commotio/proprietary/system/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     vendor/commotio/proprietary/system/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/commotio/proprietary/system/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
@@ -114,5 +113,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
+    vendor/commotio/proprietary/data/app/Hangouts.apk:data/app/Hangouts.apk \
     vendor/commotio/proprietary/data/app/Term.apk:data/app/Term.apk \
     vendor/commotio/proprietary/data/app/TitaniumBackup.apk:data/app/TitaniumBackup.apk 
