@@ -106,6 +106,7 @@ def MostPopularKey(d, default):
   x.sort()
   return x[-1][1]
 
+
 def IsSymlink(info):
   """Return true if the zipfile.ZipInfo object passed in represents a
   symlink."""
@@ -302,6 +303,7 @@ def CopySystemFiles(input_zip, output_zip=None,
   symlinks.sort()
   return symlinks
 
+
 def SignOutput(temp_zip_name, output_zip_name):
   key_passwords = common.GetKeyPasswords([OPTIONS.package_key])
   pw = key_passwords[OPTIONS.package_key]
@@ -309,12 +311,14 @@ def SignOutput(temp_zip_name, output_zip_name):
   common.SignFile(temp_zip_name, output_zip_name, OPTIONS.package_key, pw,
                   whole_file=True)
 
+
 def AppendAssertions(script, info_dict):
   if OPTIONS.override_device == "auto":
     device = GetBuildProp("ro.product.device", info_dict)
   else:
-    device = OPTIONS.override_device 
+    device = OPTIONS.override_device
   script.AssertDevice(device)
+
 
 def MakeRecoveryPatch(input_tmp, output_zip, recovery_img, boot_img):
   """Generate a binary patch that creates the recovery image starting
@@ -332,7 +336,6 @@ def MakeRecoveryPatch(input_tmp, output_zip, recovery_img, boot_img):
   executable.
   """
 
-d = common.Difference(recovery_img, boot_img)
   diff_program = ["imgdiff"]
   path = os.path.join(input_tmp, "SYSTEM", "etc", "recovery-resource.dat")
   if os.path.exists(path):
@@ -343,7 +346,7 @@ d = common.Difference(recovery_img, boot_img)
     bonus_args = ""
 
   d = common.Difference(recovery_img, boot_img, diff_program=diff_program)
-   _, _, patch = d.ComputePatch()
+  _, _, patch = d.ComputePatch()
   common.ZipWriteStr(output_zip, "recovery/recovery-from-boot.p", patch)
   Item.Get("system/recovery-from-boot.p", dir=False)
 
@@ -370,6 +373,7 @@ fi
   common.ZipWriteStr(output_zip, "recovery/etc/install-recovery.sh", sh)
   return Item.Get("system/etc/install-recovery.sh", dir=False)
 
+
 def WriteFullOTAPackage(input_zip, output_zip):
   # TODO: how to determine this?  We don't know what version it will
   # be installed on top of.  For now, we expect the API just won't
@@ -393,9 +397,9 @@ def WriteFullOTAPackage(input_zip, output_zip):
       metadata=metadata,
       info_dict=OPTIONS.info_dict)
 
-#if not OPTIONS.omit_prereq:
-#  ts = GetBuildProp("ro.build.date.utc", OPTIONS.info_dict)
-#  script.AssertOlderBuild(ts)
+  #if not OPTIONS.omit_prereq:
+  #  ts = GetBuildProp("ro.build.date.utc", OPTIONS.info_dict)
+  #  script.AssertOlderBuild(ts)
 
   AppendAssertions(script, OPTIONS.info_dict)
   device_specific.FullOTA_Assertions()
