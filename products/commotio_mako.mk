@@ -14,7 +14,7 @@ PRODUCT_COPY_FILES +=  \
 
 # Blobs necessary for Bootanimation
 PRODUCT_COPY_FILES +=  \
-   vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/vanir/proprietary/common/etc/mako-vanir.cfg:system/etc/vanir.cfg
     
 # Inherit AOSP device configuration for mako.
 $(call inherit-product, device/lge/mako/full_mako.mk)

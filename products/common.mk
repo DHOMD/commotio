@@ -132,6 +132,7 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     Camera \
     LatinIME \
+    PhotoTable \
     SoundRecorder\
     Superuser \
     su \

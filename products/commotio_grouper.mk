@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
 # Copy grouper specific prebuilt files
 ## FIX ME: bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/smalltab/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/vanir/proprietary/boot_animations/800x1280.zip:system/media/bootanimation.zip
 
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/grouper/full_grouper.mk)
