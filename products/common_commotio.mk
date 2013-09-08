@@ -83,7 +83,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/commotio/proprietary/system/app/Talkback.apk:system/app/Talkback.apk \
     vendor/commotio/proprietary/system/app/Thinkfree.apk:system/app/Thinkfree.apk \
-    vendor/commotio/proprietary/system/app/PlayGames.apk:system/app/PlayGames.apk \
     vendor/commotio/proprietary/system/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/commotio/proprietary/system/etc/gps.conf.old:system/etc/gps.conf.old \
     vendor/commotio/proprietary/system/etc/gps.conf.old2:system/etc/gps.conf.old2 \
