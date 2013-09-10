@@ -2,7 +2,7 @@
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/commotio
 
 # DSPManager and bravia
-# $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
+$(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk) 
 
 # Build packages included in manifest
@@ -12,6 +12,8 @@ PRODUCT_PACKAGES += \
     DSPManager \
     Email \
     libcyanogen-dsp 
+
+#    VoicePlus
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -135,8 +137,7 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     SoundRecorder\
     Superuser \
-    su \
-    VoicePlus
+    su
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
