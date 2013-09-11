@@ -19,9 +19,6 @@ PRODUCT_COPY_FILES +=  \
 # Inherit AOSP device configuration for mako.
 $(call inherit-product, device/lge/mako/full_mako.mk)
 
-#... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
-PRODUCT_LOCALES := en_US
-
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_mako
 PRODUCT_BRAND := google

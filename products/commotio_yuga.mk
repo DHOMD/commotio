@@ -20,9 +20,6 @@ $(call inherit-product, device/sony/yuga/full_yuga.mk)
 # PRODUCT_COPY_FILES +=  \
 #   vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
 
-#... and then make the AOSP device configuration for yuga get on its knees and sing the national anthem into our "microphones"
-PRODUCT_LOCALES := en_US
-
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_yuga
 PRODUCT_BRAND := Sony
