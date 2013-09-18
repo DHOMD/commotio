@@ -15,9 +15,9 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
 
-# bootanimation
+# Boot Animation
 PRODUCT_COPY_FILES += \
-   vendor/vanir/proprietary/boot_animations/1280x800.zip:system/media/bootanimation.zip
+   vendor/commotio/proprietary/system/media/commotio-1280x800.zip:system/media/bootanimation.zip
 
 # Tablet Overlays no radios
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio

@@ -19,9 +19,8 @@ PRODUCT_PACKAGES += \
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Copy grouper specific prebuilt files
-## FIX ME: bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/800x1280.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/system/media/commotio-800x1280.zip:system/media/bootanimation.zip
 
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/grouper/full_grouper.mk)

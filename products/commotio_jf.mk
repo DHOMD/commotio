@@ -1,6 +1,6 @@
 # Copy toro specific prebuilt files
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/system/media/commotio-1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit common product files.
 NO_DRM_BLOBS := true

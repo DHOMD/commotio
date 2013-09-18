@@ -16,9 +16,9 @@ PRODUCT_COPY_FILES +=  \
 # Inherit AOSP device configuration for yuga.
 $(call inherit-product, device/sony/yuga/full_yuga.mk)
 
-# Bootanimation
-# PRODUCT_COPY_FILES +=  \
-#   vendor/commotio/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip
+# Copy toro specific prebuilt files
+PRODUCT_COPY_FILES += \
+    vendor/commotio/proprietary/system/media/commotio-1080x1920.zip:system/media/bootanimation.zip
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_yuga
