@@ -50,8 +50,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B59 \
-    ro.goo.version=59
+    ro.modversion=Commotio-B60 \
+    ro.goo.version=60
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JWR66V BUILD_ID=JLS36C BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -132,6 +132,7 @@ SUPERUSER_EMBEDDED := true
 
 # Required CM packages
 PRODUCT_PACKAGES += \
+    BluetoothExt \
     Camera \
     LatinIME \
     PhotoTable \
