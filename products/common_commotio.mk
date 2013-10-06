@@ -72,7 +72,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
     vendor/commotio/proprietary/system/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
     vendor/commotio/proprietary/system/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
-    vendor/commotio/proprietary/system/app/GoogleNow.apk:system/app/GoogleNow.apk \
     vendor/commotio/proprietary/system/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
     vendor/commotio/proprietary/system/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
     vendor/commotio/proprietary/system/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
@@ -113,6 +112,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/data/app/Amazon_Appstore-release.apk:data/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
     vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
+    vendor/commotio/proprietary/data/app/GoogleNow.apk:data/app/GoogleNow.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
     vendor/commotio/proprietary/data/app/Hangouts.apk:data/app/Hangouts.apk \
     vendor/commotio/proprietary/data/app/Term.apk:data/app/Term.apk \
