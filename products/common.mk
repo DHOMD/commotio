@@ -15,9 +15,8 @@ PRODUCT_PACKAGES += \
     busybox \
     DSPManager \
     Email \
-    libcyanogen-dsp 
-
-#    VoicePlus
+    libcyanogen-dsp \
+    VoicePlus
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
