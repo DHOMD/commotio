@@ -1,6 +1,10 @@
 #Commotio Header
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/commotio
 
+# De-dup the common folder
+# If you run out of HD space, comment this out
+CM_FIXUP_COMMON_OUT=1 && export CM_FIXUP_COMMON_OUT
+
 # DSPManager and bravia
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk) 
