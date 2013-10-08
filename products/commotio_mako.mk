@@ -8,10 +8,6 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/mako-vanir.cfg:system/etc/vanir.cfg
-
 # Boot animation
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/media/commotio-768x1280.zip:system/media/bootanimation.zip

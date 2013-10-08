@@ -12,10 +12,6 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/media/commotio-768x1280.zip:system/media/bootanimation.zip
 
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
-
 # Note 2 stuff
 $(call inherit-product, device/samsung/i605/full_i605.mk)
 

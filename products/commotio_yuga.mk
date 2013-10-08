@@ -9,10 +9,6 @@ $(call inherit-product, vendor/vanir/products/gsm.mk)
 #Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
-
 # Inherit AOSP device configuration for yuga.
 $(call inherit-product, device/sony/yuga/full_yuga.mk)
 

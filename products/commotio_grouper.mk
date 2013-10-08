@@ -8,10 +8,6 @@ $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 # Commotio theme files
     PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/theme
 
-# Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
-
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
     
