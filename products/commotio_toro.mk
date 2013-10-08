@@ -13,8 +13,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/vanir/overlay/cdma_phone
 
 # Vanir Config = awesome
-PRODUCT_COPY_FILES +=  \
-    vendor/commotio/proprietary/system/etc/vanir.cfg:system/etc/vanir.cfg
+$(call inherit-product, vendor/vanir/tweaks/tuna/tweaks.mk)
 
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/samsung/toro/full_toro.mk)
