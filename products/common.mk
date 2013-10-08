@@ -9,6 +9,7 @@ $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 PRODUCT_PACKAGES += \
     AppWidgetPicker \
     busybox \
+    CellBroadcastReceiver \
     DSPManager \
     Email \
     libcyanogen-dsp \

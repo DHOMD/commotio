@@ -81,7 +81,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/commotio/proprietary/system/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/commotio/proprietary/system/app/Talkback.apk:system/app/Talkback.apk \
-    vendor/commotio/proprietary/system/app/Thinkfree.apk:system/app/Thinkfree.apk \
     vendor/commotio/proprietary/system/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/commotio/proprietary/system/etc/gps.conf.old:system/etc/gps.conf.old \
     vendor/commotio/proprietary/system/etc/gps.conf.old2:system/etc/gps.conf.old2 \
@@ -111,7 +110,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/xbin/zipalign:system/xbin/zipalign \
     vendor/commotio/proprietary/data/app/Amazon_Appstore-release.apk:data/app/Amazon_Appstore-release.apk \
     vendor/commotio/proprietary/data/app/DashClockWidget.apk:data/app/DashClockWidget.apk \
-    vendor/commotio/proprietary/data/app/FileManager.apk:data/app/FileManager.apk \
     vendor/commotio/proprietary/data/app/GoogleNow.apk:data/app/GoogleNow.apk \
     vendor/commotio/proprietary/data/app/GoogleVoice.apk:data/app/GoogleVoice.apk \
     vendor/commotio/proprietary/data/app/Hangouts.apk:data/app/Hangouts.apk \
