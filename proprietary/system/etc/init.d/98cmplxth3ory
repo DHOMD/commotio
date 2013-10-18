@@ -2,7 +2,7 @@
 # DroidTheory + DHO + Vanir
 
 sync
-sysrw
+mount -o remount,rw /system
 
 # enable sysctl tweaks
 sysctl -p /system/etc/sysctl.conf
@@ -63,4 +63,4 @@ if [ -f "\$i" ]; then
 fi
 
 sync
-sysro
+mount -o remount,ro /system

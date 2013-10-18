@@ -27,6 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.checkjni=false \
+    dalvik.vm.debug.alloc=0 \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.execution-mode=int:jit
     dalvik.vm.heapstartsize=16m \
@@ -45,7 +46,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.performance.tuning=1 \
     video.accelerate.hw=1 \
-    persist.sys.purgeable_assets=1 \
+    persist.sys.purgeable_assets=0 \
     persist.sys.use_dithering=0 \
     pm.sleep_mode=1 \
     ro.config.nocheckin=1 \

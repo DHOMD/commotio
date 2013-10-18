@@ -2,7 +2,7 @@
 # DroidTheory + DHO
 
 sync
-sysrw
+mount -o remount,rw /system
 
 # File System Mounts
 #
@@ -22,4 +22,4 @@ busybox mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=wr
 busybox mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/media/0
 
 sync
-sysro
+mount -o remount,ro /system
