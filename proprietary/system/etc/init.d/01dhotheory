@@ -11,7 +11,7 @@ echo "2204318071 2004318071 2654318071" > /sys/class/misc/colorcontrol/multiplie
 echo "6" > /sys/devices/platform/omapdss/manager0/gamma
 
 # Nuking run once scripts
- busybox mount -o rw,remount /system
- rm /system/etc/init.d/02dhotheory
- #! /bin/rm -f
- busybox mount -o ro,remount /system
+mount -o rw,remount /system
+rm /system/etc/init.d/02dhotheory
+#! /bin/rm -f
+mount -o ro,remount /system
