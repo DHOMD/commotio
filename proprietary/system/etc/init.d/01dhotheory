@@ -12,6 +12,6 @@ echo "6" > /sys/devices/platform/omapdss/manager0/gamma
 
 # Nuking run once scripts
 mount -o rw,remount /system
-rm /system/etc/init.d/02dhotheory
+rm /system/etc/init.d/01dhotheory
 #! /bin/rm -f
 mount -o ro,remount /system
