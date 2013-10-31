@@ -30,7 +30,7 @@ PRODUCT_BRAND := Asus
 PRODUCT_MODEL := ASUS Transformer Pad TF700T
 PRODUCT_MANUFACTURER := Asus
 
-PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=EeePad BUILD_FINGERPRINT=asus/US_epad/EeePad:4.3.1/JLS36I/573038:user/release-keys PRIVATE_BUILD_DESC="EeePad-user 4.3.1 JLS36I 573038 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=EeePad BUILD_FINGERPRINT=asus/US_epad/EeePad:4.3.1/KRT16M/573038:user/release-keys PRIVATE_BUILD_DESC="EeePad-user 4.3.1 KRT16M 573038 release-keys"
 
 #
 # Setup device specific product configuration.

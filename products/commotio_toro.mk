@@ -32,6 +32,6 @@ PRODUCT_DEVICE := toro
 PRODUCT_MODEL := Galaxy Nexus
 PRODUCT_MANUFACTURER := samsung
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=mysid BUILD_FINGERPRINT="google/mysid/toro:4.3.1/JLS36I/737497:user/release-keys" PRIVATE_BUILD_DESC="mysid-user 4.3.1 JLS36I 737497 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=mysid BUILD_FINGERPRINT="google/mysid/toro:4.3.1/KRT16M/737497:user/release-keys" PRIVATE_BUILD_DESC="mysid-user 4.3.1 KRT16M 737497 release-keys"
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=Commotio-TORO

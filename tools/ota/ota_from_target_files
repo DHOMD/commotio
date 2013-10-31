@@ -481,6 +481,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.SetPermissionsRecursive("/system/etc/init.d", 0, 0, 0755, 0755)
   script.SetPermissionsRecursive("/data/cron", 0, 0, 0755, 0755)
   script.SetPermissionsRecursive("/system/etc/cron", 0, 0, 0755, 0755)
+  script.SetPermissions("/dev/urandom", 0, 0, 0557)
 
   script.Print(" ")
   script.Print("**      Installing Colonel           **");
