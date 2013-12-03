@@ -121,37 +121,52 @@ fi
 rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
-GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $REPACK/ota/system/build.prop`
-GOOVERSION=`sed -n -e'/ro\.goo\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTVERSION=B"$GOOVERSION"-"$GOOROM"
+OUTVERSION="$TARGET_PRODUCT"_"$MODVERSION"
 OUTFILE=$OUT/$OUTVERSION.zip
 
 # Pack it up and sign
-echo -e $CL_CYN"Zipping package..."$CL_RST
+printf "Zipping package..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
-echo ""
-echo -e $CL_CYN"Signing package..."$CL_RST
+echo
+printf "Signing package..."
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx2048m \
     -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
     -w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
     $REPACK/update.zip $OUTFILE
-echo ""
-echo -e $CL_CYN"Cleaning up..."$CL_RST
+echo
+printf "Cleaning up..."
 rm -rf $REPACK
 echo
 
 # Create a md5 checksum image of the repacked package
 (
+echo -e ""
+echo -e ""
+echo -e $CL_GRN"================  "$CL_RST OTA package information $CL_GRN"  ================"$CL_RST
+echo -e ""
+echo -e $CL_BLU"Product name:"$CL_RST $TARGET_PRODUCT-ota-eng.$USER.zip
+
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
-$MD5 $img >$img.md5sum
-ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
+STRING="$TARGET_PRODUCT-ota-eng.$USER.zip"
+OTASIZE=`ls -lah $STRING | awk '{ print $5}' `
+echo -e $CL_BLU"Package Size: "$CL_YLW "$OTASIZE" $CL_RST
+echo -e $CL_BLU"Target Location: " $CL_RST
+echo -e $CL_YLW"$OUT/$TARGET_PRODUCT-ota-eng.$USER.zip" $CL_RST
 echo ""
-echo -e $CL_CYN"Package complete:"$CL_MAG" $OUTFILE"$CL_RST
-echo -e $CL_BLU"Package Size: "$CL_YLW"$ZIPSIZE "
-echo -e $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+
+$MD5 $img >$img.md5
+ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
+echo -e $CL_GRN"================"$CL_RST $TARGET_PRODUCT-$TARGET_BUILD_VARIANT: $CL_RED"completed"$CL_RST $CL_GRN"================"$CL_RST
+echo ""
+echo -e $CL_BLU"Product name:"$CL_RST $OUTVERSION.zip
+echo -e $CL_BLU"Package Size: "$CL_YLW"$ZIPSIZE     "
+echo -e $CL_BLU"md5:"$CL_RST $CL_YLW" $(cat $img.md5 | awk '{ print $1 }')"$CL_RST
+echo -e $CL_BLU"Target location:"$CL_RST
+echo -e $CL_YLW $OUTFILE $CL_RST
+echo ""
 echo ""
 )
 

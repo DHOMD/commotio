@@ -1,0 +1,34 @@
+#!/system/xbin/bash
+# Nice Tweaks
+# Nuclearmistake, PrimeDirective and Sonicxml
+
+#DEBUG=1
+
+db()
+{
+    [ -z $DEBUG ] && return 0
+    echo "$*"
+}
+smartrenice()
+{
+    for pid in `pgrep -f $1`; do
+        [ $pid ] && db "RENICING $1 to $2" && busybox renice $2 $pid
+    done
+    return 0
+}
+smartionice()
+{
+    for pid in `pgrep -f $1`; do
+        [ $pid ] && db "IONICING $1 to $2 $3" && busybox ionice $pid $2 $3
+    done
+    return 0
+}
+for kb in "android.inputmethod.latin" "pckeyboard" "swype" "swiftkey"; do smartrenice $kb -13; done
+for browser in "dolphin" "com.android.browser" "chrome"; do smartrenice $browser -12; done
+smartrenice launcher -13
+smartrenice com.android.systemui -12
+smartrenice com.google.android.googlequicksearchbox -11
+smartrenice com.android.phone -10
+smartionice com.android.gallery be 0
+smartionice com.google.android.music rt 1
+exit 0
