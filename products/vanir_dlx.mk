@@ -1,18 +1,18 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-dlx
+    ro.goo.rom=commotio-dlx
 
 # Inherit device configuration
 $(call inherit-product, device/htc/dlx/full_dlx.mk)
-$(call inherit-product, vendor/vanir/products/vanir_jf-common.mk)
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/commotio_jf-common.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dlx
-PRODUCT_NAME := vanir_dlx
+PRODUCT_NAME := commotio_dlx
 PRODUCT_BRAND := Verizon
 PRODUCT_MODEL := HTC6435LVW
 PRODUCT_MANUFACTURER := HTC

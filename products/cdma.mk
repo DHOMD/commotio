@@ -1,2 +1,2 @@
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/vanir/overlay/cdma_phone
+    vendor/commotio/overlay/cdma_phone

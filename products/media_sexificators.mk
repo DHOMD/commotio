@@ -5,10 +5,10 @@ PRODUCT_PACKAGES += \
 
 # Bravia 3 engine, credit C0deF0x
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/bravia/etc/be_movie:system/etc/be_movie \
-    vendor/vanir/proprietary/bravia/etc/be_photo:system/etc/be_photo \
-    vendor/vanir/proprietary/bravia/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml:system/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml \
-    vendor/vanir/proprietary/bravia/framework/com.sonyericsson.android.SwIqiBmp.jar:system/framework/com.sonyericsson.android.SwIqiBmp.jar
+    vendor/commotio/proprietary/bravia/etc/be_movie:system/etc/be_movie \
+    vendor/commotio/proprietary/bravia/etc/be_photo:system/etc/be_photo \
+    vendor/commotio/proprietary/bravia/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml:system/etc/permissions/com.sonyericsson.android.SwIqiBmp.xml \
+    vendor/commotio/proprietary/bravia/framework/com.sonyericsson.android.SwIqiBmp.jar:system/framework/com.sonyericsson.android.SwIqiBmp.jar
 
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \

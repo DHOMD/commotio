@@ -1,31 +1,31 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 KERNEL_SPAM := CM-AOSP 3.4.0-g8e41961
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-FLO
+    ro.goo.rom=commotio-FLO
 
 # Tablet Overlays with radios
-    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_radio
 
 # GSM APNs and Simcard app
-$(call inherit-product, vendor/vanir/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit common product files.
-$(call inherit-product, vendor/vanir/products/common_tabs.mk)
+$(call inherit-product, vendor/commotio/products/common_tabs.mk)
 
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/deb/aosp_deb.mk)
 
 
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_deb
+PRODUCT_NAME := commotio_deb
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := deb
 PRODUCT_MODEL := Nexus 7

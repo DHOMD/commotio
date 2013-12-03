@@ -1,17 +1,17 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-MASERATI
+    ro.goo.rom=commotio-MASERATI
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/540x960.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/540x960.zip:system/media/bootanimation.zip
 
 # Vanir configuration
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/cdma.mk)
-# $(call inherit-product, vendor/vanir/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
+# $(call inherit-product, vendor/commotio/products/beats.mk)
 
 # Inherit AOSP device configuration for maserati.
 $(call inherit-product, device/motorola/maserati/full_maserati.mk)
@@ -20,7 +20,7 @@ $(call inherit-product, device/motorola/maserati/full_maserati.mk)
 # Setup device specific product configuration.
 #
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_maserati
+PRODUCT_NAME := commotio_maserati
 PRODUCT_BRAND := verizon
 PRODUCT_DEVICE := maserati
 PRODUCT_RELEASE_NAME := Droid4

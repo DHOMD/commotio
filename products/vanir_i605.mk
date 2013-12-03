@@ -1,26 +1,26 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-i605
+    ro.goo.rom=commotio-i605
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/768x1280.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/768x1280.zip:system/media/bootanimation.zip
 
 # Vanir configuration
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
-# $(call inherit-product, vendor/vanir/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+# $(call inherit-product, vendor/commotio/products/beats.mk)
 
 # CDMA APNs and Simcard app
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
 # Inherit AOSP device configuration for Note 2.
 $(call inherit-product, device/samsung/i605/full_i605.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_i605
+PRODUCT_NAME := commotio_i605
 PRODUCT_DEVICE := i605
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung

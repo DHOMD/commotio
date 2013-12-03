@@ -1,27 +1,27 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-p3100
+    ro.goo.rom=commotio-p3100
 
 # Inherit VANIR files.
-$(call inherit-product, vendor/vanir/products/gsm.mk)
-$(call inherit-product, vendor/vanir/products/common_tabs.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/common_tabs.mk)
+$(call inherit-product, vendor/commotio/products/beats.mk)
 
 # Copy VANIR files
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/600x1024.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/600x1024.zip:system/media/bootanimation.zip
 
 # Inherit VANIR overlays.
-    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_no_radio
 
 # Inherit AOSP device configuration for Tab 2 7.0 WiFi + GSM
 $(call inherit-product, device/samsung/p3100/full_p3100.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := vanir_p3100
+PRODUCT_NAME := commotio_p3100
 PRODUCT_DEVICE := p3100
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung

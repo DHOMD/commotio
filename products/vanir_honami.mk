@@ -1,26 +1,26 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-honami
+    ro.goo.rom=commotio-honami
 
 # Inherit VANIR files.
-$(call inherit-product, vendor/vanir/products/gsm.mk)
-$(call inherit-product, vendor/vanir/products/common_tabs.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/common_tabs.mk)
 
 # Copy VANIR files
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit VANIR overlays.
-    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_radio
 
 # Inherit AOSP device configuration for honami
 $(call inherit-product, device/sony/honami/full_honami.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := vanir_honami
+PRODUCT_NAME := commotio_honami
 PRODUCT_DEVICE := honami
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

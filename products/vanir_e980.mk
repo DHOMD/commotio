@@ -1,5 +1,5 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
@@ -7,22 +7,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ring.delay=0 \
     ro.telephony.call_ring.delay=50 \
     ro.ril.fast.dormancy.rule=0 \
-    ro.goo.rom=vanir-e980
+    ro.goo.rom=commotio-e980
 
 # Boot animation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Vanir configuration
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/gsm.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/beats.mk)
 
 # Inherit AOSP device configuration for Optimus G Pro.
 $(call inherit-product, device/lge/e980/e980.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_e980
+PRODUCT_NAME := commotio_e980
 PRODUCT_DEVICE := e980
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := Optimus G Pro

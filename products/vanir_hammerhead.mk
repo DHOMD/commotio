@@ -1,25 +1,25 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-hammerhead
+    ro.goo.rom=commotio-hammerhead
 
 # Inherit VANIR files.
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
-$(call inherit-product, vendor/vanir/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 # Copy VANIR files
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hammerhead
-PRODUCT_NAME := vanir_hammerhead
+PRODUCT_NAME := commotio_hammerhead
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE

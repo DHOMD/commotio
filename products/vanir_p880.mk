@@ -1,23 +1,23 @@
 #Squisher Choosing
-DHO_VENOR := vanir
+DHO_VENOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=vanir-P880
+    ro.goo.rom=commotio-P880
 
 # Boot animation
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/720x1280.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/720x1280.zip:system/media/bootanimation.zip
 
 # Vanir configuration
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/gsm.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/beats.mk)
 
 # Inherit CM device configuration for p880.
 $(call inherit-product, device/lge/p880/p880.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_p880
+PRODUCT_NAME := commotio_p880
 PRODUCT_DEVICE := p880
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := Optimus 4X HD

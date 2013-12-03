@@ -2,19 +2,19 @@
 KERNEL_SPAM := CM Kernel
 
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/480x480.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/480x480.zip:system/media/bootanimation.zip
 
 # Inherit common phone stuff
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
-# Inherit common vanir files.
-$(call inherit-product, vendor/vanir/products/gsm.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
+# Inherit common commotio files.
+$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/beats.mk)
 
 # inherit AOSP configuration for apache.
 $(call inherit-product, device/samsung/apache/full_apache.mk)
 # Setup device configuration
-PRODUCT_NAME := vanir_apache
+PRODUCT_NAME := commotio_apache
 PRODUCT_DEVICE := apache
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

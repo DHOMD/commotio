@@ -17,9 +17,9 @@
 
 
 $(call inherit-product, device/samsung/d710/full_d710.mk)
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
-PRODUCT_NAME := vanir_d710
+PRODUCT_NAME := commotio_d710
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SPH-D710 TARGET_DEVICE=SPH-D710 BUILD_FINGERPRINT=samsung/SPH-D710/SPH-D710:4.1.2/JZO54K/SPH-D710.GB27:user/release-keys PRIVATE_BUILD_DESC="SPH-D710-user 4.1.2 JZO54K SPH-D710.GB27 release-keys"

@@ -1,17 +1,17 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
  
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-quincyatt
+    ro.goo.rom=commotio-quincyatt
 
-$(call inherit-product, vendor/vanir/products/vanir_quincy-common.mk)
+$(call inherit-product, vendor/commotio/products/commotio_quincy-common.mk)
  
 # Inherit AOSP device configuration for quincyatt.
 $(call inherit-product, device/samsung/quincyatt/full_quincyatt.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_quincyatt
+PRODUCT_NAME := commotio_quincyatt
 PRODUCT_DEVICE := quincyatt
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

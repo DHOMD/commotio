@@ -1,20 +1,20 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-d802
+    ro.goo.rom=commotio-d802
 
 # Inherit device configuration
 $(call inherit-product, device/lge/d802/d802.mk)
 
-# Inherit common vanir files.
-$(call inherit-product, vendor/vanir/products/vanir_g2-common.mk)
-$(call inherit-product, vendor/vanir/products/gsm.mk)
+# Inherit common commotio files.
+$(call inherit-product, vendor/commotio/products/commotio_g2-common.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := d802
-PRODUCT_NAME := vanir_d802
+PRODUCT_NAME := commotio_d802
 PRODUCT_BRAND := LGE
 PRODUCT_MODEL := LG-D802
 PRODUCT_MANUFACTURER := lge

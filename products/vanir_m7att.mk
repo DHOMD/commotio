@@ -1,21 +1,21 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-m7att
+    ro.goo.rom=commotio-m7att
 
-# Inherit common vanir files.
-$(call inherit-product, vendor/vanir/products/gsm.mk)
+# Inherit common commotio files.
+$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 # Inherit model specific configuration.
-$(call inherit-product, vendor/vanir/products/vanir_m7.mk)
+$(call inherit-product, vendor/commotio/products/commotio_m7.mk)
 
 # Inherit AOSP device configuration for HTC One.
 $(call inherit-product, device/htc/m7att/full_m7att.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := vanir_m7att
+PRODUCT_NAME := commotio_m7att
 PRODUCT_DEVICE := m7att
 PRODUCT_BRAND := HTC
 PRODUCT_MANUFACTURER := HTC

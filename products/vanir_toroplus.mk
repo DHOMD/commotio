@@ -1,5 +1,5 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
@@ -7,19 +7,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ring.delay=0 \
     ro.telephony.call_ring.delay=50 \
     ro.ril.fast.dormancy.rule=0 \
-    ro.goo.rom=vanir-TOROPLUS
+    ro.goo.rom=commotio-TOROPLUS
 
 # Inherit common product files.
-$(call inherit-product, vendor/vanir/products/vanir_tuna.mk)
+$(call inherit-product, vendor/commotio/products/commotio_tuna.mk)
 
 # Inherit AOSP device configuration for toroplus.
 $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/vanir/overlay/cdma_phone
+    vendor/commotio/overlay/cdma_phone
 
 # Setup device specific product configuration.
-PRODUCT_NAME := vanir_toroplus
+PRODUCT_NAME := commotio_toroplus
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := toroplus
 PRODUCT_MODEL := Galaxy Nexus

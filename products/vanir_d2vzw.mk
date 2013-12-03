@@ -1,21 +1,21 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 # Variable for zip installerscript spam about kernel
 KERNEL_SPAM := CM Kernel
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-d2vzw
+    ro.goo.rom=commotio-d2vzw
 
 # Inherit AOSP device configuration for GS3 VZW.
 $(call inherit-product, device/samsung/d2vzw/full_d2vzw.mk)
-# Inherit common vanir files.
-$(call inherit-product, vendor/vanir/products/vanir_d2-common.mk)
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+# Inherit common commotio files.
+$(call inherit-product, vendor/commotio/products/commotio_d2-common.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := vanir_d2vzw
+PRODUCT_NAME := commotio_d2vzw
 PRODUCT_DEVICE := d2vzw
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung

@@ -1,13 +1,13 @@
 # Vanir common
-$(call inherit-product, vendor/vanir/products/common.mk)
+$(call inherit-product, vendor/commotio/products/common.mk)
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/commotio/proprietary/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # World SPN overrides list
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/etc/spn-conf.xml:system/etc/spn-conf.xml
+    vendor/commotio/proprietary/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 # SIM Toolkit
 PRODUCT_PACKAGES += \

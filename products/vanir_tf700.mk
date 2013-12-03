@@ -1,30 +1,30 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 # Variable for zip installerscript spam about kernel
 KERNEL_SPAM := CM Kernel
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=vanir-tf700t
+    ro.goo.rom=commotio-tf700t
 
 # Vanir Overlays
 # Vanir config should be updated
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
+    vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
 
 # Vanir specific overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
+PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_no_radio
 
 # Inherit common Vanir stuff
-$(call inherit-product, vendor/vanir/products/common_tabs.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
+$(call inherit-product, vendor/commotio/products/common_tabs.mk)
+$(call inherit-product, vendor/commotio/products/beats.mk)
 
 # Inherit AOSP device configuration for Transformer Prime.
 $(call inherit-product, device/asus/tf700t/full_tf700t.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := vanir_tf700
+PRODUCT_NAME := commotio_tf700
 PRODUCT_DEVICE := tf700t
 PRODUCT_BRAND := Asus
 PRODUCT_MANUFACTURER := Asus
