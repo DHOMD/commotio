@@ -60,7 +60,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     vs980 \
     yuga;
   do
-    add_lunch_combo vanir_$x-$1
+    add_lunch_combo commotio_$x-$1
   done
 }
 
