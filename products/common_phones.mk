@@ -1,5 +1,5 @@
 # Vanir common
-$(call inherit-product, vendor/commotio/products/common.mk)
+$(call inherit-product, vendor/commotio/products/common_commotio.mk)
 
 # World APN list
 PRODUCT_COPY_FILES += \
