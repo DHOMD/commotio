@@ -1,0 +1,27 @@
+#!/system/bin/sh
+# DroidTheory + DHO
+
+sync
+mount -o remount,rw /system
+
+cat /proc/mounts
+
+# File System Mounts
+#
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /dev
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /proc
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /sys
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nodev,data=writeback,barrier=0 -t auto /system
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/data
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /cache
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /acct
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /dev/pts
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /dev/cpuctl
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /mnt/asec
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /mnt/obb
+mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,barrier=0 -t auto /data/media/0
+
+sync
+mount -o remount,ro /system

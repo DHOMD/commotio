@@ -1,0 +1,71 @@
+#!/system/xbin/bash
+# DHO
+# Menu structure based on Vanir script
+
+
+menu()
+{
+    amiroot && menu_main || echo "You must run this as root. run: su -c hunter"
+}
+
+menu_main()
+{
+    sectionheader "Main Menu"
+    echo "1) Remove Setup Wizard and Provision"
+    echo "2) Remove Email"
+    echo "3) Remove Live Wallpapers"
+    echo "4) Remove all"
+    echo "Q) Quit"
+    read -p "Enter option: " opt
+    choice=""
+    case $opt in
+      1) choice="wp";;
+      2) choice="em";;
+      3) choice="lw";;
+      4) choice="all";;;
+      [Qq]) echo "Goodbye."; echo; exit 0;;
+      *) echo "Invalid option" && sleep 1;;
+    esac
+if [ ! -z $choice ]; then
+menu $choice
+    fi
+menu
+}
+
+menu_wp()
+{
+    sectionheader "Removing Setup Wizard and Provision"
+    rm /system/app/Provision.apk
+	rm /system/app/SetupWizard.apk
+    return 0
+}
+
+menu_em()
+{
+    sectionheader "Removing Setup Wizard and Provision"
+    rm /system/app/Provision.apk
+	rm /system/app/SetupWizard.apk
+    return 0
+}
+
+menu_lw()
+{
+    sectionheader "Removing Setup Wizard and Provision"
+    rm /system/app/Provision.apk
+	rm /system/app/SetupWizard.apk
+    return 0
+}
+
+menu_all()
+{
+    sectionheader "Removing Setup Wizard and Provision"
+    rm /system/app/Provision.apk
+	rm /system/app/SetupWizard.apk
+    return 0
+}
+
+amiroot()
+{
+    ret=`whoami 2>&1`
+    [ "$ret" = "root" ] && return 0 || [ `echo $ret | egrep "uid 0" | wc -l` -gt 0 ] && return 0 || return 1
+}
