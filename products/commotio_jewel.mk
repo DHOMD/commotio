@@ -14,7 +14,6 @@ $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Vanir Product Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/cdma_phone
     vendor/commotio/proprietary/boot_animations/800x1280.zip:system/media/bootanimation.zip 
 
 # Inherit AOSP device configuration for toro.

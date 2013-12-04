@@ -10,9 +10,6 @@ $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/samsung/toro/full_toro.mk)
 
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/vanir/overlay/cdma_phone
-
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toro
 PRODUCT_BRAND := google

@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Inherit VANIR files.
 $(call inherit-product, vendor/commotio/vanir/gsm.mk)
 $(call inherit-product, vendor/commotio/vanir/common_tabs.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Copy VANIR files
 PRODUCT_COPY_FILES += \
