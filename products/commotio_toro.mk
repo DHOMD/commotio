@@ -5,19 +5,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.goo.rom=commotio-TORO
 
-# trusting defaults
-#    ro.config.vc_call_vol_steps=7 \
-#    ring.delay=0 \
-#    ro.telephony.call_ring.delay=0 \
-#    ro.ril.fast.dormancy.rule=0 \
-
 $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)
 
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/samsung/toro/full_toro.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/cdma_phone
+    vendor/vanir/overlay/cdma_phone
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toro

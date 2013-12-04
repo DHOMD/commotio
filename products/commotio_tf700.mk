@@ -14,11 +14,11 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
 
 # Vanir specific overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_no_radio
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Inherit common Vanir stuff
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/commotio/vanir/beats.mk)
 
 # Inherit AOSP device configuration for Transformer Prime.
 $(call inherit-product, device/asus/tf700t/full_tf700t.mk)

@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-FLO
 
 # Tablet Overlays with radios
-    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_radio
 
 # GSM APNs and Simcard app
 $(call inherit-product, vendor/commotio/products/gsm.mk)

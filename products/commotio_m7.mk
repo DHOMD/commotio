@@ -8,6 +8,6 @@ PRODUCT_COPY_FILES += \
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 # Inherit common product files.
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 #$(call inherrit-product, vendor/commotio/tweaks/m7/tweaks.mk

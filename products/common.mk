@@ -3,11 +3,11 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/commotio/overlay/theme
 
 # DSPManager and bravia
-$(call inherit-product, vendor/commotio/products/media_sexificators.mk)
+$(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
-$(call inherit-product, vendor/commotio/proprietary/ringtones/VanirRingtones.mk)
+$(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
@@ -125,9 +125,6 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/commotio/proprietary/common/bin/50-commotio.sh:system/addon.d/50-commotio.sh
 endif
-
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/dictionaries
 
 #Define thirdparty for Koush's SU
 SUPERUSER_EMBEDDED := true

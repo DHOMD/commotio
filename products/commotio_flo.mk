@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-FLO
 
 # Tablet Overlays no radios
-    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_no_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Boot Animation
 PRODUCT_COPY_FILES += \

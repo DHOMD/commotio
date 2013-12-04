@@ -11,10 +11,10 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/commotio/vanir/beats.mk)
 
 # GSM APNs and Simcard app
-$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/vanir/products/gsm.mk)
 
 # Inherit AOSP device configuration for Note 2.
 $(call inherit-product, device/samsung/t0lteatt/full_t0lteatt.mk)

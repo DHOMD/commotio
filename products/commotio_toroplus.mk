@@ -16,7 +16,7 @@ $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)
 $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/cdma_phone
+    vendor/vanir/overlay/cdma_phone
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_toroplus

@@ -6,16 +6,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-p3110
 
 # Inherit VANIR files.
-$(call inherit-product, vendor/commotio/products/gsm.mk)
+$(call inherit-product, vendor/commotio/vanir/gsm.mk)
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/commotio/vanir/beats.mk)
 
 # Copy VANIR files
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/600x1024.zip:system/media/bootanimation.zip
 
 # Inherit VANIR overlays.
-    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_radio
 
 # Inherit AOSP device configuration for Tab 2 7.0 WiFi + GSM
 $(call inherit-product, device/samsung/p3110/full_p3110.mk)

@@ -14,14 +14,14 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
 
 # Vanir specific overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_no_radio
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Inherit AOSP device configuration for the Nook HD+.
 $(call inherit-product, device/bn/ovation/full_ovation.mk)
 
 # Inherit common Vanir stuff
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := commotio_ovation

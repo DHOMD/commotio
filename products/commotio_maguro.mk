@@ -6,7 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-MAGURO
 
 # More Language support for Maguro LatinIME
-PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)

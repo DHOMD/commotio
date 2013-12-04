@@ -6,7 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-m7spr
 
 # Inherit common commotio files.
-$(call inherit-product, vendor/commotio/products/cdma.mk)
+$(call inherit-product, vendor/vanir/products/cdma.mk)
 
 # Inherit model specific configuration.
 $(call inherit-product, vendor/commotio/products/commotio_m7.mk)

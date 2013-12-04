@@ -12,7 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-GROUPER
 
 # Tablet Overlays no radios
-    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_no_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/grouper/full_grouper.mk)

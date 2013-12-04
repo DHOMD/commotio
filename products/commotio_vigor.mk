@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Inherit AOSP device configuration for vigor.
 $(call inherit-product, device/htc/vigor/vigor.mk)
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Boot animation
 PRODUCT_COPY_FILES += \
@@ -19,7 +19,7 @@ PRODUCT_COPY_FILES += \
 	vendor/commotio/proprietary/cdma/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_PACKAGE_OVERLAYS += \
-	vendor/commotio/overlay/cdma_phone
+	vendor/vanir/overlay/cdma_phone
 
 #... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
 PRODUCT_LOCALES := en_US

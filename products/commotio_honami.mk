@@ -14,7 +14,7 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit VANIR overlays.
-    PRODUCT_PACKAGE_OVERLAYS += vendor/commotio/overlay/tab_radio
+    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_radio
 
 # Inherit AOSP device configuration for honami
 $(call inherit-product, device/sony/honami/full_honami.mk)

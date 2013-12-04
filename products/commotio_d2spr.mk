@@ -12,7 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/samsung/d2spr/full_d2spr.mk)
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/commotio_d2-common.mk)
-$(call inherit-product, vendor/commotio/products/cdma.mk)
+$(call inherit-product, vendor/vanir/products/cdma.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := commotio_d2spr

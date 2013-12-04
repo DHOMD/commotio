@@ -10,8 +10,8 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/products/cdma.mk)
-# $(call inherit-product, vendor/commotio/products/beats.mk)
+$(call inherit-product, vendor/vanir/products/cdma.mk)
+# $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for maserati.
 $(call inherit-product, device/motorola/maserati/full_maserati.mk)
