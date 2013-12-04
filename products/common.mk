@@ -61,9 +61,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=KRT16S BUILD_ID=KRT16S BUILD_VE
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/common/xbin/sysrw:system/xbin/sysrw \
     vendor/commotio/proprietary/common/xbin/sysro:system/xbin/sysro \
-    vendor/commotio/proprietary/common/xbin/commotiointeractivegovernorgovernor:system/xbin/commotiointeractivegovernorgovernor \
-    vendor/commotio/proprietary/common/xbin/commotioflash:system/xbin/commotioflash \
-    vendor/commotio/proprietary/common/init.commotio.rc:root/init.commotio.rc \
+    vendor/commotio/proprietary/common/xbin/vanirinteractivegovernorgovernor:system/xbin/vanirinteractivegovernorgovernor \
+    vendor/commotio/proprietary/common/xbin/vanirflash:system/xbin/vanirflash \
+    vendor/commotio/proprietary/common/init.vanir.rc:root/init.vanir.rc \
     vendor/commotio/proprietary/common/bin/sysinit:system/bin/sysinit \
     vendor/commotio/proprietary/common/etc/init.d/00firsties:system/etc/init.d/00firsties \
     vendor/commotio/proprietary/common/xbin/purgethumbnails:system/xbin/purgethumbnails
@@ -79,8 +79,8 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/common/bin/fix_permissions:system/bin/fix_permissions \
     vendor/commotio/proprietary/common/xbin/hunter:system/xbin/hunter \
     vendor/commotio/proprietary/common/xbin/testinitd:system/xbin/testinitd \
-    vendor/commotio/proprietary/common/xbin/commotiocheckcpu:system/xbin/commotiocheckcpu \
-    vendor/commotio/proprietary/common/xbin/commotionice:system/xbin/commotionice
+    vendor/commotio/proprietary/common/xbin/vanircheckcpu:system/xbin/vanircheckcpu \
+    vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice
 
 #Imoseyon's zram script
 PRODUCT_COPY_FILES += \
@@ -100,29 +100,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/common/xbin/CB_RunHaveged:system/xbin/CB_RunHaveged \
     vendor/commotio/proprietary/common/xbin/haveged:system/xbin/haveged \
-    vendor/commotio/proprietary/common/xbin/commotioentropy:system/xbin/commotioentropy \
+    vendor/commotio/proprietary/common/xbin/vanirentropy:system/xbin/vanirentropy \
     vendor/commotio/proprietary/common/bin/cronlogger:system/bin/cronlogger
 
 # init.d Tweaks
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
     vendor/commotio/proprietary/common/etc/init.d/06ENTROPY:system/etc/init.d/06ENTROPY \
     vendor/commotio/proprietary/common/etc/init.d/09cron:system/etc/init.d/09cron \
     vendor/commotio/proprietary/common/etc/init.d/99vanir:system/etc/init.d/99vanir \
+    vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
     vendor/commotio/proprietary/common/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
     vendor/commotio/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
     vendor/commotio/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
 
-
-    vendor/commotio/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/commotio/proprietary/system/etc/init.d/01dhotheory:system/etc/init.d/01dhotheory \
-    vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
-    vendor/commotio/proprietary/system/etc/init.d/15cmplxfilesystem:system/etc/init.d/15cmplxfilesystem \
-    vendor/commotio/proprietary/system/etc/init.d/91cmplxzipalign:system/etc/init.d/91cmplxzipalign \
-    vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
-    vendor/commotio/proprietary/system/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
-
-
+#    vendor/commotio/proprietary/system/etc/init.d/01dhotheory:system/etc/init.d/01dhotheory \
+#    vendor/commotio/proprietary/system/etc/init.d/91cmplxzipalign:system/etc/init.d/91cmplxzipalign \
 
 # Backup Tools
 PRODUCT_COPY_FILES += \
