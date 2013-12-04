@@ -16,7 +16,7 @@ PRODUCT_COPY_FILES += \
 
 # CDMA APN list
 PRODUCT_COPY_FILES += \
-	vendor/commotio/proprietary/cdma/etc/apns-conf.xml:system/etc/apns-conf.xml
+	vendor/vanir/proprietary/cdma/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 #... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
 PRODUCT_LOCALES := en_US
