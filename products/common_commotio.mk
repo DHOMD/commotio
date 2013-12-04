@@ -19,11 +19,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.enc.hprof.vid.bps=8000000 \
     ro.media.enc.hprof.vid.fps=65 
 
-# Beats and Bravia 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.service.swiqi2.enable=1 \
-    ro.service.swiqi2.supported=true
-
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.checkjni=false \
