@@ -1,8 +1,7 @@
 #!/system/bin/sh
 # DroidTheory + DHO + Vanir
 
-sync
-mount -o remount,rw /system
+mount -o remount,rw rootfs /
 
 # enable sysctl tweaks
 sysctl -p /system/etc/sysctl.conf
@@ -23,15 +22,9 @@ if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]; then
   echo 2048 > /sys/devices/virtual/bdi/179:0/read_ahead_kb
 fi
 
-# Vibration if used
-echo 1498 > /sys/vibe/pwmduty
-
 # Battery
 busybox sysctl -w vm.dirty_expire_centisecs=750
 busybox sysctl -w vm.dirty_writeback_centisecs=1500
-
-# RQ_Affinity
-for b in /sys/block/*; do echo 1 > $b/queue/rq_affinity; done
 
 # iostats disabling
 for i in `find /sys/devices/platform -name iostats`; do echo "0" > $i; done 
@@ -62,5 +55,4 @@ if [ -f "\$i" ]; then
 	echo "cfq" > \$i;
 fi
 
-sync
-mount -o remount,ro /system
+mount -o remount,ro rootfs /
