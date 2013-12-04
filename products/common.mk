@@ -128,7 +128,7 @@ endif
 
 #Define thirdparty for Koush's SU
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.commotio.superuser
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.vanir.superuser
 
 # Required CM packages
 PRODUCT_PACKAGES += \
