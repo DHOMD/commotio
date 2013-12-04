@@ -16,13 +16,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     VanirUpdater
 
-Vanir_Version=4.4
-Vanir_BUILD=$(Vanir_Version)
-
-ifeq ($(RELEASE),)
-Vanir_BUILD=$(Vanir_Version)$(shell date +".%m%d%y")
-endif
-
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -33,68 +26,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     ro.setupwizard.mode=OPTIONAL \
     ro.setupwizard.enterprise_mode=1 \
-    ro.config.ringtone=Hydra.ogg \
+    ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Alarm_Beep_03.ogg \
-    ro.modversion=$(Vanir_BUILD) \
-    ro.goo.version=$(Vanir_BUILD) \
-    ro.rommanager.developerid=commotio \
-    wifi.supplicant_scan_interval=300 \
-    persist.sys.root_access=3 \
-    ro.build.selinux=1
+    ro.config.alarm_alert=Cesium.ogg \
+    ro.build.selinux=1 \
+    persist.sys.root_access=3
 
-ifeq ($(VANIR_FAILSAFE),)
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.checkjni=false \
-    dalvik.vm.dexopt-flags=m=y \
-    dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.stack-trace-file=/data/anr/traces.txt \
-    dalvik.vm.verify-bytecode=false \
-    mot.proximity.delay=20 \
     net.bt.name=Android \
-    ro.ril.disable.power.collapse=0 \
-    ro.vold.umsdirtyratio=20 \
-    persist.sys.purgeable_assets=1 \
-    persist.sys.use_dithering=0 \
-    pm.sleep_mode=0 \
-    ro.config.nocheckin=1 \
     ro.config.hwfeature_wakeupkey=0 \
     ro.ext4fs=1 \
-    ro.goo.developerid=commotio \
-    ro.kernel.android.checkjni=0 \
-    ro.kernel.checkjni=0 \
-    ro.lge.proximity.delay=20 \
+    debug.composition.type=gpu \
+    ro.HOME_APP_MEM=8192 \
+    ro.FOREGROUND_APP_MEM=8192 \
+    ro.VISIBLE_APP_MEM=8192 \
     ro.max.fling_velocity=15000 \
-    ro.media.enc.hprof.vid.bps=8000000 \
-    ro.media.enc.hprof.vid.fps=65 \
-    ro.media.dec.jpeg.memcap=8000000 \
-    ro.media.enc.jpeg.quality=100 \
     ro.min.fling_velocity=10000 \
-    video.accelerate.hw=1
-endif
+    ro.lge.proximity.delay=20 \
+    mot.proximity.delay=20 \
+    movfilter=40 \
+    movehyst=0 \
+    per_sec=300 \
+    TCHTHR=28 \
+    ro.rommanager.developerid=DHO \
+    ro.goo.developerid=DHO \
+    ro.modversion=Commotio-B62 \
+    ro.goo.version=62
 
-# Disable GC freed lines
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.debug.alloc=0
-
-# Questionable stuff -- just trusting stock values on these
-#    movfilter=40 \
-#    per_sec=300 \
-#    windowsmgr.max_events_per_sec=280 \
-#    ro.mot.eri.losalert.delay=600 \
-#    debug.composition.type=gpu \
-#    debug.performance.tuning=1 \
-#    debug.sf.hw=1
-#    ro.VISIBLE_APP_MEM=8192 \
-#    ro.HOME_APP_ADJ=1 \
-#    ro.HOME_APP_MEM=8192 \
-#    ro.FOREGROUND_APP_MEM=8192 \
-#    dalvik.vm.lockprof.threshold=850 \
-
-### These will prevent any FC popups from showing... ever. (lol)
-#    profiler.force_disable_err_rpt=1 \
-#    profiler.force_disable_ulog=1 \
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=KRT16S BUILD_ID=KRT16S BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -149,11 +108,21 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/commotio/proprietary/common/etc/init.d/06ENTROPY:system/etc/init.d/06ENTROPY \
     vendor/commotio/proprietary/common/etc/init.d/09cron:system/etc/init.d/09cron \
-    vendor/commotio/proprietary/common/etc/init.d/98SONIC_SHOCK:system/etc/init.d/98SONIC_SHOCK \
-    vendor/commotio/proprietary/common/etc/init.d/99commotio:system/etc/init.d/99commotio \
+    vendor/commotio/proprietary/common/etc/init.d/99vanir:system/etc/init.d/99vanir \
     vendor/commotio/proprietary/common/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
     vendor/commotio/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
     vendor/commotio/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
+
+
+    vendor/commotio/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/commotio/proprietary/system/etc/init.d/01dhotheory:system/etc/init.d/01dhotheory \
+    vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
+    vendor/commotio/proprietary/system/etc/init.d/15cmplxfilesystem:system/etc/init.d/15cmplxfilesystem \
+    vendor/commotio/proprietary/system/etc/init.d/91cmplxzipalign:system/etc/init.d/91cmplxzipalign \
+    vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
+    vendor/commotio/proprietary/system/etc/init.d/ZZafterboot:system/etc/init.d/ZZafterboot \
+
+
 
 # Backup Tools
 PRODUCT_COPY_FILES += \
