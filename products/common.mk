@@ -13,8 +13,9 @@ $(call inherit-product, vendor/commotio/proprietary/ringtones/VanirRingtones.mk)
 PRODUCT_PACKAGES += \
     busybox \
     Email \
-    Launcher3 \
-    VanirUpdater
+    Launcher3
+
+#    VanirUpdater
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
