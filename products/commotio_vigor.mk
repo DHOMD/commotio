@@ -18,9 +18,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	vendor/vanir/proprietary/cdma/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-#... and then make the AOSP device configuration for toro get on its knees and sing the national anthem into our "microphones"
-PRODUCT_LOCALES := en_US
-
 # Setup device specific product configuration.
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 PRODUCT_NAME := commotio_vigor

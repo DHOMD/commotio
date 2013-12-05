@@ -10,7 +10,7 @@ $(call inherit-product, device/lge/vs980/vs980.mk)
 
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/commotio_g2-common.mk)
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vs980

@@ -18,7 +18,7 @@
 
 $(call inherit-product, device/samsung/d710/full_d710.mk)
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
 PRODUCT_NAME := commotio_d710
 

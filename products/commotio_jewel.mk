@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Inherit common commotio files.
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Vanir Product Overlays

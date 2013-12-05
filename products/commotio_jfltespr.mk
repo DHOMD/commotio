@@ -10,7 +10,7 @@ $(call inherit-product, device/samsung/jfltespr/full_jfltespr.mk)
 
 $(call inherit-product, vendor/commotio/products/commotio_jf-common.mk)
 
-$(call inherit-product, vendor/vanir/products/cdma.mk)
+$(call inherit-product, vendor/commotio/products/cdma.mk)
 
 # Setup device specific product configuration.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jfltespr TARGET_DEVICE=jfltespr BUILD_FINGERPRINT="samsung/jfltespr/jfltespr:4.4/KRT16S/L720VPUAMDL:user/release-keys" PRIVATE_BUILD_DESC="jfltespr-user 4.4 KRT16S L720VPUAMDL release-keys"
