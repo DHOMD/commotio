@@ -15,8 +15,8 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/vanir/gsm.mk)
-$(call inherit-product, vendor/commotio/vanir/beats.mk)
+$(call inherit-product, vendor/vanir/products/gsm.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for mako.
 $(call inherit-product, device/lge/mako/full_mako.mk)
