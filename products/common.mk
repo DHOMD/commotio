@@ -1,6 +1,7 @@
 # Theme files
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/theme
+    vendor/commotio/overlay/theme \
+    vendor/vanir/overlay/common
 
 # DSPManager and bravia
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
