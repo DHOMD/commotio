@@ -47,8 +47,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     p700 \
     p880 \
     pollux \
-    quincyatt \
-    quincytmo \
+    pollux_windy \
     t0lteatt \
     t0ltetmo \
     tf700 \

@@ -36,6 +36,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_p700.mk \
     $(LOCAL_DIR)/commotio_p880.mk \
     $(LOCAL_DIR)/commotio_pollux.mk \
+    $(LOCAL_DIR)/commotio_pollux_windy.mk \
     $(LOCAL_DIR)/commotio_quincyatt.mk \
     $(LOCAL_DIR)/commotio_quincytmo.mk \
     $(LOCAL_DIR)/commotio_jfltevzw.mk \
