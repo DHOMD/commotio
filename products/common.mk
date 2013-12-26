@@ -203,3 +203,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+
+# Allow installing apps that require cm permissions from the play store 
+include vendor/cyngn/product.mk
