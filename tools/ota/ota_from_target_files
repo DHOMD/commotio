@@ -468,6 +468,11 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Mount("/system")
   script.Mount("/data")
 
+  script.Print(" ")
+  script.Print("**     Evaluating Gapps              **")
+  script.RunBackup("backup")
+
+  script.Print(" ")
   script.Print("**     De Novo Lite Wipe In Progress **")
   script.Print("**                                   **")
   script.Print("**     All Installs now 'Dirty'      **")
@@ -482,7 +487,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.DeleteRecursive(["/data/media/0/Android/data/com.amazon.venezia/files/apks"])
 
   script.Print(" ")
-  script.Print("Copying files")
+  script.Print("**      Copying files                **");
   script.UnpackPackageDir("system", "/system")
   script.DeleteFiles(["/data/cron/root"])
   script.UnpackPackageDir("data", "/data")
@@ -493,17 +498,14 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("**     Patience Please               **")
   script.Print("  Vanir - JellyBean")
   script.Print("    by Team Vanir:")
-  script.Print("      Sonicxml")
   script.Print("        DHO")
   script.Print("          PrimeDirective")
   script.Print("            Nuclearmistake")
-  script.Print("              ChevyCam94")
   script.Print(" ")
-  script.Print(" ")
-  script.Print("Installing the ROM...")
+  script.Print("**      Installing the ROM...        **");
 
   script.Print(" ")
-  script.Print("Symlinking")
+  script.Print("**      Symlinking                   **");
   symlinks = CopySystemFiles(input_zip, output_zip)
   script.MakeSymlinks(symlinks)
 
@@ -511,8 +513,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
                                      OPTIONS.input_tmp, "BOOT")
 
   script.Print(" ")
-  script.Print("Setting permissions...")
-  script.Print("   -rw-r--r-- means -rwxrwxrwx")
+  script.Print("**      Setting permissions...       **");
   Item.GetMetadata(input_zip)
   Item.Get("system").SetPermissions(script)
   script.SetPermissionsRecursive("/system/etc/init.d", 0, 0, 0755, 0755, None, None)
@@ -544,10 +545,11 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.AppendExtra(OPTIONS.extra_script)
 
   script.Print(" ")
-  script.Print("Resurrecting gapps from pre-flash backup")
+  script.Print("**Resurrecting gapps from pre-flash backup**");
   script.ShowProgress(0.2, 10)
   script.RunBackup("restore")
-  script.Print("Zombie gapps in the hizouse")
+  script.Print(" ")
+  script.Print("**      RISE Zombie Gapps RISE       **")
 
   script.Print(" ")
   script.Print("**      Mission Complete             **")
