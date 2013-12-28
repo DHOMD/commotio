@@ -65,7 +65,6 @@ ZOMG_ITS_A_COMBO_COMBO()
 
 #BROKEN:
 #   apache \
-#   honami \
 
 ZOMG_ITS_A_COMBO_COMBO userdebug
 ZOMG_ITS_A_COMBO_COMBO user

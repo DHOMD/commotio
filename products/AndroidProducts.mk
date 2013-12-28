@@ -59,4 +59,3 @@ PRODUCT_MAKEFILES := \
 
 # BROKEN
 #    $(LOCAL_DIR)/commotio_apache.mk \
-#    $(LOCAL_DIR)/commotio_honami.mk \
