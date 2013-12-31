@@ -18,6 +18,9 @@ ZOMG_ITS_A_COMBO_COMBO()
     grouper \
     hammerhead \
     hercules \
+    hltespr \
+    hltetmo \
+    hltexx \
     i605 \
     i9300 \
     i9305 \
@@ -56,6 +59,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     toroplus \
     vigor \
     vs980 \
+    xt907 \
+    xt1060 \
     yuga;
   do
     add_lunch_combo commotio_$x-$1

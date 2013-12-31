@@ -15,6 +15,9 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_grouper.mk \
     $(LOCAL_DIR)/commotio_hammerhead.mk \
     $(LOCAL_DIR)/commotio_hercules.mk \
+    $(LOCAL_DIR)/commotio_hltespr.mk \
+    $(LOCAL_DIR)/commotio_hltetmo.mk \
+    $(LOCAL_DIR)/commotio_hltexx.mk \
     $(LOCAL_DIR)/commotio_i605.mk \
     $(LOCAL_DIR)/commotio_i9300.mk \
     $(LOCAL_DIR)/commotio_i9305.mk \
@@ -52,9 +55,11 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_tilapia.mk \
     $(LOCAL_DIR)/commotio_toro.mk \
     $(LOCAL_DIR)/commotio_toroplus.mk \
-    $(LOCAL_DIR)/commotio_yuga.mk \
     $(LOCAL_DIR)/commotio_vigor.mk \
-    $(LOCAL_DIR)/commotio_vs980.mk
+    $(LOCAL_DIR)/commotio_vs980.mk \
+    $(LOCAL_DIR)/commotio_xt907.mk \
+    $(LOCAL_DIR)/commotio_xt1060.mk \
+    $(LOCAL_DIR)/commotio_yuga.mk
 
 # BROKEN
 #    $(LOCAL_DIR)/commotio_apache.mk \

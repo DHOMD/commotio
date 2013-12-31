@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-T889
+    ro.goo.rom=commotio_t0ltetmo
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
