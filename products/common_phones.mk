@@ -16,7 +16,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     SpeakerProximity \
-    CellBroadcastReceiver
+    CellBroadcastReceiver \
+    Torch
 
 # Audio Packages
 include frameworks/base/data/sounds/AudioPackage7.mk
