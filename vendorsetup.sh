@@ -39,7 +39,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     manta \
     mako \
     maserati \
-    ovation \
     p3100 \
     p3110 \
     p5100 \

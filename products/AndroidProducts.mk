@@ -28,7 +28,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_maguro.mk \
     $(LOCAL_DIR)/commotio_mako.mk \
     $(LOCAL_DIR)/commotio_maserati.mk \
-    $(LOCAL_DIR)/commotio_ovation.mk \
     $(LOCAL_DIR)/commotio_p3100.mk \
     $(LOCAL_DIR)/commotio_p3110.mk \
     $(LOCAL_DIR)/commotio_p5100.mk \
