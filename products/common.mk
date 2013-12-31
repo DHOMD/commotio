@@ -57,8 +57,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B62 \
-    ro.goo.version=62
+    ro.modversion=Commotio-B62-nightly \
+    ro.goo.version=62-nightly
 
 
 # Version information used on all builds
