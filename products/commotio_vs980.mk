@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-d802
+    ro.goo.rom=commotio-vs980
 
 # Inherit device configuration
 $(call inherit-product, device/lge/vs980/vs980.mk)

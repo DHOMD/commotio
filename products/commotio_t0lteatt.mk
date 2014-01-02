@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio_t0lteatt
+    ro.goo.rom=commotio-t0lteatt
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
@@ -11,7 +11,7 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/vanir/beats.mk)
+$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # GSM APNs and Simcard app
 $(call inherit-product, vendor/vanir/products/gsm.mk)
