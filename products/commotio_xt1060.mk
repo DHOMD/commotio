@@ -1,5 +1,5 @@
 #Squisher Choosing
-DHO_VENDOR := Commotio
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
