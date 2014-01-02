@@ -1,8 +1,8 @@
 #Squisher Choosing
-DHO_VENOR := commotio
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-P880
+    ro.goo.rom=commotio-p880
 
 # Boot animation
 PRODUCT_COPY_FILES += \
