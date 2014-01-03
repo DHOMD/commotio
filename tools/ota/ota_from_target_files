@@ -464,20 +464,23 @@ def WriteFullOTAPackage(input_zip, output_zip):
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
-  script.FormatPartition("/system")
-  script.Mount("/system")
-  script.Mount("/data")
-
   script.Print(" ")
   script.Print("**     Evaluating Gapps              **")
+  script.Mount("/system")
   script.RunBackup("backup")
+  script.Unmount("/system")
 
   script.Print(" ")
   script.Print("**     De Novo Lite Wipe In Progress **")
   script.Print("**                                   **")
   script.Print("**     All Installs now 'Dirty'      **")
   script.Print("**                                   **")
-  script.Print("** A clean module can be found in OP **")  
+  script.Print("** A clean module can be found in OP **")
+
+  script.FormatPartition("/system")
+  script.Mount("/system")
+  script.Mount("/data")
+
   script.DeleteRecursive(["/cache"])
   script.DeleteRecursive(["/data/cron"])
   script.DeleteRecursive(["/data/dalvik-cache"])
