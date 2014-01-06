@@ -499,7 +499,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.Print("**     Installing Vanir              **")
   script.Print("**     Patience Please               **")
-  script.Print("  Vanir - JellyBean")
+  script.Print("  Vanir - KitKat")
   script.Print("    by Team Vanir:")
   script.Print("        DHO")
   script.Print("          PrimeDirective")
