@@ -467,6 +467,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print(" ")
   script.Print("**     Evaluating Gapps              **")
   script.Mount("/system")
+  script.Mount("/data")
   script.RunBackup("backup")
   script.Unmount("/system")
 
@@ -479,7 +480,6 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.FormatPartition("/system")
   script.Mount("/system")
-  script.Mount("/data")
 
   script.DeleteRecursive(["/cache"])
   script.DeleteRecursive(["/data/cron"])
