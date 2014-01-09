@@ -21,7 +21,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 
 # Inherit AOSP device configuration for grouper
-$(call inherit-product, device/asus/deb/aosp_deb.mk)
+$(call inherit-product, device/asus/deb/full_deb.mk)
 
 
 # Setup device specific product configuration.
