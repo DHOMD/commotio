@@ -25,3 +25,5 @@ mount -o remount,noatime,nodiratime,noauto_da_alloc,nosuid,nodev,data=writeback,
 
 sync
 mount -o remount,ro /system
+
+exit 0

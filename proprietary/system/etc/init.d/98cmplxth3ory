@@ -56,3 +56,5 @@ if [ -f "\$i" ]; then
 fi
 
 mount -o remount,ro rootfs /
+
+exit 0

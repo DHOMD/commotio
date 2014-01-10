@@ -60,3 +60,5 @@ sync
 busybox mount -o ro,remount /system;
 touch $ZIPALIGNED_APK;
 echo "Automatic ZipAlign finished at $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG_FILE;
+
+exit 0

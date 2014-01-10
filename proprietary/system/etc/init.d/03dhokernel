@@ -32,3 +32,5 @@ echo 256 > /sys/kernel/mm/ksm/pages_to_scan
 # Breaking the lease
 # Prime Directive
 echo "15" > /proc/sys/fs/lease-break-time
+
+exit 0

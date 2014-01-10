@@ -15,3 +15,5 @@ mount -o rw,remount /system
 rm /system/etc/init.d/01dhotheory
 #! /bin/rm -f
 mount -o ro,remount /system
+
+exit 0
