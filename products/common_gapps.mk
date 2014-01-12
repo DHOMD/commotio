@@ -22,10 +22,11 @@ PRODUCT_PACKAGES := \
     GoogleLoginService \
     GooglePartnerSetup \
     GoogleServicesFramework \
-    OneTimeInitializer \
     Phonesky \
     SetupWizard
 
+# Use Vanir's
+#    OneTimeInitializer \
 
 # ETC
 PRODUCT_COPY_FILES += \
