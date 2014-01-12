@@ -25,9 +25,6 @@ PRODUCT_PACKAGES := \
     Phonesky \
     SetupWizard
 
-# Use Vanir's
-#    OneTimeInitializer \
-
 # ETC
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
