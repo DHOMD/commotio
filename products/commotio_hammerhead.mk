@@ -17,6 +17,9 @@ PRODUCT_COPY_FILES += \
 # Inherit device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
+# Theptee Configuration
+PRODUCT_LOCALES += en_US th_TH
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hammerhead
 PRODUCT_NAME := commotio_hammerhead

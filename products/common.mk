@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     Email \
     Launcher3
 
+#    VanirWallpapers
 #    VanirUpdater
 
 # Build Properties
