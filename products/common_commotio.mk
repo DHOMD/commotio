@@ -2,6 +2,9 @@
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_target_files
 
+#Gapps
+$(call inherit-product, vendor/commotio/products/common_gapps.mk)
+
 # Also see overrides in common
 # Sound 
 PRODUCT_PROPERTY_OVERRIDES += \

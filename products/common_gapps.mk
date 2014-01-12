@@ -29,10 +29,10 @@ PRODUCT_PACKAGES := \
 
 # ETC
 PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/system/etc/com.google.android.maps.xml:system/etc/com.google.android.maps.xml \
-    vendor/commotio/proprietary/system/etc/com.google.android.media.effects.xml:system/etc/com.google.android.media.effects.xml \
-    vendor/commotio/proprietary/system/etc/com.google.widevine.software.drm.xml:system/etc/com.google.widevine.software.drm.xml \
-    vendor/commotio/proprietary/system/etc/features.xml:system/etc/features.xml
+    vendor/commotio/proprietary/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+    vendor/commotio/proprietary/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+    vendor/commotio/proprietary/system/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+    vendor/commotio/proprietary/system/etc/permissions/features.xml:system/etc/permissions/features.xml
 
 # framework
 PRODUCT_COPY_FILES += \
