@@ -1,5 +1,5 @@
 #Data
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     Amazon_Appstore \
     Gmail \
     GoogleNow \
@@ -9,13 +9,13 @@ PRODUCT_PACKAGES := \
     TitaniumBackup
 
 #Apps
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     ChromeBookmarksSyncAdapter \
     GenieWidget \
     GoogleCalendarSyncAdapter
 
 #Apps-priv
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     GMScore \
     GoogleBackupTransport \
     GoogleFeedback \
