@@ -86,4 +86,4 @@ PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/usr/srec/en-US/phonelist:system/usr/srec/en-US/phonelist \
     vendor/commotio/proprietary/system/usr/srec/en-US/rescoring_lm:system/usr/srec/en-US/rescoring_lm \
     vendor/commotio/proprietary/system/usr/srec/en-US/wordlist:system/usr/srec/en-US/wordlist \
-    vendor/commotio/proprietary/system/usr/srec/en-US/hotword_prompt:system/usr/srec/en-US/hotword_prompt
+    vendor/commotio/proprietary/system/usr/srec/en-US/hotword_prompt.txt:system/usr/srec/en-US/hotword_prompt.txt
