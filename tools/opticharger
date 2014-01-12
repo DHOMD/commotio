@@ -92,8 +92,8 @@ then
         fi
         if [ "$CERT" = "PRESIGNED" ];
         then
-            echo -e $CL_YLW"$NAME is presigned, skipping"$CL_RST
-            exit 1;
+            echo -e $CL_YLW"$NAME is presigned. Cross your fingers!"$CL_RST
+            #exit 1;
         fi
     fi
 
@@ -111,6 +111,9 @@ then
 
     [ $QUIET ] || echo -e $CL_YLW"Repacking apk.."$CL_RST
     aapt p -0 .dat -0 .dict -0 .arsc -F $NAME .
+    if [ "$CERT" = "PRESIGNED" ]; then
+        CERT="build/target/product/security/platform.x509.pem"
+    fi
     
     [ $QUIET ] || echo -e $CL_YLW"Resigning with cert: `echo $CERT`"$CL_RST
 
