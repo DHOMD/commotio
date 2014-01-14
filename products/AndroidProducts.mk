@@ -9,7 +9,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_d801.mk \
     $(LOCAL_DIR)/commotio_d802.mk \
     $(LOCAL_DIR)/commotio_dlx.mk \
-    $(LOCAL_DIR)/commotio_e975.mk \
     $(LOCAL_DIR)/commotio_e980.mk \
     $(LOCAL_DIR)/commotio_flo.mk \
     $(LOCAL_DIR)/commotio_grouper.mk \

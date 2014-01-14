@@ -12,7 +12,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     d801 \
     d802 \
     dlx \
-    e975 \
     e980 \
     flo \
     grouper \

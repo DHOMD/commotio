@@ -16,14 +16,17 @@ PRODUCT_PACKAGES += \
 
 #Apps-priv
 PRODUCT_PACKAGES += \
-    GMScore \
     GoogleBackupTransport \
     GoogleFeedback \
     GoogleLoginService \
     GooglePartnerSetup \
     GoogleServicesFramework \
-    Phonesky \
     SetupWizard
+
+# ROM will explode if you resign these
+PRODUCT_COPY_FILES += \
+    vendor/commotio/proprietary/system/app/GMScore.apk:system/app/GMScore.apk \
+    vendor/commotio/proprietary/system/app/Phonesky.apk:system/app/Phonesky.apk
 
 # ETC
 PRODUCT_COPY_FILES += \
