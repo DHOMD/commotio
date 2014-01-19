@@ -5,6 +5,11 @@ KERNEL_SPAM := WHY DOESNT THIS JUST WORK AMGGGG #not related to the kernel... bu
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
+# MPDecision and thermal(d/-engine) auto-disablers for KT-based kernels (like ours)
+PRODUCT_COPY_FILES += \
+    vendor/vanir/proprietary/jf/etc/init.d/00kernelcompat:system/etc/init.d/00kernelcompat \
+    vendor/vanir/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter
+
 # OPT OUT of moto blobs
 QCOM_FORCE_NONMOTO_DALVIK := true
 
