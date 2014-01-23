@@ -58,8 +58,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     TCHTHR=28 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B62-nightly \
-    ro.goo.version=62-nightly
+    ro.modversion=Commotio-B63-nightly \
+    ro.goo.version=63-nightly
 
 
 # Version information used on all builds
@@ -151,6 +151,7 @@ PRODUCT_PACKAGES += \
 # Optional CM packages
 PRODUCT_PACKAGES += \
     Basic \
+    Development \
     SoundRecorder \
     libemoji
 
