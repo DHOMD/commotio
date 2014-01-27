@@ -56,6 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     movehyst=0 \
     per_sec=300 \
     TCHTHR=28 \
+    ro.vanir.base=4.4.2 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
     ro.modversion=Commotio-B63-nightly \
@@ -124,8 +125,8 @@ PRODUCT_COPY_FILES += \
 
 # Backup Tools
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/vanir/proprietary/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/commotio/proprietary/system/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/commotio/proprietary/system/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/vanir/proprietary/common/bin/50-vanir.sh:system/addon.d/50-vanir.sh \
     vendor/vanir/proprietary/common/bin/blacklist:system/addon.d/blacklist \
     vendor/vanir/proprietary/common/bin/whitelist:system/addon.d/whitelist
