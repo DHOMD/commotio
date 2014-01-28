@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     openvpn \
     e2fsck \
+    libsepol \
     mke2fs \
     tune2fs \
     bash \
