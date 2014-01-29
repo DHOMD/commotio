@@ -18,7 +18,8 @@ $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 PRODUCT_PACKAGES += \
     busybox \
     Email \
-    Launcher3
+    Launcher3 \
+    PerformanceControl
 
 #    VanirWallpapers
 #    VanirUpdater
