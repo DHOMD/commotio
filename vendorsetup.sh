@@ -16,10 +16,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     flo \
     grouper \
     hammerhead \
-    hercules \
-    hltespr \
-    hltetmo \
-    hltexx \
+    hlte \
     i605 \
     i9300 \
     i9305 \
@@ -41,11 +38,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     manta \
     mako \
     maserati \
-    p3100 \
-    p3110 \
-    p5100 \
-    p5110 \
-    p700 \
     p880 \
     pollux \
     pollux_windy \
@@ -56,7 +48,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     toro \
     p700 \
     toroplus \
-    vigor \
     vs980 \
     xt907 \
     xt1060 \
@@ -65,9 +56,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     add_lunch_combo commotio_$x-$1
   done
 }
-
-#BROKEN:
-#   apache \
 
 ZOMG_ITS_A_COMBO_COMBO userdebug
 ZOMG_ITS_A_COMBO_COMBO user

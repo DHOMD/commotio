@@ -13,10 +13,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_flo.mk \
     $(LOCAL_DIR)/commotio_grouper.mk \
     $(LOCAL_DIR)/commotio_hammerhead.mk \
-    $(LOCAL_DIR)/commotio_hercules.mk \
-    $(LOCAL_DIR)/commotio_hltespr.mk \
-    $(LOCAL_DIR)/commotio_hltetmo.mk \
-    $(LOCAL_DIR)/commotio_hltexx.mk \
+    $(LOCAL_DIR)/commotio_hlte.mk \
     $(LOCAL_DIR)/commotio_i605.mk \
     $(LOCAL_DIR)/commotio_i9300.mk \
     $(LOCAL_DIR)/commotio_i9305.mk \
@@ -30,11 +27,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_maguro.mk \
     $(LOCAL_DIR)/commotio_mako.mk \
     $(LOCAL_DIR)/commotio_maserati.mk \
-    $(LOCAL_DIR)/commotio_p3100.mk \
-    $(LOCAL_DIR)/commotio_p3110.mk \
-    $(LOCAL_DIR)/commotio_p5100.mk \
-    $(LOCAL_DIR)/commotio_p5110.mk \
-    $(LOCAL_DIR)/commotio_p700.mk \
     $(LOCAL_DIR)/commotio_p880.mk \
     $(LOCAL_DIR)/commotio_pollux.mk \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
@@ -59,6 +51,3 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_xt907.mk \
     $(LOCAL_DIR)/commotio_xt1060.mk \
     $(LOCAL_DIR)/commotio_yuga.mk
-
-# BROKEN
-#    $(LOCAL_DIR)/commotio_apache.mk \
