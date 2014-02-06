@@ -19,7 +19,8 @@ PRODUCT_PACKAGES += \
     busybox \
     Email \
     Launcher3 \
-    PerformanceControl
+    PerformanceControl \
+    OmniSwitch
 
 #    VanirWallpapers
 #    VanirUpdater
