@@ -11,6 +11,9 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_dlx.mk \
     $(LOCAL_DIR)/commotio_e980.mk \
     $(LOCAL_DIR)/commotio_flo.mk \
+    $(LOCAL_DIR)/commotio_geeb.mk \
+    $(LOCAL_DIR)/commotio_geehrc.mk \
+    $(LOCAL_DIR)/commotio_geespr.mk \
     $(LOCAL_DIR)/commotio_grouper.mk \
     $(LOCAL_DIR)/commotio_hammerhead.mk \
     $(LOCAL_DIR)/commotio_hlte.mk \

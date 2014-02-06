@@ -60,8 +60,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=4.4.2 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B63-nightly \
-    ro.goo.version=63-nightly
+    ro.modversion=Commotio-B64-nightly \
+    ro.goo.version=64-nightly
 
 
 # Version information used on all builds
