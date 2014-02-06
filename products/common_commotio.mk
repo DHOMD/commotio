@@ -16,6 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Cesium.ogg \
     ro.config.vc_call_vol_steps=9 \
     ro.telephony.call_ring.delay=50 \
+    persist.sys.dun.override=0 \
     persist.sys.camera-sound=0 
 
 # Video - Photo
