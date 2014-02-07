@@ -14,9 +14,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     dlx \
     e980 \
     flo \
+    gee \
     geeb \
-    geehrc \
-    geespr \
     grouper \
     hammerhead \
     hlte \
