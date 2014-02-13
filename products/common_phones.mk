@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SpeakerProximity \
     CellBroadcastReceiver \
+    Mms \
     Torch
 
 # Audio Packages
