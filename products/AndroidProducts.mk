@@ -20,6 +20,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_i9300.mk \
     $(LOCAL_DIR)/commotio_i9305.mk \
     $(LOCAL_DIR)/commotio_jewel.mk \
+    $(LOCAL_DIR)/commotio_jflte.mk \
     $(LOCAL_DIR)/commotio_m7att.mk \
     $(LOCAL_DIR)/commotio_m7spr.mk \
     $(LOCAL_DIR)/commotio_m7tmo.mk \
@@ -34,14 +35,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
     $(LOCAL_DIR)/commotio_quincyatt.mk \
     $(LOCAL_DIR)/commotio_quincytmo.mk \
-    $(LOCAL_DIR)/commotio_jfltevzw.mk \
-    $(LOCAL_DIR)/commotio_jflteatt.mk \
-    $(LOCAL_DIR)/commotio_jfltecan.mk \
-    $(LOCAL_DIR)/commotio_jfltecri.mk \
-    $(LOCAL_DIR)/commotio_jfltespr.mk \
-    $(LOCAL_DIR)/commotio_jfltetmo.mk \
-    $(LOCAL_DIR)/commotio_jflteusc.mk \
-    $(LOCAL_DIR)/commotio_jfltexx.mk \
     $(LOCAL_DIR)/commotio_t0lteatt.mk \
     $(LOCAL_DIR)/commotio_t0ltetmo.mk \
     $(LOCAL_DIR)/commotio_tf700.mk \
