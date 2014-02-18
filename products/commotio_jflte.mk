@@ -1,3 +1,9 @@
+#Squisher Choosing
+DHO_VENDOR := commotio
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.rom=commotio-jflte
+
 # Variable for zip installerscript spam about kernel
 KERNEL_SPAM := WHY DOESNT THIS JUST WORK AMGGGG #not related to the kernel... but this build step didn't work anyways, so lulpwned.
 
