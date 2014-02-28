@@ -17,43 +17,43 @@ busybox sysctl -w vm.page-cluster=3
 busybox sysctl -w vm.drop_caches=3
 echo "1" > /proc/sys/vm/laptop_mode
 
-# SD Card Speed Boost
-if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]; then
-  echo 2048 > /sys/devices/virtual/bdi/179:0/read_ahead_kb
-fi
-
 # Battery
 busybox sysctl -w vm.dirty_expire_centisecs=750
 busybox sysctl -w vm.dirty_writeback_centisecs=1500
 
 # iostats disabling
-for i in `find /sys/devices/platform -name iostats`; do echo "0" > $i; done 
+for i in `find /sys/devices/platform -name iostats`; do echo "0" > $i; done
 
-# Optimize Vm
-if [ -e /proc/sys/vm/vfs_cache_pressure ]; then
-	echo "10" > /proc/sys/vm/vfs_cache_pressure
-fi
+# SD Card Speed Boost || Nuke thinks this breaks stuff
+#if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]; then
+#  echo 2048 > /sys/devices/virtual/bdi/179:0/read_ahead_kb
+#fi
 
-if [ -e /proc/sys/vm/dirty_expire_centisecs ]; then
-	echo "500" > /proc/sys/vm/dirty_expire_centisecs
-fi
-
-if [ -e /proc/sys/vm/dirty_writeback_centisecs ]; then
-	echo "1000" > /proc/sys/vm/dirty_writeback_centisecs
-fi
-
-if [ -e /proc/sys/vm/dirty_ratio ]; then
-	echo "90" > /proc/sys/vm/dirty_ratio
-fi
-
-if [ -e /proc/sys/vm/dirty_background_ratio ]; then
-	echo "45" > /proc/sys/vm/dirty_background_ratio
-fi
-
-if [ -f "\$i" ]; then
-	sync;
-	echo "cfq" > \$i;
-fi
+# Optimize Vm || Likely very outdates
+#if [ -e /proc/sys/vm/vfs_cache_pressure ]; then
+#	echo "10" > /proc/sys/vm/vfs_cache_pressure
+#fi
+#
+#if [ -e /proc/sys/vm/dirty_expire_centisecs ]; then
+#	echo "500" > /proc/sys/vm/dirty_expire_centisecs
+#fi
+#
+#if [ -e /proc/sys/vm/dirty_writeback_centisecs ]; then
+#	echo "1000" > /proc/sys/vm/dirty_writeback_centisecs
+#fi
+#
+#if [ -e /proc/sys/vm/dirty_ratio ]; then
+#	echo "90" > /proc/sys/vm/dirty_ratio
+#fi
+#
+#if [ -e /proc/sys/vm/dirty_background_ratio ]; then
+#	echo "45" > /proc/sys/vm/dirty_background_ratio
+#fi
+#
+#if [ -f "\$i" ]; then
+#	sync;
+#	echo "cfq" > \$i;
+#fi
 
 mount -o remount,ro rootfs /
 

@@ -26,11 +26,16 @@ echo 1 > /sys/kernel/mm/ksm/run
 echo 1200 > /sys/kernel/mm/ksm/sleep_millisecs
 echo 256 > /sys/kernel/mm/ksm/pages_to_scan
 
-# disable logger - (comment and reboot for logcat)
-# rm /dev/log/main
-
 # Breaking the lease
 # Prime Directive
 echo "15" > /proc/sys/fs/lease-break-time
+
+# Make perms all loosey-goosey
+[ -d /sys/devices/system/cpu/cpufreq/interactive ] && vanirinteractivegovernorgovernor
+
+# ICUP FUNI CULURSZ
+[ -e /sys/class/misc/colorcontrol/v1_offset ] && chown system.system /sys/class/misc/colorcontrol/v1_offset && chmod 0666 /sys/class/misc/colorcontrol/v1_offset
+[ -e /sys/class/misc/colorcontrol/multiplier ] && chown system.system /sys/class/misc/colorcontrol/multiplier && chmod 0666 /sys/class/misc/colorcontrol/multiplier
+[ -e /sys/devices/platform/omapdss/manager0/gamma ] && chown system.system /sys/devices/platform/omapdss/manager0/gamma && chmod 0666 /sys/devices/platform/omapdss/manager0/gamma
 
 exit 0
