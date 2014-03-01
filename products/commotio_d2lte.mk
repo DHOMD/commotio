@@ -14,9 +14,7 @@ $(call inherit-product, vendor/vanir/products/beats.mk)
 $(call inherit-product, device/samsung/d2lte/full_d2lte.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/commotio/config/nfc_enhanced.mk)
-
-
+$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=d2uc \
