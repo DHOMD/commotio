@@ -22,7 +22,6 @@ PRODUCT_PACKAGES += \
     PerformanceControl \
     OmniSwitch
 
-#    VanirWallpapers
 #    VanirUpdater
 
 # Build Properties
@@ -61,8 +60,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=4.4.2 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B64-nightly \
-    ro.goo.version=64-nightly
+    ro.modversion=Commotio-B64 \
+    ro.goo.version=64
 
 
 # Version information used on all builds
