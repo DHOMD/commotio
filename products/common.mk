@@ -65,7 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 # Version information used on all builds
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=KOT49H BUILD_ID=KOT49H BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=KOT49L BUILD_ID=KOT49L BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
@@ -208,8 +208,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     klogripper
 
+## FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
+PRODUCT_PACKAGES += \
+    utility_mkbootimg \
+    utility_unpackbootimg
+PRODUCT_COPY_FILES += \
+    vendor/vanir/proprietary/common/etc/init.d/0000kernelassimilator:system/etc/init.d/0000kernelassimilator \
+    vendor/vanir/proprietary/common/etc/kernelassimilator.d/00bootclasspath:system/etc/kernelassimilator.d/00bootclasspath
+
 PRODUCT_COPY_FILES += \
     vendor/vanir/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # Allow installing apps that require cm permissions from the play store 
 include vendor/cyngn/product.mk
+
+$(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
+
