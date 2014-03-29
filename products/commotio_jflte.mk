@@ -17,7 +17,8 @@ $(call inherit-product, device/samsung/jflte/full_jflte.mk)
 # MPDecision and thermal(d/-engine) auto-disablers for KT-based kernels (like ours)
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/jf/etc/init.d/00kernelcompat:system/etc/init.d/00kernelcompat \
-    vendor/vanir/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter
+    vendor/vanir/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter \
+    vendor/vanir/proprietary/jf/bin/nuclearwinterinternal:system/bin/nuclearwinterinternal
 
 # Inherit common product files.
 NO_DRM_BLOBS := true
