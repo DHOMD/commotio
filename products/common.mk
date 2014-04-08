@@ -93,7 +93,7 @@ PRODUCT_COPY_FILES += \
 
 # Misc Files
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/etc/hosts:system/etc/hosts \
+    vendor/commotio/proprietary/system/etc/hosts:system/etc/hosts \
     vendor/vanir/proprietary/common/etc/resolv.conf:system/etc/resolv.conf
 
 # proprietary guts
