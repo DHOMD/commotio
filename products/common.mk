@@ -8,9 +8,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
-# Disable dex preopt
-DISABLE_DEXPREOPT := true
-
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 
@@ -46,23 +43,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.hwfeature_wakeupkey=0 \
     ro.ext4fs=1 \
     debug.composition.type=gpu \
-    ro.HOME_APP_MEM=8192 \
-    ro.FOREGROUND_APP_MEM=8192 \
-    ro.VISIBLE_APP_MEM=8192 \
     ro.max.fling_velocity=15000 \
     ro.min.fling_velocity=10000 \
     ro.lge.proximity.delay=20 \
     mot.proximity.delay=20 \
     movfilter=40 \
-    movehyst=0 \
     per_sec=300 \
-    TCHTHR=28 \
     ro.vanir.base=4.4.2 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
     ro.modversion=Commotio-B65 \
     ro.goo.version=65
-
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=KOT49L BUILD_ID=KOT49L BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
