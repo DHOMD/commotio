@@ -28,10 +28,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0 \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.execution-mode=int:jit
-    dalvik.vm.heapstartsize=16m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.stack-trace-file=/data/anr/traces.txt \
     dalvik.vm.verify-bytecode=false
 
