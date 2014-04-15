@@ -20,12 +20,6 @@ busybox sysctl -w kernel.threads-max=525810
 busybox sysctl -w kernel.random.write_wakeup_threshold=256
 busybox sysctl -w kernel.random.read_wakeup_threshold=128
 
-# Enable KSM
-#
-echo 1 > /sys/kernel/mm/ksm/run
-echo 1200 > /sys/kernel/mm/ksm/sleep_millisecs
-echo 256 > /sys/kernel/mm/ksm/pages_to_scan
-
 # Breaking the lease
 # Prime Directive
 echo "15" > /proc/sys/fs/lease-break-time
