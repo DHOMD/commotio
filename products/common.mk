@@ -42,7 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.bt.name=Android \
     ro.config.hwfeature_wakeupkey=0 \
     ro.ext4fs=1 \
-    debug.composition.type=gpu \
     ro.max.fling_velocity=15000 \
     ro.min.fling_velocity=10000 \
     ro.lge.proximity.delay=20 \
