@@ -21,9 +21,19 @@ echo "1" > /proc/sys/vm/laptop_mode
 busybox sysctl -w vm.dirty_expire_centisecs=750
 busybox sysctl -w vm.dirty_writeback_centisecs=1500
 
+#
+# General Queue Tweaks
+#
+for i in /sys/block/*/queue; do
+echo 512 > $i/nr_requests;
+  echo 2 > $i/rq_affinity;
+  echo 0 > $i/nomerges;
+  echo 0 > $i/add_random;
+  echo 0 > $i/rotational;
+done;
+
 # iostats disabling
 for i in `find /sys/devices/platform -name iostats`; do echo "0" > $i; done
-
 
 mount -o remount,ro rootfs /
 
