@@ -40,7 +40,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     toro \
     p700 \
     toroplus \
-    u8833 \
     vs980 \
     xt907 \
     xt1060 \
