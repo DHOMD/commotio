@@ -30,6 +30,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     manta \
     mako \
     maserati \
+    mondrianwifi \
     p880 \
     pollux \
     pollux_windy \

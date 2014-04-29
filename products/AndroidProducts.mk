@@ -27,6 +27,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_maguro.mk \
     $(LOCAL_DIR)/commotio_mako.mk \
     $(LOCAL_DIR)/commotio_maserati.mk \
+    $(LOCAL_DIR)/commotio_mondrianwifi.mk \
     $(LOCAL_DIR)/commotio_p880.mk \
     $(LOCAL_DIR)/commotio_pollux.mk \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
