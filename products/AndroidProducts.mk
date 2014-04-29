@@ -38,6 +38,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_tilapia.mk \
     $(LOCAL_DIR)/commotio_toro.mk \
     $(LOCAL_DIR)/commotio_toroplus.mk \
+    $(LOCAL_DIR)/commotio_u8833.mk \
     $(LOCAL_DIR)/commotio_vigor.mk \
     $(LOCAL_DIR)/commotio_vs980.mk \
     $(LOCAL_DIR)/commotio_xt907.mk \
