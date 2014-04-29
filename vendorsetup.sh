@@ -31,6 +31,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     mako \
     maserati \
     mondrianwifi \
+    moto_msm8960 \
+    moto_msm8960dt \
     p880 \
     pollux \
     pollux_windy \
@@ -42,8 +44,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     p700 \
     toroplus \
     vs980 \
-    xt907 \
-    xt1060 \
     yuga;
   do
     add_lunch_combo commotio_$x-$1
