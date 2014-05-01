@@ -10,6 +10,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     d802 \
     dlx \
     e980 \
+    find5 \
     flo \
     gee \
     geeb \
@@ -33,6 +34,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     mondrianwifi \
     moto_msm8960 \
     moto_msm8960dt \
+    n1 \
     p880 \
     pollux \
     pollux_windy \
