@@ -24,6 +24,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_m7tmo.mk \
     $(LOCAL_DIR)/commotio_m7ul.mk \
     $(LOCAL_DIR)/commotio_m7vzw.mk \
+    $(LOCAL_DIR)/commotio_m8.mk \
     $(LOCAL_DIR)/commotio_manta.mk \
     $(LOCAL_DIR)/commotio_maguro.mk \
     $(LOCAL_DIR)/commotio_mako.mk \

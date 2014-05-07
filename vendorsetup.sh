@@ -27,6 +27,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     m7tmo \
     m7ul \
     m7vzw \
+    m8 \
     maguro \
     manta \
     mako \
