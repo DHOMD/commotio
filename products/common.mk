@@ -51,8 +51,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=4.4.2 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B65 \
-    ro.goo.version=65
+    ro.modversion=Commotio-B66 \
+    ro.goo.version=66
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=KOT49L BUILD_ID=KOT49L BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
