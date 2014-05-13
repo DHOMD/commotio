@@ -11,6 +11,9 @@ $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 
+#Dexpreopt to all builds
+WITH_DEXPREOPT := true 
+
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
     busybox \
