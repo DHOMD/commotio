@@ -10,3 +10,7 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 $(call inherit-product, vendor/vanir/products/beats.mk)
 
 $(call inherit-product, vendor/commotio/tweaks/tuna/tweaks.mk)
+
+# Extra Packages for Tunas
+PRODUCT_PACKAGES += \
+    Mira4U
