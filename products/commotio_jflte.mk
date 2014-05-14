@@ -25,5 +25,11 @@ NO_DRM_BLOBS := true
 $(call inherit-product, vendor/vanir/products/beats.mk)
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# Unified device flag for Verizon permissions
+VZW_UNIFIED := true
+
+# Inherit common Verizon Wireless Perms and Lib
+$(call inherit-product, vendor/vanir/products/vzw.mk)
+
 #Tagging
 PRODUCT_NAME := commotio_jflte

@@ -12,6 +12,9 @@ $(call inherit-product, device/lge/vs980/vs980.mk)
 $(call inherit-product, vendor/commotio/products/commotio_g2-common.mk)
 $(call inherit-product, vendor/commotio/products/cdma.mk)
 
+# Inherit common Verizon Wireless Perms and Lib
+$(call inherit-product, vendor/vanir/products/vzw.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vs980
 PRODUCT_NAME := commotio_vs980

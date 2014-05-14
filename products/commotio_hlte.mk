@@ -17,6 +17,12 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 $(call inherit-product, vendor/commotio/products/gsm.mk)
 $(call inherit-product, vendor/vanir/products/beats.mk)
 
+# Unified device flag for Verizon permissions
+VZW_UNIFIED := true
+
+# Inherit common Verizon Wireless Perms and Lib
+$(call inherit-product, vendor/vanir/products/vzw.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hlte
 PRODUCT_NAME := commotio_hlte

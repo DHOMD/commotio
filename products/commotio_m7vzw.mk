@@ -8,9 +8,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Inherit AOSP device configuration for HTC One.
 $(call inherit-product, device/htc/m7vzw/full_m7vzw.mk)
 
+# Commotio
 $(call inherit-product, vendor/commotio/products/commotio_m7.mk)
-
 $(call inherit-product, vendor/commotio/products/cdma.mk)
+
+# Inherit common Verizon Wireless Perms and Lib
+$(call inherit-product, vendor/vanir/products/vzw.mk)
 
 # Setup device specific product configuration.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7wlv BUILD_ID=KOT49L BUILD_FINGERPRINT="VERIZON/HTCOneVZW/m7wlv:4.4.2/KOT49L/304035.8:user/release-k" PRIVATE_BUILD_DESC="3.11.605.1 CL304035 release-keys"
