@@ -41,6 +41,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_t0lteatt.mk \
     $(LOCAL_DIR)/commotio_t0ltetmo.mk \
     $(LOCAL_DIR)/commotio_tf700.mk \
+    $(LOCAL_DIR)/commotio_tf701.mk \
     $(LOCAL_DIR)/commotio_tilapia.mk \
     $(LOCAL_DIR)/commotio_toro.mk \
     $(LOCAL_DIR)/commotio_toroplus.mk \
