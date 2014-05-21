@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-tf700t
+    ro.goo.rom=commotio-tf700
 
 # Vanir Overlays
 # Vanir config should be updated

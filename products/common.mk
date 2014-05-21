@@ -194,12 +194,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-# T-Mobile theme engine
+# Theme engine
 PRODUCT_PACKAGES += \
-    ThemeManager \
     ThemeChooser \
-    com.tmobile.themes \
+    ThemesProvider \
     Vanir_Inverted
+
+PRODUCT_COPY_FILES += \
+    vendor/vanir/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
+    vendor/vanir/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
 
 ## STREAMING DMESG?
 PRODUCT_PACKAGES += \
@@ -212,9 +215,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/init.d/0000kernelassimilator:system/etc/init.d/0000kernelassimilator \
     vendor/vanir/proprietary/common/etc/kernelassimilator.d/00bootclasspath:system/etc/kernelassimilator.d/00bootclasspath
-
-PRODUCT_COPY_FILES += \
-    vendor/vanir/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # Allow installing apps that require cm permissions from the play store 
 include vendor/cyngn/product.mk
