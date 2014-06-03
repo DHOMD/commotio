@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
     busybox \
     Email \
     Launcher3 \
+    PerformanceControl \
     OmniSwitch
 
 #    VanirUpdater
@@ -47,7 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     movfilter=40 \
     per_sec=300 \
-    ro.vanir.base=4.4.2 \
+    ro.vanir.base=4.4.3 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
     ro.modversion=Commotio-B66 \
