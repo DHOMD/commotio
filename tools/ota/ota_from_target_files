@@ -111,7 +111,7 @@ OPTIONS.backuptool = True
 OPTIONS.override_device = 'auto'
 OPTIONS.override_prop = False
 OPTIONS.two_step = False
-OPTIONS.no_separate_recovery = True
+OPTIONS.no_separate_recovery = False
 
 def MostPopularKey(d, default):
   """Given a dict, return the key corresponding to the largest
@@ -1092,8 +1092,7 @@ def main(argv):
     elif o in ("-2", "--two_step"):
       OPTIONS.two_step = True
     elif o in ("--no_separate_recovery"):
-      noop=1
-      # return success so we can ignore it. trololol
+      OPTIONS.no_separate_recovery = True
     else:
       return False
     return True
