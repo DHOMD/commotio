@@ -16,9 +16,9 @@ PRODUCT_PACKAGES += \
     busybox \
     Email \
     Launcher3 \
-    PerformanceControl \
     OmniSwitch
 
+#    PerformanceControl \
 #    VanirUpdater
 
 # Build Properties
