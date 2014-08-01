@@ -12,6 +12,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     dlx \
     e980 \
     find5 \
+    find7 \
     flo \
     gee \
     geeb \

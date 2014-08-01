@@ -9,6 +9,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_dlx.mk \
     $(LOCAL_DIR)/commotio_e980.mk \
     $(LOCAL_DIR)/commotio_find5.mk \
+    $(LOCAL_DIR)/commotio_find7.mk \
     $(LOCAL_DIR)/commotio_flo.mk \
     $(LOCAL_DIR)/commotio_gee.mk \
     $(LOCAL_DIR)/commotio_geeb.mk \
