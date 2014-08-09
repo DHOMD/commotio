@@ -11,6 +11,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     d802 \
     dlx \
     e980 \
+    falcon \
     find5 \
     find7 \
     flo \
