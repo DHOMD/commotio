@@ -41,8 +41,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     p880 \
     pollux \
     pollux_windy \
-    t0lteatt \
-    t0ltetmo \
+    t0lte \
     tf700 \
     tf701 \
     tilapia \

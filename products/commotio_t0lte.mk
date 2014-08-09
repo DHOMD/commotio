@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-t0lteatt
+    ro.goo.rom=commotio-t0lte
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
@@ -11,19 +11,19 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
+# $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # GSM APNs and Simcard app
 $(call inherit-product, vendor/vanir/products/gsm.mk)
 
 # Inherit AOSP device configuration for Note 2.
-$(call inherit-product, device/samsung/t0lteatt/full_t0lteatt.mk)
+$(call inherit-product, device/samsung/t0lte/full_t0lte.mk)
 
 # Setup device specific product configuration.
-PRODUCT_NAME := commotio_t0lteatt
-PRODUCT_DEVICE := t0lteatt
+PRODUCT_NAME := commotio_t0lte
+PRODUCT_DEVICE := t0lte
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
-PRODUCT_MODEL := SGH-I317
+PRODUCT_MODEL := GT-N7105
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=t0lteatt TARGET_DEVICE=t0lteatt BUILD_FINGERPRINT="samsung/t0lteatt/t0lteatt:4.4.4/KTU84Q/I317UCAMA4:user/release-keys" PRIVATE_BUILD_DESC="t0lteatt-user 4.1.2 KTU84Q I317UCAMA4 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=t0lte TARGET_DEVICE=t0lte BUILD_FINGERPRINT="samsung/t0ltexx/t0lte:4.4.4/KTU84Q/N7105XXDLL4:user/release-keys" PRIVATE_BUILD_DESC="t0ltexx-user 4.4.4 KTU84Q N7105XXDLL4 release-keys"

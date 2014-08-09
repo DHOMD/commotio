@@ -40,8 +40,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
     $(LOCAL_DIR)/commotio_quincyatt.mk \
     $(LOCAL_DIR)/commotio_quincytmo.mk \
-    $(LOCAL_DIR)/commotio_t0lteatt.mk \
-    $(LOCAL_DIR)/commotio_t0ltetmo.mk \
+    $(LOCAL_DIR)/commotio_t0lte.mk \
     $(LOCAL_DIR)/commotio_tf700.mk \
     $(LOCAL_DIR)/commotio_tf701.mk \
     $(LOCAL_DIR)/commotio_tilapia.mk \
