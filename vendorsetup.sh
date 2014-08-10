@@ -38,6 +38,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     mondrianwifi \
     moto_msm8960 \
     moto_msm8960dt \
+    moto_msm8960_jbbl \
     n1 \
     p880 \
     pollux \
