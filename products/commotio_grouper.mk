@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
     ro.goo.rom=commotio-GROUPER
 
 # Tablet Overlays no radios
