@@ -19,6 +19,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     geeb \
     grouper \
     hammerhead \
+    huashan \
     hlte \
     i605 \
     i9300 \
