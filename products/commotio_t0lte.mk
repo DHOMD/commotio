@@ -14,7 +14,7 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 # $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # GSM APNs and Simcard app
-$(call inherit-product, vendor/vanir/products/gsm.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 # Inherit AOSP device configuration for Note 2.
 $(call inherit-product, device/samsung/t0lte/full_t0lte.mk)
