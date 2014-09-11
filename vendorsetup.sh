@@ -41,6 +41,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     moto_msm8960dt \
     moto_msm8960_jbbl \
     n1 \
+    n7100 \
     p880 \
     pollux \
     pollux_windy \

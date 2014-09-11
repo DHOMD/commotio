@@ -38,6 +38,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_moto_msm8960_jbbl.mk \
     $(LOCAL_DIR)/commotio_moto_msm8960dt.mk \
     $(LOCAL_DIR)/commotio_n1.mk \
+    $(LOCAL_DIR)/commotio_n7100.mk \
     $(LOCAL_DIR)/commotio_p880.mk \
     $(LOCAL_DIR)/commotio_pollux.mk \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
