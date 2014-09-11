@@ -20,7 +20,7 @@ $(call inherit-product, vendor/commotio/products/gsm.mk)
 $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for GS3 LTE (GSM).
-$(call inherit-product, device/samsung/i9300/full_i9300.mk)
+$(call inherit-product, device/samsung/i9305/full_i9305.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := commotio_i9305
