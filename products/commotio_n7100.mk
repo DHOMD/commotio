@@ -14,7 +14,7 @@ $(call inherit-product, device/samsung/n7100/full_n7100.mk)
 
 # Inherit common vanir files.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/vanir/gsm.mk)
+$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := n7100
