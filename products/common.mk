@@ -22,6 +22,11 @@ PRODUCT_PACKAGES += \
 #    PerformanceControl \
 #    VanirUpdater
 
+# QuickBoot (included automagically for non-oppo qcom devices)
+PRODUCT_PACKAGES += \
+ QuickBoot \
+ init.vanir.quickboot.rc
+
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
