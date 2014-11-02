@@ -27,10 +27,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     jewel \
     jflte \
     klimtwifi \
-    m7att \
+    m7 \
     m7spr \
-    m7tmo \
-    m7ul \
     m7vzw \
     m8 \
     maguro \
