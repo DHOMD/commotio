@@ -11,7 +11,7 @@ $(call inherit-product, vendor/commotio/products/gsm.mk)
 $(call inherit-product, vendor/commotio/products/commotio_m7-common.mk)
 
 # Inherit AOSP device configuration for HTC One Unlocked edition.
-$(call inherit-product, device/htc/m7ul/full_m7.mk)
+$(call inherit-product, device/htc/m7/full_m7.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := commotio_m7
