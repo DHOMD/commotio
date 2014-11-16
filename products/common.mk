@@ -57,8 +57,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=5.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B73 \
-    ro.goo.version=73
+    ro.modversion=Commotio-B74 \
+    ro.goo.version=74
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LRX21T BUILD_ID=LRX21T BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
