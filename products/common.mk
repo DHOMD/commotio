@@ -74,11 +74,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/init.d/00firsties:system/etc/init.d/00firsties \
     vendor/vanir/proprietary/common/xbin/purgethumbnails:system/xbin/purgethumbnails
 
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/lib/liblightcycle.so:system/lib/liblightcycle.so \
-    vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
-    vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
-
 ifeq ($(VANIR_FAILSAFE),)
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
