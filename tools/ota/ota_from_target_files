@@ -571,26 +571,35 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
 
-
-
-
-
-
-
+  script.Print(" ")
+  script.Print("**     Evaluating Gapps              **")
+    if OPTIONS.backuptool:
+    if block_based:
+      common.ZipWriteStr(output_zip, "system/bin/backuptool.sh",
+                     ""+input_zip.read("SYSTEM/bin/backuptool.sh"))
+      common.ZipWriteStr(output_zip, "system/bin/backuptool.functions",
+                     ""+input_zip.read("SYSTEM/bin/backuptool.functions"))
+    script.Mount("/system")
+    script.RunBackup("backup")
+    script.Unmount("/system")
 
 
   if OPTIONS.wipe_user_data:
-    script.FormatPartition("/data")
+    system_progress -= 0.1
+  if HasVendorPartition(input_zip):
+    system_progress -= 0.1
+
+  if block_based:
+    common.ZipWriteStr(output_zip, "system/bin/otasigcheck.sh",
+                   ""+input_zip.read("SYSTEM/bin/otasigcheck.sh"))
+  script.Mount("/data")
+  script.ValidateSignatures("data")
+  script.Unmount("/data")
 
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
-  script.Print(" ")
-  script.Print("**     Evaluating Gapps              **")
-  script.Mount("/system")
-  script.Mount("/data")
-  script.RunBackup("backup")
-  script.Unmount("/system")
+  recovery_mount_options = OPTIONS.info_dict.get("recovery_mount_options")
 
   script.Print(" ")
   script.Print("**     De Novo Lite Wipe In Progress **")
@@ -601,6 +610,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   script.FormatPartition("/system")
   script.Mount("/system")
+  script.Mount("/data")
 
   script.DeleteRecursive(["/cache"])
   script.DeleteRecursive(["/data/cron"])
@@ -610,11 +620,64 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.DeleteFiles(["/data/system/dropbox/*.txt"])
   script.DeleteRecursive(["/data/media/0/Android/data/com.amazon.venezia/files/apks"])
 
+  system_progress = 0.75
+
   script.Print(" ")
   script.Print("**      Copying files                **");
-  script.UnpackPackageDir("system", "/system")
-  script.DeleteFiles(["/data/cron/root"])
-  script.UnpackPackageDir("data", "/data")
+  system_items = ItemSet("system", "META/filesystem_config.txt")
+  script.ShowProgress(system_progress, 0)
+  if block_based:
+    # Full OTA is done as an "incremental" against an empty source
+    # image.  This has the effect of writing new data from the package
+    # to the entire partition, but lets us reuse the updater code that
+    # writes incrementals to do it.
+    system_tgt = GetImage("system", OPTIONS.input_tmp, OPTIONS.info_dict)
+    system_tgt.ResetFileMap()
+    system_diff = common.BlockDifference("system", system_tgt, src=None)
+    system_diff.WriteScript(script, output_zip)
+  else:
+    script.FormatPartition("/system")
+    script.Mount("/system", recovery_mount_options)
+    if not has_recovery_patch:
+      script.UnpackPackageDir("recovery", "/system")
+    script.UnpackPackageDir("system", "/system")
+    script.UnpackPackageDir("data", "/data")
+    symlinks = CopyPartitionFiles(system_items, input_zip, output_zip)
+    script.MakeSymlinks(symlinks)
+
+  boot_img = common.GetBootableImage("boot.img", "boot.img",
+                                     OPTIONS.input_tmp, "BOOT")
+
+  if not block_based:
+    def output_sink(fn, data):
+      common.ZipWriteStr(output_zip, "recovery/" + fn, data)
+      system_items.Get("system/" + fn, dir=False)
+
+    common.MakeRecoveryPatch(OPTIONS.input_tmp, output_sink,
+                             recovery_img, boot_img)
+
+    system_items.GetMetadata(input_zip)
+    system_items.Get("system").SetPermissions(script)
+
+  if HasVendorPartition(input_zip):
+    vendor_items = ItemSet("vendor", "META/vendor_filesystem_config.txt")
+    script.ShowProgress(0.1, 0)
+
+    if block_based:
+      vendor_tgt = GetImage("vendor", OPTIONS.input_tmp, OPTIONS.info_dict)
+      vendor_tgt.ResetFileMap()
+      vendor_diff = common.BlockDifference("vendor", vendor_tgt)
+      vendor_diff.WriteScript(script, output_zip)
+    else:
+      script.FormatPartition("/vendor")
+      script.Mount("/vendor", recovery_mount_options)
+      script.UnpackPackageDir("vendor", "/vendor")
+
+      symlinks = CopyPartitionFiles(vendor_items, input_zip, output_zip)
+      script.MakeSymlinks(symlinks)
+
+      vendor_items.GetMetadata(input_zip)
+      vendor_items.Get("vendor").SetPermissions(script)
 
   script.Print("**      Nice and Tidy                **")
 
@@ -627,14 +690,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("            Nuclearmistake")
   script.Print(" ")
   script.Print("**      Installing the ROM...        **");
-
-  script.Print(" ")
-  script.Print("**      Symlinking                   **");
-  symlinks = CopySystemFiles(input_zip, output_zip)
-  script.MakeSymlinks(symlinks)
-
-  boot_img = common.GetBootableImage("boot.img", "boot.img",
-                                     OPTIONS.input_tmp, "BOOT")
 
   script.Print(" ")
   script.Print("**      Setting permissions...       **");
@@ -662,18 +717,36 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   vanirinitlinks.append(("/init.vanir.rc", "/system/etc/init.local.rc"))
   script.MakeSymlinks(vanirinitlinks)
 
-  script.ShowProgress(0.1, 0)
-  device_specific.FullOTA_InstallEnd()
+  if block_based:
+    script.Mount("/system")
+  script.ValidateSignatures("cleanup")
+  if block_based:
+    script.Unmount("/system")
 
-  if OPTIONS.extra_script is not None:
-    script.AppendExtra(OPTIONS.extra_script)
 
   script.Print(" ")
   script.Print("**Resurrecting gapps from pre-flash backup**");
   script.ShowProgress(0.2, 10)
-  script.RunBackup("restore")
+
+  if OPTIONS.backuptool:
+    script.ShowProgress(0.02, 10)
+    if block_based:
+      script.Mount("/system")
+    script.RunBackup("restore")
+    if block_based:
+      script.Unmount("/system")
+
   script.Print(" ")
   script.Print("**      RISE Zombie Gapps RISE       **")
+
+  script.ShowProgress(0.05, 5)
+  script.WriteRawImage("/boot", "boot.img")
+
+  script.ShowProgress(0.2, 10)
+  device_specific.FullOTA_InstallEnd()
+
+  if OPTIONS.extra_script is not None:
+    script.AppendExtra(OPTIONS.extra_script)
 
   script.Print(" ")
   script.Print("**      Mission Complete             **")
