@@ -555,25 +555,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   device_specific.FullOTA_InstallBegin()
 
-  script.ShowProgress(0.5, 0)
-
-  script.Print("    _   _             _ ___ ___  _  ")
-  script.Print("   / ` / ) )\/) )\/) / ) )   )  / ) ")
-  script.Print("  (_. (_/ (  ( (  ( (_/ (  _(_ (_/  ")
-
-  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
-  script.Print("   |     Commotio - 4.4   Edition    | ")
-  script.Print("   |     A DHO Production            | ")
-  script.Print("   | Team Vanir                      | ")
-  script.Print("   |                                 | ")
-  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
-  script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
-  script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
-  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
-
-  script.Print(" ")
-  script.Print("**     Evaluating Gapps              **")
-    if OPTIONS.backuptool:
+  if OPTIONS.backuptool:
     if block_based:
       common.ZipWriteStr(output_zip, "system/bin/backuptool.sh",
                      ""+input_zip.read("SYSTEM/bin/backuptool.sh"))
@@ -583,6 +565,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.RunBackup("backup")
     script.Unmount("/system")
 
+  system_progress = 0.75
 
   if OPTIONS.wipe_user_data:
     system_progress -= 0.1
@@ -601,29 +584,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   recovery_mount_options = OPTIONS.info_dict.get("recovery_mount_options")
 
-  script.Print(" ")
-  script.Print("**     De Novo Lite Wipe In Progress **")
-  script.Print("**                                   **")
-  script.Print("**     All Installs now 'Dirty'      **")
-  script.Print("**                                   **")
-  script.Print("** A clean module can be found in OP **")
-
-  script.FormatPartition("/system")
-  script.Mount("/system")
-  script.Mount("/data")
-
-  script.DeleteRecursive(["/cache"])
-  script.DeleteRecursive(["/data/cron"])
-  script.DeleteRecursive(["/data/dalvik-cache"])
-  script.DeleteRecursive(["/data/tombstones/"])
-  script.DeleteFiles(["/data/system/usagestats/*"])
-  script.DeleteFiles(["/data/system/dropbox/*.txt"])
-  script.DeleteRecursive(["/data/media/0/Android/data/com.amazon.venezia/files/apks"])
-
-  system_progress = 0.75
-
-  script.Print(" ")
-  script.Print("**      Copying files                **");
   system_items = ItemSet("system", "META/filesystem_config.txt")
   script.ShowProgress(system_progress, 0)
   if block_based:
@@ -641,7 +601,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     if not has_recovery_patch:
       script.UnpackPackageDir("recovery", "/system")
     script.UnpackPackageDir("system", "/system")
-    script.UnpackPackageDir("data", "/data")
     symlinks = CopyPartitionFiles(system_items, input_zip, output_zip)
     script.MakeSymlinks(symlinks)
 
@@ -679,54 +638,14 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
       vendor_items.GetMetadata(input_zip)
       vendor_items.Get("vendor").SetPermissions(script)
 
-  script.Print("**      Nice and Tidy                **")
-
-  script.Print("**     Installing Vanir              **")
-  script.Print("**     Patience Please               **")
-  script.Print("  Vanir - KitKat")
-  script.Print("    by Team Vanir:")
-  script.Print("        DHO")
-  script.Print("          PrimeDirective")
-  script.Print("            Nuclearmistake")
-  script.Print(" ")
-  script.Print("**      Installing the ROM...        **");
-
-  script.Print(" ")
-  script.Print("**      Setting permissions...       **");
-  Item.GetMetadata(input_zip)
-  Item.Get("system").SetPermissions(script)
-  script.SetPermissionsRecursive("/system/etc/init.d", 0, 0, 0755, 0755, None, None)
-  script.SetPermissionsRecursive("/data/cron", 0, 0, 0755, 0755, None, None)
-  script.SetPermissionsRecursive("/system/etc/cron", 0, 0, 0755, 0755, None, None)
-
-  script.Print(" ")
-  script.Print("**      Installing Colonel           **");
-
   common.CheckSize(boot_img.data, "boot.img", OPTIONS.info_dict)
   common.ZipWriteStr(output_zip, "boot.img", boot_img.data)
-  script.ShowProgress(0.2, 10)
-  script.WriteRawImage("/boot", "boot.img")  
-
-  script.Print(" ")
-  script.Print("**      Time for some Cajun Voodoo   **")
-  script.Print(" ")
-  script.Print("**   DHOtheory is rocking this bitch **")
-
-  vanirinitlinks = []
-  vanirinitlinks.append(("/init.vanir.rc", "/init.cm.rc"))
-  vanirinitlinks.append(("/init.vanir.rc", "/system/etc/init.local.rc"))
-  script.MakeSymlinks(vanirinitlinks)
 
   if block_based:
     script.Mount("/system")
   script.ValidateSignatures("cleanup")
   if block_based:
     script.Unmount("/system")
-
-
-  script.Print(" ")
-  script.Print("**Resurrecting gapps from pre-flash backup**");
-  script.ShowProgress(0.2, 10)
 
   if OPTIONS.backuptool:
     script.ShowProgress(0.02, 10)
@@ -736,9 +655,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     if block_based:
       script.Unmount("/system")
 
-  script.Print(" ")
-  script.Print("**      RISE Zombie Gapps RISE       **")
-
   script.ShowProgress(0.05, 5)
   script.WriteRawImage("/boot", "boot.img")
 
@@ -747,11 +663,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   if OPTIONS.extra_script is not None:
     script.AppendExtra(OPTIONS.extra_script)
-
-  script.Print(" ")
-  script.Print("**      Mission Complete             **")
-  script.Print(" ")
-  script.Print(" ")
 
   script.UnmountAll()
 
