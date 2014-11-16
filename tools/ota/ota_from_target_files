@@ -555,6 +555,20 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   device_specific.FullOTA_InstallBegin()
 
+  script.Print("    _   _             _ ___ ___  _  ")
+  script.Print("   / ` / ) )\/) )\/) / ) )   )  / ) ")
+  script.Print("  (_. (_/ (  ( (  ( (_/ (  _(_ (_/  ")
+
+  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+  script.Print("   |     Commotio - 4.4   Edition    | ")
+  script.Print("   |     A DHO Production            | ")
+  script.Print("   | Team Vanir                      | ")
+  script.Print("   |                                 | ")
+  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+  script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
+  script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
+  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+
   if OPTIONS.backuptool:
     if block_based:
       common.ZipWriteStr(output_zip, "system/bin/backuptool.sh",
@@ -583,6 +597,18 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
   recovery_mount_options = OPTIONS.info_dict.get("recovery_mount_options")
+
+  script.Print("**      Nice and Tidy                **")
+
+  script.Print("**     Installing Vanir              **")
+  script.Print("**     Patience Please               **")
+  script.Print("  Vanir - KitKat")
+  script.Print("    by Team Vanir:")
+  script.Print("        DHO")
+  script.Print("          PrimeDirective")
+  script.Print("            Nuclearmistake")
+  script.Print(" ")
+  script.Print("**      Installing the ROM...        **");
 
   system_items = ItemSet("system", "META/filesystem_config.txt")
   script.ShowProgress(system_progress, 0)
@@ -638,8 +664,16 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
       vendor_items.GetMetadata(input_zip)
       vendor_items.Get("vendor").SetPermissions(script)
 
+  script.Print(" ")
+  script.Print("**      Installing Colonel           **");
+
   common.CheckSize(boot_img.data, "boot.img", OPTIONS.info_dict)
   common.ZipWriteStr(output_zip, "boot.img", boot_img.data)
+
+  script.Print(" ")
+  script.Print("**      Time for some Cajun Voodoo   **")
+  script.Print(" ")
+  script.Print("**   DHOtheory is rocking this bitch **")
 
   if block_based:
     script.Mount("/system")
@@ -647,6 +681,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   if block_based:
     script.Unmount("/system")
 
+  script.Print(" ")
+  script.Print("**Resurrecting gapps from pre-flash backup**");
   if OPTIONS.backuptool:
     script.ShowProgress(0.02, 10)
     if block_based:
@@ -654,6 +690,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.RunBackup("restore")
     if block_based:
       script.Unmount("/system")
+  script.Print(" ")
+  script.Print("**      RISE Zombie Gapps RISE       **")
 
   script.ShowProgress(0.05, 5)
   script.WriteRawImage("/boot", "boot.img")
@@ -663,6 +701,11 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   if OPTIONS.extra_script is not None:
     script.AppendExtra(OPTIONS.extra_script)
+
+  script.Print(" ")
+  script.Print("**      Mission Complete             **")
+  script.Print(" ")
+  script.Print(" ")
 
   script.UnmountAll()
 
