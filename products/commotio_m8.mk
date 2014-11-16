@@ -14,7 +14,6 @@ $(call inherit-product, device/htc/m8/full_m8.mk)
 
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m8

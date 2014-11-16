@@ -25,8 +25,5 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 # Unified device flag for Verizon permissions
 VZW_UNIFIED := true
 
-# Inherit common gsm
-$(call inherit-product, vendor/vanir/products/gsm.mk)
-
 #Tagging
 PRODUCT_NAME := commotio_jfltetmo

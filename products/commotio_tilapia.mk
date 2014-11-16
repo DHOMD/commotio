@@ -22,9 +22,6 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 $(call inherit-product, vendor/vanir/products/beats.mk)
 
-# GSM APNs and Simcard app
-$(call inherit-product, vendor/commotio/products/gsm.mk)
-
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/tilapia/full_tilapia.mk)
 

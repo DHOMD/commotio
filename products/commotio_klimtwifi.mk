@@ -14,7 +14,6 @@ $(call inherit-product, device/samsung/klimtwifi/full_klimtwifi.mk)
 
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := klimtwifi

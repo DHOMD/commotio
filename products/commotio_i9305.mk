@@ -16,7 +16,6 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Inherit common commotio files.
-$(call inherit-product, vendor/commotio/products/gsm.mk)
 $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for GS3 LTE (GSM).

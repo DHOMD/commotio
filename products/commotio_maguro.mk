@@ -10,7 +10,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)
-$(call inherit-product, vendor/commotio/products/gsm.mk)
 
 # Inherit AOSP device configuration for maguro.
 $(call inherit-product, device/samsung/maguro/full_maguro.mk)
