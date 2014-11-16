@@ -22,15 +22,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.enc.jpeg.quality=100
 
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.checkjni=false \
-    dalvik.vm.debug.alloc=0 \
-    dalvik.vm.dexopt-flags=m=y \
-    dalvik.vm.execution-mode=int:jit
-    dalvik.vm.stack-trace-file=/data/anr/traces.txt \
-    dalvik.vm.verify-bytecode=false
-
 # General
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
