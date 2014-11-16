@@ -124,9 +124,9 @@ fi
 rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
-GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $REPACK/ota/system/build.prop`
-GOOVERSION=`sed -n -e'/ro\.goo\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
-MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
+GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $OUT/system/build.prop`
+GOOVERSION=`sed -n -e'/ro\.goo\.version/s/^.*=//p' $OUT/system/build.prop`
+MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $OUT/system/build.prop`
 OUTVERSION=B"$GOOVERSION"-"$GOOROM"
 OUTFILE=$OUT/$OUTVERSION.zip
 
