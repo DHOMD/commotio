@@ -26,6 +26,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     i9305 \
     jewel \
     jflte \
+    jfltetmo \
+    jfltevzw \
     klimtwifi \
     m7 \
     m7spr \

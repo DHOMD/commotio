@@ -2,17 +2,14 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-jflte
-
-# Variable for zip installerscript spam about kernel
-KERNEL_SPAM := WHY DOESNT THIS JUST WORK AMGGGG #not related to the kernel... but this build step didn't work anyways, so lulpwned.
+    ro.goo.rom=commotio-jfltevzw
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device repo
-$(call inherit-product, device/samsung/jflte/full_jflte.mk)
+$(call inherit-product, device/samsung/jfltevzw/full_jfltevzw.mk)
 
 # MPDecision and thermal(d/-engine) auto-disablers for KT-based kernels (like ours)
 PRODUCT_COPY_FILES += \
@@ -28,8 +25,8 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 # Unified device flag for Verizon permissions
 VZW_UNIFIED := true
 
-# Inherit common gsm
-$(call inherit-product, vendor/vanir/products/gsm.mk)
+# Inherit common Verizon Wireless Perms and Lib
+$(call inherit-product, vendor/vanir/products/vzw.mk)
 
 #Tagging
-PRODUCT_NAME := commotio_jflte
+PRODUCT_NAME := commotio_jfltevzw

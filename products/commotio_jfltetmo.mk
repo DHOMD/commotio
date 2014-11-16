@@ -2,17 +2,14 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-jflte
-
-# Variable for zip installerscript spam about kernel
-KERNEL_SPAM := WHY DOESNT THIS JUST WORK AMGGGG #not related to the kernel... but this build step didn't work anyways, so lulpwned.
+    ro.goo.rom=commotio-jfltetmo
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device repo
-$(call inherit-product, device/samsung/jflte/full_jflte.mk)
+$(call inherit-product, device/samsung/jfltetmo/full_jfltetmo.mk)
 
 # MPDecision and thermal(d/-engine) auto-disablers for KT-based kernels (like ours)
 PRODUCT_COPY_FILES += \
@@ -32,4 +29,4 @@ VZW_UNIFIED := true
 $(call inherit-product, vendor/vanir/products/gsm.mk)
 
 #Tagging
-PRODUCT_NAME := commotio_jflte
+PRODUCT_NAME := commotio_jfltetmo
