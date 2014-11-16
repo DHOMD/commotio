@@ -2,6 +2,13 @@
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_target_files
 
+# Commotio files
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/commotio/overlay/commotio \
+    vendor/vanir/overlay/common
+
+#    vendor/commotio/overlay/theme \
+
 #Gapps
 GAPPS := false
 ifeq ($(GAPPS),true)

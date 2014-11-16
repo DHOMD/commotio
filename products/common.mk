@@ -1,7 +1,5 @@
-# Theme files
+# Vanir files
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/theme \
-    vendor/commotio/overlay/commotio \
     vendor/vanir/overlay/common
 
 # DSPManager and bravia
