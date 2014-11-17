@@ -677,6 +677,11 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" ")
   script.Print("**   DHOtheory is rocking this bitch **")
 
+  vanirinitlinks = []
+  vanirinitlinks.append(("/init.vanir.rc", "/init.cm.rc"))
+  vanirinitlinks.append(("/init.vanir.rc", "/system/etc/init.local.rc"))
+  script.MakeSymlinks(vanirinitlinks)
+
   if block_based:
     script.Mount("/system")
   script.ValidateSignatures("cleanup")
