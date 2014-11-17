@@ -569,6 +569,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
   script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
 
+  script.Print(" ")
+  script.Print("**     Evaluating Gapps              **")
   if OPTIONS.backuptool:
     if block_based:
       common.ZipWriteStr(output_zip, "system/bin/backuptool.sh",
