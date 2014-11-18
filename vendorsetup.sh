@@ -55,6 +55,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     toroplus \
     v500 \
     vs980 \
+    vs985 \
     yuga;
   do
     add_lunch_combo commotio_$x-$1

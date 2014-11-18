@@ -54,4 +54,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_v500.mk \
     $(LOCAL_DIR)/commotio_vigor.mk \
     $(LOCAL_DIR)/commotio_vs980.mk \
+    $(LOCAL_DIR)/commotio_vs985.mk \
     $(LOCAL_DIR)/commotio_yuga.mk
