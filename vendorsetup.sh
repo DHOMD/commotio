@@ -39,7 +39,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     maserati \
     mondrianwifi \
     moto_msm8960 \
-    moto_msm8960dt \
     moto_msm8960_jbbl \
     n1 \
     n7100 \
