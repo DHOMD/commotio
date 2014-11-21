@@ -164,13 +164,18 @@ PRODUCT_PACKAGES += \
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
+    libsepol \
     openvpn \
     e2fsck \
-    libsepol \
     mke2fs \
     tune2fs \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
     bash \
     vim \
+    zip \
+    unrar \
     nano \
     htop \
     powertop \
