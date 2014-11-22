@@ -5,7 +5,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     bacon \
     deb \
     d2lte \
-    d710 \
     d800 \
     d801 \
     d802 \
