@@ -69,8 +69,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/init.vanir.rc:root/init.vanir.rc \
     vendor/vanir/proprietary/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh \
     vendor/vanir/proprietary/common/bin/sysinit:system/bin/sysinit \
-    vendor/vanir/proprietary/common/etc/init.d/00firsties:system/etc/init.d/00firsties \
-    vendor/vanir/proprietary/common/xbin/purgethumbnails:system/xbin/purgethumbnails
+    vendor/vanir/proprietary/common/etc/init.d/00firsties:system/etc/init.d/00firsties
 
 ifeq ($(VANIR_FAILSAFE),)
 # Blobs common to all devices
@@ -90,13 +89,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/vanir/proprietary/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
-# entropy mumbo jump
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/xbin/CB_RunHaveged:system/xbin/CB_RunHaveged \
-    vendor/vanir/proprietary/common/xbin/haveged:system/xbin/haveged \
-    vendor/vanir/proprietary/common/xbin/vanirentropy:system/xbin/vanirentropy \
-    vendor/vanir/proprietary/common/bin/cronlogger:system/bin/cronlogger
 
 # init.d Tweaks
 PRODUCT_COPY_FILES += \
@@ -217,8 +209,7 @@ PRODUCT_PACKAGES += \
 # Theme engine
 PRODUCT_PACKAGES += \
     ThemeChooser \
-    ThemesProvider \
-    Vanir_Inverted
+    ThemesProvider
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
@@ -232,9 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     utility_mkbootimg \
     utility_unpackbootimg
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/etc/init.d/0000kernelassimilator:system/etc/init.d/0000kernelassimilator \
-    vendor/vanir/proprietary/common/etc/kernelassimilator.d/00bootclasspath:system/etc/kernelassimilator.d/00bootclasspath
 
 # Allow installing apps that require cm permissions from the play store 
 include vendor/cyngn/product.mk
