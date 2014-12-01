@@ -8,6 +8,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     d800 \
     d801 \
     d802 \
+    d850 \
+    d851 \
     dlx \
     e980 \
     falcon \
@@ -28,6 +30,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     jfltetmo \
     jfltevzw \
     klimtwifi \
+    ls990 \
     m7 \
     m7spr \
     m7vzw \
