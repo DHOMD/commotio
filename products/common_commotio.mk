@@ -4,8 +4,7 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_
 
 # Commotio files
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/overlay/commotio \
-    vendor/vanir/overlay/common
+    vendor/commotio/overlay/commotio
 
 #    vendor/commotio/overlay/theme \
 

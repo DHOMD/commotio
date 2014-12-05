@@ -2,6 +2,8 @@
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/vanir/overlay/common
 
+#    vendor/vanir/overlay/dictionaries
+
 # DSPManager and bravia
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
@@ -86,8 +88,9 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/resolv.conf:system/etc/resolv.conf
 
 # Keyboard Files
-    PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+PRODUCT_COPY_FILES += \
+    vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinimegoogle.so
 
 # proprietary guts
 PRODUCT_COPY_FILES += \
