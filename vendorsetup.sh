@@ -4,7 +4,9 @@ ZOMG_ITS_A_COMBO_COMBO()
   for x in \
     bacon \
     deb \
-    d2lte \
+    d2att \
+    d2spr \
+    d2vzw \
     d800 \
     d801 \
     d802 \
