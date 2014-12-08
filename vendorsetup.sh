@@ -32,6 +32,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     jfltetmo \
     jfltevzw \
     klimtwifi \
+    klte \
+    kltevzw \
     ls990 \
     m7 \
     m7spr \
