@@ -15,9 +15,6 @@ PRODUCT_COPY_FILES += \
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
-# Inherit common vanir files.
-$(call inherit-product, vendor/vanir/products/beats.mk)
-
 # Inherit device configuration
 $(call inherit-product, device/motorola/falcon/full_falcon.mk)
 

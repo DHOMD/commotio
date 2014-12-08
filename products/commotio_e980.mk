@@ -15,7 +15,6 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for Optimus G Pro.
 $(call inherit-product, device/lge/e980/e980.mk)

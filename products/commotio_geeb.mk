@@ -15,7 +15,6 @@ PRODUCT_COPY_FILES += \
 
 # commotio configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for geeb.
 $(call inherit-product, device/lge/geeb/full_geeb.mk)

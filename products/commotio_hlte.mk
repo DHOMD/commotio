@@ -14,7 +14,6 @@ $(call inherit-product, device/samsung/hlte/full_hlte.mk)
 
 # Inherit common vanir files.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Unified device flag for Verizon permissions
 VZW_UNIFIED := true

@@ -22,7 +22,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/grouper/full_grouper.mk)

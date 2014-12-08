@@ -8,7 +8,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Inherit AOSP device configuration for vigor.
 $(call inherit-product, device/htc/vigor/vigor.mk)
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Boot animation
 PRODUCT_COPY_FILES += \

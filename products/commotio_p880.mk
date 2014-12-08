@@ -10,7 +10,6 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/products/beats.mk)
 
 # Inherit CM device configuration for p880.
 $(call inherit-product, device/lge/p880/p880.mk)

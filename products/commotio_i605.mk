@@ -11,7 +11,6 @@ PRODUCT_COPY_FILES += \
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-# $(call inherit-product, vendor/vanir/products/beats.mk)
 
 # CDMA APNs and Simcard app
 $(call inherit-product, vendor/commotio/products/cdma.mk)
