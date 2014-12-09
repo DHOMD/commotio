@@ -18,12 +18,12 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # MPDecision and thermal(d/-engine) auto-disablers for KT-based kernels (like ours)
 PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/jf/etc/boot.d/69nuclearwinter:system/etc/boot.d/69nuclearwinter \
-    vendor/commotio/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter \
-    vendor/commotio/proprietary/jf/bin/nuclearwinterinternal:system/bin/nuclearwinterinternal
+    vendor/vanir/proprietary/jf/etc/boot.d/69nuclearwinter:system/etc/boot.d/69nuclearwinter \
+    vendor/vanir/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter \
+    vendor/vanir/proprietary/jf/bin/nuclearwinterinternal:system/bin/nuclearwinterinternal
 
 # Inherit common Verizon Wireless Perms and Lib
-$(call inherit-product, vendor/commotio/products/vzw.mk)
+$(call inherit-product, vendor/vanir/products/vzw.mk)
 
 $(call inherit-product, device/samsung/kltevzw/full_kltevzw.mk)
 
