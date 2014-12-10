@@ -20,6 +20,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     flo \
     gee \
     geeb \
+    golden \
     grouper \
     hammerhead \
     huashan \
@@ -51,6 +52,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     p880 \
     pollux \
     pollux_windy \
+    skomer \
     t0lte \
     tf700 \
     tf701 \

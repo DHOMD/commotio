@@ -17,6 +17,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_flo.mk \
     $(LOCAL_DIR)/commotio_gee.mk \
     $(LOCAL_DIR)/commotio_geeb.mk \
+    $(LOCAL_DIR)/commotio_golden.mk \
     $(LOCAL_DIR)/commotio_grouper.mk \
     $(LOCAL_DIR)/commotio_hammerhead.mk \
     $(LOCAL_DIR)/commotio_hlte.mk \
@@ -48,8 +49,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_p880.mk \
     $(LOCAL_DIR)/commotio_pollux.mk \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
-    $(LOCAL_DIR)/commotio_quincyatt.mk \
-    $(LOCAL_DIR)/commotio_quincytmo.mk \
+    $(LOCAL_DIR)/commotio_skomer.mk \
     $(LOCAL_DIR)/commotio_t0lte.mk \
     $(LOCAL_DIR)/commotio_tf700.mk \
     $(LOCAL_DIR)/commotio_tf701.mk \
