@@ -18,7 +18,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/jf/bin/nuclearwinterinternal:system/bin/nuclearwinterinternal
 
 # Inherit common product files.
-NO_DRM_BLOBS := true
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Unified device flag for Verizon permissions

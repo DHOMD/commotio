@@ -4,8 +4,7 @@ DHO_VENDOR := commotio
 KERNEL_SPAM := Faux Kernel v013u IN THE HIZNOUSE
 
 PRODUCT_PACKAGES += \
-    LiveWallpapersPicker \
-    Mira4U
+    LiveWallpapersPicker
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -10,9 +10,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
-# Inherit common product files.
-NO_DRM_BLOBS := true
-
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
