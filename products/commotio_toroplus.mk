@@ -7,7 +7,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ring.delay=0 \
     ro.telephony.call_ring.delay=50 \
     ro.ril.fast.dormancy.rule=0 \
-    ro.goo.rom=commotio-TOROPLUS
+    ro.goo.rom=commotio-toroplus
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)

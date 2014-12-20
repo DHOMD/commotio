@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-TORO
+    ro.goo.rom=commotio-toro
 
 $(call inherit-product, vendor/commotio/products/commotio_tuna.mk)
 

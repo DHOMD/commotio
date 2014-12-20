@@ -8,7 +8,7 @@ PRODUCT_PACKAGES += \
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-TILAPIA
+    ro.goo.rom=commotio-tilapia
 
 # Boot Animation
 PRODUCT_COPY_FILES += \

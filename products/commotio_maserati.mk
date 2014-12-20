@@ -2,7 +2,7 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-MASERATI
+    ro.goo.rom=commotio-maserati
 
 # Boot Animation
 PRODUCT_COPY_FILES += \

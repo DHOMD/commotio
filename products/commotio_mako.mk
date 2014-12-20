@@ -7,7 +7,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ring.delay=0 \
     ro.telephony.call_ring.delay=50 \
     ro.ril.fast.dormancy.rule=0 \
-    ro.goo.rom=commotio-MAKO
+    ro.goo.rom=commotio-mako
 
 # Boot animation
 PRODUCT_COPY_FILES += \

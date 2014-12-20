@@ -3,7 +3,7 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-MAGURO
+    ro.goo.rom=commotio-maguro
 
 # More Language support for Maguro LatinIME
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/dictionaries

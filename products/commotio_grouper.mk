@@ -10,7 +10,7 @@ PRODUCT_PACKAGES += \
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
-    ro.goo.rom=commotio-GROUPER
+    ro.goo.rom=commotio-grouper
 
 # Tablet Overlays no radios
     PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio

@@ -2,7 +2,7 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-YUGA
+    ro.goo.rom=commotio-yuga
 
 # Boot Animation
 PRODUCT_COPY_FILES += \
