@@ -29,7 +29,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     i9300 \
     i9305 \
     jewel \
-    jflte \
+    jflteatt \
     jfltetmo \
     jfltevzw \
     klimtwifi \
