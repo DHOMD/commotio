@@ -29,7 +29,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_jflteatt.mk \
     $(LOCAL_DIR)/commotio_jfltetmo.mk \
     $(LOCAL_DIR)/commotio_jfltevzw.mk \
-    $(LOCAL_DIR)/commotio_klimtwifi.mk \
     $(LOCAL_DIR)/commotio_klte.mk \
     $(LOCAL_DIR)/commotio_kltevzw.mk \
     $(LOCAL_DIR)/commotio_ls990.mk \
