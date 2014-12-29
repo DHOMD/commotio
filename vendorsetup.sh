@@ -51,6 +51,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     p880 \
     pollux \
     pollux_windy \
+    shamu \
     skomer \
     t0lte \
     tf700 \

@@ -48,6 +48,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_p880.mk \
     $(LOCAL_DIR)/commotio_pollux.mk \
     $(LOCAL_DIR)/commotio_pollux_windy.mk \
+    $(LOCAL_DIR)/commotio_shamu.mk \
     $(LOCAL_DIR)/commotio_skomer.mk \
     $(LOCAL_DIR)/commotio_t0lte.mk \
     $(LOCAL_DIR)/commotio_tf700.mk \
