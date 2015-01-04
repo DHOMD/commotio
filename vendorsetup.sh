@@ -24,7 +24,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     grouper \
     hammerhead \
     huashan \
-    hlte \
+    hltespr \
+    hltetmo \
     i605 \
     i9300 \
     i9305 \

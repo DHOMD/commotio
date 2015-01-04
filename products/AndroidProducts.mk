@@ -20,7 +20,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_golden.mk \
     $(LOCAL_DIR)/commotio_grouper.mk \
     $(LOCAL_DIR)/commotio_hammerhead.mk \
-    $(LOCAL_DIR)/commotio_hlte.mk \
+    $(LOCAL_DIR)/commotio_hltespr.mk \
+    $(LOCAL_DIR)/commotio_hltetmo.mk \
     $(LOCAL_DIR)/commotio_huashan.mk \
     $(LOCAL_DIR)/commotio_i605.mk \
     $(LOCAL_DIR)/commotio_i9300.mk \
