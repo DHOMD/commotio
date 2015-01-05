@@ -12,6 +12,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     d802 \
     d850 \
     d851 \
+    d855 \
     dlx \
     e980 \
     falcon \
