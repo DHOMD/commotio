@@ -16,8 +16,7 @@ PRODUCT_PACKAGES += \
     busybox \
     Email \
     Launcher3 \
-    LiveWallpapersPicker \
-    OmniSwitch
+    LiveWallpapersPicker
 
 #    PerformanceControl \
 #    VanirUpdater
@@ -123,15 +122,10 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/whitelist:system/addon.d/whitelist
 endif
 
-#Define thirdparty for Koush's SU
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.vanir.superuser
-
 # Required CM packages
 PRODUCT_PACKAGES += \
     Camera \
     LatinIME \
-    Superuser \
     su \
     BluetoothExt
 
