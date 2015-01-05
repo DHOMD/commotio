@@ -235,5 +235,10 @@ PRODUCT_PACKAGES += \
 # Allow installing apps that require cm permissions from the play store 
 include vendor/cyngn/product.mk
 
+# Fucking disgusting hack
+CM_BUILD=true
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cm.version=cm-12.0
+
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
 
