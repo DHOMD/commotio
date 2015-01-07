@@ -35,6 +35,7 @@ ZOMG_ITS_A_COMBO_COMBO()
     jfltetmo \
     jfltevzw \
     klte \
+    kltespr \
     kltevzw \
     ls990 \
     m7 \

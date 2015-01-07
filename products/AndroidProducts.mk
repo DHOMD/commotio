@@ -33,6 +33,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_jfltetmo.mk \
     $(LOCAL_DIR)/commotio_jfltevzw.mk \
     $(LOCAL_DIR)/commotio_klte.mk \
+    $(LOCAL_DIR)/commotio_kltespr.mk \
     $(LOCAL_DIR)/commotio_kltevzw.mk \
     $(LOCAL_DIR)/commotio_ls990.mk \
     $(LOCAL_DIR)/commotio_m7.mk \
