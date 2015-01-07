@@ -44,7 +44,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     maguro \
     manta \
     mako \
-    maserati \
     mondrianwifi \
     moto_msm8960 \
     moto_msm8960_jbbl \
@@ -57,7 +56,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     skomer \
     t0lte \
     tf700 \
-    tf701 \
     tilapia \
     toro \
     p700 \
