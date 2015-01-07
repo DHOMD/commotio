@@ -5,6 +5,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/commotio_d2spr.mk \
     $(LOCAL_DIR)/commotio_d2vzw.mk \
     $(LOCAL_DIR)/commotio_d710.mk \
+    $(LOCAL_DIR)/commotio_d800.mk \
     $(LOCAL_DIR)/commotio_d801.mk \
     $(LOCAL_DIR)/commotio_d802.mk \
     $(LOCAL_DIR)/commotio_d850.mk \
