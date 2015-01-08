@@ -1,3 +1,6 @@
+#Squisher Choosing
+DHO_VENDOR := commotio
+
 # Catchy but impractical something here
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -18,7 +21,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter \
     vendor/vanir/proprietary/jf/bin/nuclearwinterinternal:system/bin/nuclearwinterinternal
 
-# Inherit common Verizon Wireless Perms and Lib
-$(call inherit-product, vendor/vanir/products/vzw.mk)
-
 $(call inherit-product, device/samsung/kltespr/full_kltespr.mk)
+
+PRODUCT_NAME := commotio_kltespr
