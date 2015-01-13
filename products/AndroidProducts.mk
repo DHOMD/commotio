@@ -1,4 +1,5 @@
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/commotio_amami.mk \
     $(LOCAL_DIR)/commotio_bacon.mk \
     $(LOCAL_DIR)/commotio_deb.mk \
     $(LOCAL_DIR)/commotio_d2att.mk \

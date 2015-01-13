@@ -2,6 +2,7 @@
 ZOMG_ITS_A_COMBO_COMBO()
 {
   for x in \
+    amami \
     bacon \
     deb \
     d2att \
