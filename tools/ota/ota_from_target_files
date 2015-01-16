@@ -476,6 +476,16 @@ def GetImage(which, tmpdir, info_dict):
   return sparse_img.SparseImage(path, mappath)
 
 
+def CopyInstallTools(output_zip):
+  oldcwd = os.getcwd()
+  os.chdir(os.getenv('OUT'))
+  for root, subdirs, files in os.walk("install"):
+    for f in files:
+      p = os.path.join(root, f)
+      output_zip.write(p, p)
+  os.chdir(oldcwd)
+
+
 def WriteFullOTAPackage(input_zip, output_zip):
   # TODO: how to determine this?  We don't know what version it will
   # be installed on top of.  For now, we expect the API just won't
@@ -564,6 +574,7 @@ reboot_now("%(bcb_dev)s", "recovery");
 else if get_stage("%(bcb_dev)s") == "3/3" then
 """ % bcb_dev)
 
+  script.SmartUnmount("/system")
   device_specific.FullOTA_InstallBegin()
 
   script.ShowProgress(0.5, 0)
@@ -585,12 +596,18 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print(" ")
   script.Print("**     Evaluating Gapps              **")
   script.SmartUnmount("/system")
+
+  if block_based:
+    common.ZipWriteStr(output_zip, "system/bin/automagic.sh",
+                   ""+input_zip.read("SYSTEM/bin/automagic.sh"))
+    common.ZipWriteStr(output_zip, "system/build.prop",
+                     ""+input_zip.read("SYSTEM/build.prop"))
+  CopyInstallTools(output_zip)
+  script.UnpackPackageDir("install", "/tmp/install")
+  script.SetPermissionsRecursive("/tmp/install", 0, 0, 0755, 0644, None, None)
+  script.SetPermissionsRecursive("/tmp/install/bin", 0, 0, 0755, 0755, None, None)
+
   if OPTIONS.backuptool:
-    if block_based:
-      common.ZipWriteStr(output_zip, "system/bin/backuptool.sh",
-                     ""+input_zip.read("SYSTEM/bin/backuptool.sh"))
-      common.ZipWriteStr(output_zip, "system/bin/backuptool.functions",
-                     ""+input_zip.read("SYSTEM/bin/backuptool.functions"))
     script.Mount("/system")
     script.RunBackup("backup")
     script.Unmount("/system")
@@ -602,15 +619,13 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   if HasVendorPartition(input_zip):
     system_progress -= 0.1
 
-  if block_based:
-    common.ZipWriteStr(output_zip, "system/bin/otasigcheck.sh",
-                   ""+input_zip.read("SYSTEM/bin/otasigcheck.sh"))
-
   script.AppendExtra("if is_mounted(\"/data\") then")
   script.ValidateSignatures("data")
+  script.RunAutomagic()
   script.AppendExtra("else")
   script.Mount("/data")
   script.ValidateSignatures("data")
+  script.RunAutomagic()
   script.Unmount("/data")
   script.AppendExtra("endif;")
 
@@ -701,12 +716,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   vanirinitlinks.append(("/init.vanir.rc", "/system/etc/init.local.rc"))
   script.MakeSymlinks(vanirinitlinks)
 
-  if block_based:
-    script.Mount("/system")
-  script.ValidateSignatures("cleanup")
-  if block_based:
-    script.Unmount("/system")
-
   device_specific.FullOTA_PostValidate()
 
   script.Print(" ")
@@ -718,7 +727,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.RunBackup("restore")
     if block_based:
       script.Unmount("/system")
-  script.Print(" ")
+
   script.Print("**      RISE Zombie Gapps RISE       **")
 
   script.ShowProgress(0.05, 5)
@@ -734,6 +743,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("**      Mission Complete             **")
   script.Print(" ")
   script.Print(" ")
+
+  script.UnmountAll()
 
   if OPTIONS.wipe_user_data:
     script.ShowProgress(0.1, 10)
