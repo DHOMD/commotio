@@ -60,7 +60,8 @@ ZOMG_ITS_A_COMBO_COMBO()
     tf700 \
     tilapia \
     toro \
-    p700 \
+    trltespr \
+    trltetmo \
     toroplus \
     v500 \
     vs980 \
