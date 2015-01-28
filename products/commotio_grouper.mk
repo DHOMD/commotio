@@ -1,8 +1,6 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-KERNEL_SPAM := Faux Kernel v013u IN THE H1ZNOUSE
-
 PRODUCT_PACKAGES += \
     Camera \
     LiveWallpapersPicker

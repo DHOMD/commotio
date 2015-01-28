@@ -1,5 +1,5 @@
 #Squisher Choosing
-DHO_VENDOR := vanir
+DHO_VENDOR := commotio
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \

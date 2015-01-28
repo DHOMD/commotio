@@ -1,5 +1,5 @@
-# when this builds, it will probably mess your phone up.
-# you might want to wait to try this unless you have a giant pair of low-hanging huevos
+#Squisher Choosing
+DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-shamu
@@ -14,7 +14,6 @@ $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
-PRODUCT_PACKAGE_OVERLAYS += device/moto/shamu/overlay-cm
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := shamu
