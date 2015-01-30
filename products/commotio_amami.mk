@@ -2,6 +2,7 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.rom=commotio-amami \
     drm.service.enabled=true
 
 # Boot Animation
@@ -11,10 +12,8 @@ PRODUCT_COPY_FILES += \
 # Inherit commotio common Phone stuff.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
-# Phone Config
+#Go and build Amami
 $(call inherit-product, device/sony/amami/full_amami.mk)
-
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=D5503 BUILD_FINGERPRINT=Sony/D5503/D5503:5.0/14.4.A.0.133/k___jQ:user/release-keys PRIVATE_BUILD_DESC="D5503-user 5.0 14.4.A.0.133 k___jQ release-keys"
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := amami
@@ -22,3 +21,5 @@ PRODUCT_NAME := commotio_amami
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia Z1 Compact
 PRODUCT_MANUFACTURER := Sony
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=D5503 BUILD_FINGERPRINT=Sony/D5503/D5503:5.0/14.4.A.0.133/k___jQ:user/release-keys PRIVATE_BUILD_DESC="D5503-user 5.0 14.4.A.0.133 k___jQ release-keys"
