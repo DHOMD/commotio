@@ -22,7 +22,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     flo \
     gee \
     geeb \
-    golden \
     grouper \
     hammerhead \
     huashan \
@@ -55,7 +54,6 @@ ZOMG_ITS_A_COMBO_COMBO()
     pollux \
     pollux_windy \
     shamu \
-    skomer \
     t0lte \
     tf700 \
     tilapia \
