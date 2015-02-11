@@ -101,6 +101,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
     vendor/vanir/proprietary/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/vanir/proprietary/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
     vendor/vanir/proprietary/common/etc/init.d/99vanir:system/etc/init.d/99vanir \
     vendor/vanir/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
@@ -108,7 +109,7 @@ PRODUCT_COPY_FILES += \
 
 # system and persistent /data boot.d Tweaks - triggered when ro.boot_complete is set to 1
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/bin/userinit:system/bin/userinit \
+    vendor/vanir/proprietary/common/bin/afterboot:system/bin/afterboot \
     vendor/vanir/proprietary/common/etc/boot.d/00vanirnice:system/etc/boot.d/00vanirnice
 
 
