@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
     busybox \
     Email \
     Launcher3 \
+    LockClock \
     LiveWallpapersPicker
 
 #    PerformanceControl \
