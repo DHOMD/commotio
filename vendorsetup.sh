@@ -1,74 +1,9 @@
 #!/bin/bash
-ZOMG_ITS_A_COMBO_COMBO()
+COMBOS()
 {
-  for x in \
-    amami \
-    bacon \
-    deb \
-    d2att \
-    d2spr \
-    d2vzw \
-    d800 \
-    d801 \
-    d802 \
-    d850 \
-    d851 \
-    d855 \
-    dlx \
-    e980 \
-    falcon \
-    find5 \
-    find7 \
-    flo \
-    gee \
-    geeb \
-    grouper \
-    hammerhead \
-    huashan \
-    hltespr \
-    hltetmo \
-    i605 \
-    i9300 \
-    i9305 \
-    jewel \
-    jflteatt \
-    jfltetmo \
-    jfltevzw \
-    klte \
-    kltespr \
-    kltevzw \
-    ls990 \
-    m7 \
-    m7spr \
-    m7vzw \
-    m8 \
-    maguro \
-    manta \
-    mako \
-    mondrianwifi \
-    moto_msm8960 \
-    moto_msm8960_jbbl \
-    n1 \
-    n7100 \
-    p880 \
-    pollux \
-    pollux_windy \
-    shamu \
-    t0lte \
-    tf700 \
-    tilapia \
-    toro \
-    trltespr \
-    trltetmo \
-    toroplus \
-    v500 \
-    vs980 \
-    vs985 \
-    yuga;
-  do
-    add_lunch_combo commotio_$x-$1
-  done
+find vendor/commotio/products -name commotio_*.mk | while read FILE; do basename $FILE .mk | sed 's/commotio\_//g'; done
 }
-
-ZOMG_ITS_A_COMBO_COMBO userdebug
-ZOMG_ITS_A_COMBO_COMBO user
+for x in `COMBOS | sort -h`; do
+  ## I don't give a fuck above user and eng build.
+  add_lunch_combo commotio_$x-userdebug
+done

@@ -5,7 +5,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.goo.rom=commotio-m7
 
-$(call inherit-product, vendor/commotio/products/commotio_m7-common.mk)
+$(call inherit-product, vendor/commotio/products/multi_m7-common.mk)
 
 # Inherit AOSP device configuration for HTC One Unlocked edition.
 $(call inherit-product, device/htc/m7/full_m7.mk)

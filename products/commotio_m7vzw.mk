@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/htc/m7vzw/full_m7vzw.mk)
 
 # Commotio
-$(call inherit-product, vendor/commotio/products/commotio_m7-common.mk)
+$(call inherit-product, vendor/commotio/products/multi_m7-common.mk)
 $(call inherit-product, vendor/commotio/products/cdma.mk)
 
 # Inherit common Verizon Wireless Perms and Lib

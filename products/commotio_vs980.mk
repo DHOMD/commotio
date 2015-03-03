@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/lge/vs980/vs980.mk)
 
 # Inherit common commotio files.
-$(call inherit-product, vendor/commotio/products/commotio_g2-common.mk)
+$(call inherit-product, vendor/commotio/products/multi_g2-common.mk)
 $(call inherit-product, vendor/commotio/products/cdma.mk)
 
 # Inherit common Verizon Wireless Perms and Lib

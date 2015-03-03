@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/lge/d800/d800.mk)
 
 # Inherit common commotio files.
-$(call inherit-product, vendor/commotio/products/commotio_g2-common.mk)
+$(call inherit-product, vendor/commotio/products/multi_g2-common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := d800
