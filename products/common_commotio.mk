@@ -8,12 +8,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 #    vendor/commotio/overlay/theme \
 
-#Gapps
-GAPPS := false
-ifeq ($(GAPPS),true)
-$(call inherit-product, vendor/commotio/products/common_gapps.mk)
-endif
-
 # Also see overrides in common
 # Sound 
 PRODUCT_PROPERTY_OVERRIDES += \
