@@ -15,6 +15,12 @@ PRODUCT_COPY_FILES += \
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# MPDecision and thermal(d/-engine) auto-disablers for KT-based kernels (like ours)
+PRODUCT_COPY_FILES += \
+    vendor/vanir/proprietary/jf/etc/boot.d/69nuclearwinter:system/etc/boot.d/69nuclearwinter \
+    vendor/vanir/proprietary/jf/bin/nuclearwinter:system/bin/nuclearwinter \
+    vendor/vanir/proprietary/jf/bin/nuclearwinterinternal:system/bin/nuclearwinterinternal
+
 $(call inherit-product, device/samsung/kltespr/full_kltespr.mk)
 
 PRODUCT_NAME := commotio_kltespr
