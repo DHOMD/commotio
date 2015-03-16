@@ -12,12 +12,6 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
-# MPDecision auto-disabler for kernels (like ours)
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/hammerhead/etc/init.d/00kernelcompat:system/etc/init.d/00kernelcompat \
-    vendor/vanir/proprietary/hammerhead/bin/wedontgotoravenholmanymore:system/bin/wedontgotoravenholmanymore \
-    vendor/vanir/proprietary/hammerhead/bin/unforeseenconsequences:system/bin/unforeseenconsequences
-
 # Inherit device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
