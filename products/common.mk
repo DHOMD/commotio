@@ -15,6 +15,7 @@ $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 PRODUCT_PACKAGES += \
     busybox \
     Email \
+    IndecentXposure \
     Launcher3 \
     LockClock \
     LiveWallpapersPicker

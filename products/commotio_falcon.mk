@@ -19,8 +19,9 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 $(call inherit-product, device/motorola/falcon/full_falcon.mk)
 
 # device name
+PRODUCT_BRAND := motorola
+PRODUCT_DEVICE := falcon
 PRODUCT_RELEASE_NAME := MOTO G
 PRODUCT_NAME := commotio_falcon
-PRODUCT_BRAND := motorola
 PRODUCT_MODEL := MOTO G
 PRODUCT_MANUFACTURER := MOTOROLA
