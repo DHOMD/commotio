@@ -55,11 +55,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     movfilter=40 \
     per_sec=300 \
-    ro.vanir.base=5.0 \
+    ro.vanir.base=5.1 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B78 \
-    ro.goo.version=78
+    ro.modversion=Commotio-B80 \
+    ro.goo.version=80
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LMY47D BUILD_ID=LMY47D BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
