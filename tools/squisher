@@ -10,10 +10,6 @@ export ANDROID_BUILD_TOP=$ANDROID_BUILD_TOP
 
 QUIET=-q
 
-# No need for recovery
-#rm -rf $REPACK/ota/recovery
-#rm -rf $REPACK/ota/system/etc/install-recovery.sh
-
 # Determine what to name the new signed package
 GOOROM=`sed -n -e'/ro\.goo\.rom/s/^.*=//p' $OUT/system/build.prop`
 GOOVERSION=`sed -n -e'/ro\.goo\.version/s/^.*=//p' $OUT/system/build.prop`
