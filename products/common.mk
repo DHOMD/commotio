@@ -18,7 +18,8 @@ PRODUCT_PACKAGES += \
     IndecentXposure \
     Launcher3 \
     LockClock \
-    LiveWallpapersPicker
+    LiveWallpapersPicker \
+    Profiles
 
 #    VanirUpdater
 
