@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     LiveWallpapersPicker
 
-#    PerformanceControl \
 #    VanirUpdater
 
 # QuickBoot (included automagically for non-oppo qcom devices)
@@ -58,8 +57,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=5.1 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B82 \
-    ro.goo.version=82
+    ro.modversion=Commotio-B83 \
+    ro.goo.version=83
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LMY47V BUILD_ID=LMY47V BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
