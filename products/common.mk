@@ -58,8 +58,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=5.1 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B83 \
-    ro.goo.version=83
+    ro.modversion=Commotio-B84 \
+    ro.goo.version=84
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LMY47V BUILD_ID=LMY47V BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
@@ -212,7 +212,7 @@ PRODUCT_PACKAGES += \
     utility_unpackbootimg
 
 # Allow installing apps that require cm permissions from the play store 
-include vendor/cyngn/product.mk
+#include vendor/cyngn/product.mk
 
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
 
