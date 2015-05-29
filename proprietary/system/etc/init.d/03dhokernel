@@ -1,16 +1,6 @@
 #!/system/bin/sh
 # DroidTheory + DHO
 
-# Kernel Tweaks
-#
-busybox sysctl -w kernel.panic=0
-busybox sysctl -w kernel.panic_on_oops=1
-busybox sysctl -w kernel.hung_task_timeout_secs=0
-busybox sysctl -w kernel.sched_latency_ns=5000000; #600000
-busybox sysctl -w kernel.sched_min_granularity_ns=1000000; #400000
-busybox sysctl -w kernel.sched_wakeup_granularity_ns=1000000
-busybox sysctl -w kernel.sched_child_runs_first=0
-
 # Battery Tweaks
 busybox sysctl -w kernel.random.write_wakeup_threshold=256
 busybox sysctl -w kernel.random.read_wakeup_threshold=128
