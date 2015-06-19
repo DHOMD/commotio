@@ -35,7 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.power.collapse=0 \
     ro.ril.fast.dormancy.rule=0 \
     ro.vold.umsdirtyratio=20 \
-    wifi.supplicant_scan_interval=300 \
+    wifi.supplicant_scan_interval=300
 
 # Doghouse
 
