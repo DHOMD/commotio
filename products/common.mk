@@ -64,8 +64,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=5.1 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B89 \
-    ro.goo.version=89
+    ro.modversion=Commotio-B90 \
+    ro.goo.version=90
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LVY48E BUILD_ID=LVY48E BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
