@@ -2,8 +2,6 @@
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/vanir/overlay/common
 
-#    vendor/vanir/overlay/dictionaries
-
 # DSPManager and NFC
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
@@ -25,14 +23,44 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LockClock \
     LiveWallpapersPicker \
-    Profiles
+    Profiles \
+    SoundRecorder \
+    CMSettingsProvider
 
+#    Terminal \
 #    VanirUpdater
 
 # QuickBoot (included automagically for non-oppo qcom devices)
 PRODUCT_PACKAGES += \
- QuickBoot \
- init.vanir.quickboot.rc
+    QuickBoot \
+    init.vanir.quickboot.rc
+
+# FUCKING DISGUSTING SHIT
+ifndef CM_PLATFORM_REV
+  # For internal SDK revisions that are hotfixed/patched
+  # Reset after each CM_PLATFORM_SDK_VERSION release
+  # If you are doing a release and this is NOT 0, you are almost certainly doing it wrong
+  CM_PLATFORM_REV := 0
+endif
+ifndef CM_PLATFORM_SDK_VERSION
+  CM_PLATFORM_SDK_VERSION := 2
+endif
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
+
+# CyanogenMod Platform Internal
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.cm.build.version.plat.rev=$(CM_PLATFORM_REV)
+
+-include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -148,7 +176,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Basic \
     Development \
-    SoundRecorder \
     libemoji
 
 # Stagefright FFMPEG plugin
@@ -157,6 +184,10 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     media_codecs_ffmpeg.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
@@ -170,9 +201,9 @@ PRODUCT_PACKAGES += \
     bash \
     vim \
     zip \
+    unrar \
     nano \
     htop \
-    powertop \
     lsof \
     mount.exfat \
     fsck.exfat \
@@ -185,7 +216,13 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank \
     sqlite3 \
-    strace
+    strace \
+    curl
+
+ifneq ($(TARGET_ARCH),arm64)
+PRODUCT_PACKAGES += \
+    powertop
+endif
 
 # Openssh
 PRODUCT_PACKAGES += \
@@ -200,6 +237,10 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+# openvpwn
+PRODUCT_PACKAGES += \
+    openvpn
 
 # Theme engine
 PRODUCT_PACKAGES += \
@@ -219,7 +260,9 @@ PRODUCT_PACKAGES += \
     utility_unpackbootimg
 
 # Allow installing apps that require cm permissions from the play store 
-#include vendor/cyngn/product.mk
+-include vendor/cyngn/product.mk
 
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
+$(call inherit-product-if-exists, vendor/extra/product.mk)
+
 
