@@ -24,8 +24,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
-    SoundRecorder \
-    CMSettingsProvider
+    SoundRecorder
 
 #    Terminal \
 #    VanirUpdater
