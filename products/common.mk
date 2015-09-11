@@ -44,28 +44,16 @@ endif
 ifndef CM_PLATFORM_SDK_VERSION
   CM_PLATFORM_SDK_VERSION := 2
 endif
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
 
 # CyanogenMod Platform Internal
 PRODUCT_PROPERTY_OVERRIDES += \
+  ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION) \
   ro.cm.build.version.plat.rev=$(CM_PLATFORM_REV)
-
--include $(WORKSPACE)/build_env/image-auto-bits.mk
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.feedback \
     ro.com.google.locationfeatures=1 \
@@ -76,6 +64,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Cesium.ogg \
     ro.build.selinux=1 \
     persist.sys.root_access=3
+
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
 
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -260,6 +256,9 @@ PRODUCT_PACKAGES += \
 
 # Allow installing apps that require cm permissions from the play store 
 -include vendor/cyngn/product.mk
+
+# Allow compiling on Jenkins
+-include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
 $(call inherit-product-if-exists, vendor/extra/product.mk)
