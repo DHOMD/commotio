@@ -42,7 +42,7 @@ ifndef CM_PLATFORM_REV
   CM_PLATFORM_REV := 0
 endif
 ifndef CM_PLATFORM_SDK_VERSION
-  CM_PLATFORM_SDK_VERSION := 2
+  CM_PLATFORM_SDK_VERSION := 3
 endif
 
 # CyanogenMod Platform Internal
@@ -87,8 +87,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=5.1 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B91 \
-    ro.goo.version=91
+    ro.modversion=Commotio-B92 \
+    ro.goo.version=92
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LVY48F BUILD_ID=LVY48F BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
