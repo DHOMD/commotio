@@ -16,7 +16,7 @@ $(call inherit-product, vendor/commotio/products/cdma.mk)
 $(call inherit-product, vendor/vanir/products/vzw.mk)
 
 # Setup device specific product configuration.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7wlv BUILD_ID=LVY48F BUILD_FINGERPRINT="VERIZON/HTCOneVZW/m7wlv:5.1/LVY48F/304035.8:user/release-k" PRIVATE_BUILD_DESC="3.11.605.1 CL304035 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7wlv BUILD_ID=LMY48W BUILD_FINGERPRINT="VERIZON/HTCOneVZW/m7wlv:5.1/LMY48W/304035.8:user/release-k" PRIVATE_BUILD_DESC="3.11.605.1 CL304035 release-keys"
 
 PRODUCT_NAME := commotio_m7vzw
 PRODUCT_DEVICE := m7vzw
