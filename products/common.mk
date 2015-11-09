@@ -19,12 +19,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     busybox \
     Email \
+    ExactCalculator \
     IndecentXposure \
     Launcher3 \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
-    SoundRecorder
+    SoundRecorder \
+    CMSettingsProvider
 
 #    Terminal \
 #    VanirUpdater
@@ -123,11 +125,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinimegoogle.so
 
-# proprietary guts
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/vanir/proprietary/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
 # init.d Tweaks
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
@@ -169,7 +166,6 @@ PRODUCT_PACKAGES += \
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
-    Basic \
     Development \
     libemoji
 
@@ -184,6 +180,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
+# Copy over added mimetype supported in libcore.net.MimeUtils
+PRODUCT_COPY_FILES += \
+    vendor/vanir/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+
 # Extra tools in CM
 PRODUCT_PACKAGES += \
     libsepol \
@@ -193,6 +193,7 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
+    mkntfs \
     bash \
     vim \
     zip \
@@ -239,6 +240,7 @@ PRODUCT_PACKAGES += \
 
 # Theme engine
 PRODUCT_PACKAGES += \
+    aapt \
     ThemeChooser \
     ThemesProvider
 
