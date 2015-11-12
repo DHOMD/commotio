@@ -2,7 +2,7 @@
 DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-vs985
+    ro.goo.rom=commotio-angler
 
 # Inherit vanir phone stuff
 $(call inherit-product, vendor/vanir/products/common_phones.mk)
