@@ -5,12 +5,12 @@
 sysctl -p /system/etc/sysctl.conf
 
 # HyperTh3ory
-busybox rm -f /cache/*.apk
-busybox rm -f /cache/*.tmp
+toybox rm -f /cache/*.apk
+toybox rm -f /cache/*.tmp
 
 # Battery
-busybox sysctl -w vm.dirty_expire_centisecs=750
-busybox sysctl -w vm.dirty_writeback_centisecs=1500
+toybox sysctl -w vm.dirty_expire_centisecs=750
+toybox sysctl -w vm.dirty_writeback_centisecs=1500
 
 #
 # General Queue Tweaks

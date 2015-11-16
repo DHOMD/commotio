@@ -2,8 +2,8 @@
 # DroidTheory + DHO
 
 # Battery Tweaks
-busybox sysctl -w kernel.random.write_wakeup_threshold=256
-busybox sysctl -w kernel.random.read_wakeup_threshold=128
+toybox sysctl -w kernel.random.write_wakeup_threshold=256
+toybox sysctl -w kernel.random.read_wakeup_threshold=128
 
 # Breaking the lease
 # Prime Directive

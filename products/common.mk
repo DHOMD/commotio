@@ -1,6 +1,5 @@
 # Vanir files
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/vanir/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/common
 
 # DSPManager and NFC
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
@@ -17,15 +16,16 @@ PRODUCT_PACKAGES += \
 
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
-    busybox \
+    AudioFX \
     Email \
     ExactCalculator \
     IndecentXposure \
-    Launcher3 \
+    Trebuchet \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
     SoundRecorder \
+    toybox \
     CMSettingsProvider
 
 #    Terminal \
@@ -193,19 +193,19 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
-    mkntfs \
+    mkfs.ntfs \
+    fsck.ntfs \
+    mount.ntfs \
     bash \
     vim \
+    wget \
+    unzip \
+    7z \
+    bzip2 \
     zip \
     unrar \
     nano \
     htop \
-    lsof \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat \
-    ntfsfix \
-    ntfs-3g \
     gdbserver \
     micro_bench \
     oprofiled \
@@ -214,6 +214,15 @@ PRODUCT_PACKAGES += \
     sqlite3 \
     strace \
     curl
+
+WITH_EXFAT ?= true
+ifeq ($(WITH_EXFAT),true)
+TARGET_USES_EXFAT := true
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+endif
 
 ifneq ($(TARGET_ARCH),arm64)
 PRODUCT_PACKAGES += \
@@ -247,11 +256,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/vanir/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
 
-ifneq ($(TARGET_ARCH),arm64)
 ## STREAMING DMESG?
 PRODUCT_PACKAGES += \
     klogripper
-endif
 
 ## FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
 PRODUCT_PACKAGES += \
