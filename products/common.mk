@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES += \
 ifeq ($(VANIR_FAILSAFE),)
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/bin/fix_permissions:system/bin/fix_permissions \
     vendor/vanir/proprietary/common/xbin/hunter:system/xbin/hunter \
     vendor/vanir/proprietary/common/xbin/testinitd:system/xbin/testinitd \
     vendor/vanir/proprietary/common/xbin/vanircheckcpu:system/xbin/vanircheckcpu \
