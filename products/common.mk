@@ -44,7 +44,7 @@ ifndef CM_PLATFORM_REV
   CM_PLATFORM_REV := 0
 endif
 ifndef CM_PLATFORM_SDK_VERSION
-  CM_PLATFORM_SDK_VERSION := 3
+  CM_PLATFORM_SDK_VERSION := 4
 endif
 
 # CyanogenMod Platform Internal
@@ -103,6 +103,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/vanirflash:system/xbin/vanirflash \
     vendor/vanir/proprietary/common/init.vanir.rc:root/init.vanir.rc \
     vendor/vanir/proprietary/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh \
+    vendor/vanir/proprietary/common/bin/run-parts:system/bin/run-parts \
     vendor/vanir/proprietary/common/bin/sysinit:system/bin/sysinit \
     vendor/vanir/proprietary/common/etc/init.d/00firsties:system/etc/init.d/00firsties
 
@@ -118,11 +119,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/system/etc/hosts:system/etc/hosts \
     vendor/vanir/proprietary/common/etc/resolv.conf:system/etc/resolv.conf
-
-# Keyboard Files
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/vanir/proprietary/common/lib/libjni_latinime.so:system/lib/libjni_latinimegoogle.so
 
 # init.d Tweaks
 PRODUCT_COPY_FILES += \
@@ -212,7 +208,8 @@ PRODUCT_PACKAGES += \
     procrank \
     sqlite3 \
     strace \
-    curl
+    curl \
+    pigz
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
