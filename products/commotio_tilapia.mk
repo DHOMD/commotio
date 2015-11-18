@@ -30,4 +30,4 @@ PRODUCT_DEVICE := tilapia
 PRODUCT_MODEL := Nexus 7 GSM
 PRODUCT_MANUFACTURER := asus
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasig BUILD_FINGERPRINT="google/nakasig/tilapia:6.0/MDB08M/2353240:user/release-keys" PRIVATE_BUILD_DESC="nakasig-user 6.0 MDB08M 2353240 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasig BUILD_FINGERPRINT="google/nakasig/tilapia:5.1/LMY47D/1743759:user/release-keys" PRIVATE_BUILD_DESC="nakasig-user 5.1 LMY47D 1743759 release-keys"

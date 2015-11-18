@@ -21,4 +21,4 @@ PRODUCT_MANUFACTURER := HTC
 $(call inherit-product, vendor/vanir/products/vzw.mk)
 
 # Set build fingerprint / ID / Product Name etc.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=dlx BUILD_FINGERPRINT=verizon_wwe/dlx/dlx:6.0/MDB08M/147796.1:user/release-keys PRIVATE_BUILD_DESC="2.06.606.0 CL147796 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=dlx BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.4.2/KOT49H/322791.5:user/release-keys PRIVATE_BUILD_DESC="4.09.605.5 CL322791 release-keys"
