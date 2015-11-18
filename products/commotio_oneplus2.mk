@@ -29,4 +29,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=oneplus2 \
     PRODUCT_NAME=OnePlus2 \
     BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:6.0.0/MRA58K/1436933040:user/release-keys \
-    PRIVATE_BUILD_DESC="OnePlus2-user 6.0.0 LMY47V 28 dev-keys"
+    PRIVATE_BUILD_DESC="OnePlus2-user 6.0.0 MDB08M 28 dev-keys"

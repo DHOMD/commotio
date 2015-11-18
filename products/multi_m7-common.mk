@@ -10,5 +10,3 @@ QCOM_FORCE_NONMOTO_DALVIK := true
 
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-
-#$(call inherrit-product, vendor/vanir/tweaks/m7/tweaks.mk
