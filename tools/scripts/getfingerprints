@@ -1,0 +1,62 @@
+#!/bin/bash
+# Ownership nuclearmistake
+# Kang DHO
+
+
+TOP=`dirname $0`/../../../../
+TOP=`cd $TOP && pwd`
+
+get_mkfile_variable() {
+  value=""
+  for x in `cat $1 | sed 's/:=/=/g' | grep $2`; do
+    value="`echo $x | cut -d '=' -f 2`"
+  done
+  echo $value
+}
+
+get_device_path() {
+  device=`get_mkfile_variable $1 PRODUCT_NAME`
+  for x in `cat $1 | grep inherit-product | grep device | cut -d ',' -f 2 | sed 's/)//g'`; do
+    cmmk=$TOP/`dirname $x`/cm.mk
+    [ -e $cmmk ] && echo $cmmk
+  done
+}
+
+for x in $TOP/vendor/commotio/products/commotio*.mk; do
+  grep -q PRODUCT_BUILD_PROP_OVERRIDES $x || continue
+  RESULT=`mktemp`
+  AFTER=`mktemp`
+  grep -B100 PRODUCT_BUILD_PROP_OVERRIDES $x | grep -v PRODUCT_BUILD_PROP_OVERRIDES >> $RESULT
+  grep -A100 PRODUCT_BUILD_PROP_OVERRIDES $x | while read line; do
+    if echo $line | grep -q PRODUCT_BUILD_PROP_OVERRIDES; then
+      touch .inoverrides
+    elif [ -f .inoverrides ]; then
+      if ! echo $line | grep -q \\\\; then
+        rm .inoverrides
+        echo $line >> $AFTER
+      fi
+    else
+      echo $line >> $AFTER
+    fi
+  done
+  rm -f .inoverrides
+  file=`get_device_path $x`
+  if ! grep -q PRODUCT_BUILD_PROP_OVERRIDES $file; then
+    rm -f $RESULT $AFTER
+    continue
+  fi
+  grep -A100 PRODUCT_BUILD_PROP_OVERRIDES $file | while read line; do
+    if echo $line | grep -q PRODUCT_BUILD_PROP_OVERRIDES || echo $line | grep -q \\\\; then
+      echo $line >> $RESULT
+    fi
+  done
+  cat $AFTER >> $RESULT
+  echo -e "\n\n\n\n===== $x =====\n"
+  if which colordiff >&/dev/null; then
+    colordiff $x $RESULT
+  else
+    diff $x $RESULT
+  fi
+  mv $RESULT $x
+  rm -f $RESULT $AFTER
+done
