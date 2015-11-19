@@ -1,0 +1,1 @@
+../../../../build/tools/releasetools/make_recovery_patch.py

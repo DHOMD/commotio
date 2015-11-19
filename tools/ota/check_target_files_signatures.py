@@ -1,0 +1,1 @@
+../../../../build/tools/releasetools/check_target_files_signatures.py

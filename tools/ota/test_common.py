@@ -1,0 +1,1 @@
+../../../../build/tools/releasetools/test_common.py

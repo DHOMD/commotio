@@ -1,0 +1,1 @@
+../../../../build/tools/releasetools/sign_target_files_apks.py
