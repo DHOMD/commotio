@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     Email \
     ExactCalculator \
     IndecentXposure \
-    Trebuchet \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
@@ -64,8 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \
     ro.config.alarm_alert=Cesium.ogg \
-    ro.build.selinux=1 \
-    persist.sys.root_access=3
+    ro.build.selinux=1
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \

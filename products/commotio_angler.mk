@@ -5,7 +5,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-angler
 
 # Inherit vanir phone stuff
-$(call inherit-product, vendor/vanir/products/common_phones.mk)
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 PRODUCT_COPY_FILES += \
