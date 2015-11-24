@@ -9,9 +9,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
-    Mms \
-    Stk \
-    Torch
+    messaging \
+    Stk
 
 # Audio Packages
 include frameworks/base/data/sounds/AudioPackage7.mk

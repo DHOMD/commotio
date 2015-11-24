@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     Email \
     ExactCalculator \
     IndecentXposure \
+    LatinIME \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
