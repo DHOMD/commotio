@@ -27,6 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     debug.sf.hw=1 \
     video.accelerate.hw=1 \
+    persist.service.adb.enable=1
     pm.sleep_mode=1 \
     ro.config.nocheckin=1 \
     ro.kernel.checkjni=0 \

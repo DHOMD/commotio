@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Profiles \
     SoundRecorder \
+    Trebuchet \
     toybox \
     CMSettingsProvider
 
@@ -76,11 +77,7 @@ endif
 
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
-    net.bt.name=Android \
     ro.config.hwfeature_wakeupkey=0 \
-    ro.ext4fs=1 \
-    ro.max.fling_velocity=15000 \
-    ro.min.fling_velocity=10000 \
     ro.lge.proximity.delay=20 \
     mot.proximity.delay=20 \
     ro.vanir.base=6.0 \
