@@ -117,10 +117,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
-    vendor/vanir/proprietary/common/etc/init.d/09cron:system/etc/init.d/09cron \
     vendor/vanir/proprietary/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
-    vendor/vanir/proprietary/common/etc/init.d/99vanir:system/etc/init.d/99vanir \
+    vendor/vanir/proprietary/common/etc/cron/root:system/etc/cron/cron.d/root \
     vendor/vanir/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
     vendor/vanir/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
 
@@ -136,6 +135,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/vanir/proprietary/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/vanir/proprietary/common/bin/50-vanir.sh:system/addon.d/50-vanir.sh \
+    vendor/vanir/proprietary/common/bin/start-crond:system/bin/start-crond \
     vendor/vanir/proprietary/common/bin/blacklist:system/addon.d/blacklist \
     vendor/vanir/proprietary/common/bin/whitelist:system/addon.d/whitelist
 endif
