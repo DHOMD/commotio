@@ -618,32 +618,22 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Unmount("/system");
   device_specific.FullOTA_InstallBegin()
 
-  #says: VANIR
+  script.Print("    _   _             _ ___ ___  _  ")
+  script.Print("   / ` / ) )\/) )\/) / ) )   )  / ) ")
+  script.Print("  (_. (_/ (  ( (  ( (_/ (  _(_ (_/  ")
+
+  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+  script.Print("   |     Commotio - 6.0   Edition    | ")
+  script.Print("   |     A DHO and                   | ")
+  script.Print("   | Team Vanir production           | ")
+  script.Print("   |                                 | ")
+  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+  script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
+  script.Print("   |VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV| ")
+  script.Print("   :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-: ")
+
   script.Print(" ")
-  script.Print(" ")
-  script.Print(" ")
-  script.Print(" ")
-  script.Print(" ")
-  script.Print(" ")
-  script.Print(" ")
-  script.Print("                L.                            ")
-  script.Print("                EW:        ,ft t   j.         ")
-  script.Print("             .. E##;       t#E Ej  EW,        ")
-  script.Print("t      .DD. ;W, E###t      t#E E#, E##j       ")
-  script.Print("EK:   ,WK. j##, E#fE#f     t#E E#t E###D.     ")
-  script.Print("E#t  i#D  G###, E#t D#G    t#E E#t E#jG#W;    ")
-  script.Print("E#t j#f :E####, E#t  f#E.  t#E E#t E#t t##f   ")
-  script.Print("E#tL#i ;W#DG##, E#t   t#K: t#E E#t E#t  :K#E: ")
-  script.Print("E#WW, j###DW##, E#t    ;#W,t#E E#t E#KDDDD###i")
-  script.Print("E#K: G##i,,G##, E#t     :K#D#E E#t E#f,t#Wi,,,")
-  script.Print("ED.:K#K:   L##, E#t      .E##E E#t E#t  ;#W:  ")
-  script.Print("t ;##D.    L##, ..         G#E E#t DWi   ,KK: ")
-  script.Print("  ,,,      .,,              fE ,;.            ")
-  script.Print("                             ,                ")
-  script.Print("  Vanir - Marshallow 6.0 ")
-  script.Print("    'Jet-Puffed'")
-  script.Print("    by Team Vanir")
-  script.Print(" ")
+  script.Print("**     Evaluating Gapps              **")
 
   script.Unmount("/system")
 
@@ -680,6 +670,17 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
   recovery_mount_options = OPTIONS.info_dict.get("recovery_mount_options")
+
+
+  script.Print("**      Nice and Tidy                **")
+
+  script.Print("**     Installing Vanir              **")
+  script.Print("  Vanir - Jet-Puffed Marshallow ")
+  script.Print("    by Team Vanir:")
+  script.Print("        DHO")
+  script.Print("          Nuclearmistake")
+  script.Print(" ")
+  script.Print("**      Installing the ROM...        **");
 
   system_items = ItemSet("system", "META/filesystem_config.txt")
   script.ShowProgress(system_progress, 0)
@@ -737,12 +738,21 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
       vendor_items.GetMetadata(input_zip)
       vendor_items.Get("vendor").SetPermissions(script)
 
+  script.Print(" ")
+  script.Print("**      Installing Colonel           **");
+
   common.CheckSize(boot_img.data, "boot.img", OPTIONS.info_dict)
   common.ZipWriteStr(output_zip, "boot.img", boot_img.data)
 
   device_specific.FullOTA_PostValidate()
 
+  script.Print(" ")
+  script.Print("**      Time for some Cajun Voodoo   **")
+
   script.Mount("/system", recovery_mount_options)
+
+  script.Print(" ")
+  script.Print("**      RISE Zombie Gapps RISE       **")
 
   if OPTIONS.backuptool:
     script.Print("Resurrecting gapps from pre-flash backup")
@@ -754,6 +764,11 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.AppendExtra('set_metadata_recursive("/system/etc/cron", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");')
 
   script.Unmount("/system")
+
+  script.Print(" ")
+  script.Print("**      Mission Complete             **")
+  script.Print(" ")
+  script.Print(" ")
 
   script.ShowProgress(0.05, 5)
   script.WriteRawImage("/boot", "boot.img")
