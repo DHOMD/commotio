@@ -19,7 +19,7 @@ $(call inherit-product, device/samsung/mondrianwifi/full_mondrianwifi.mk)
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := commotio_mondrianwifi
+PRODUCT_NAME := commotio_mondri
 PRODUCT_DEVICE := mondrianwifi
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
