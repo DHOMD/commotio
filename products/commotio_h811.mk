@@ -18,8 +18,4 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 PRODUCT_DEVICE := h811
 PRODUCT_NAME := commotio_h811
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE="g4" \
-    PRODUCT_NAME="g4_global_com" \
-    BUILD_FINGERPRINT="lge/p1_global_com/p1:5.1/LMY47D/151161552fef7:user/release-keys" \
-    PRIVATE_BUILD_DESC="p1_global_com-user 5.1 LMY47D 151161552fef7 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_DEVICE="g4" PRODUCT_NAME="g4_global_com" BUILD_FINGERPRINT="lge/p1_global_com/p1:5.1/LMY47D/151161552fef7:user/release-keys" PRIVATE_BUILD_DESC="p1_global_com-user 5.1 LMY47D 151161552fef7 release-keys"
