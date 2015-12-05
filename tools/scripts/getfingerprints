@@ -23,7 +23,7 @@ get_device_path() {
 }
 
 for x in $TOP/vendor/commotio/products/commotio*.mk; do
-  grep -q PRODUCT_BUILD_PROP_OVERRIDES $x || continue
+  [ $x ] && [ -x $x ] && grep -q PRODUCT_BUILD_PROP_OVERRIDES $x || continue
   RESULT=`mktemp`
   AFTER=`mktemp`
   grep -B100 PRODUCT_BUILD_PROP_OVERRIDES $x | grep -v PRODUCT_BUILD_PROP_OVERRIDES >> $RESULT
@@ -41,7 +41,7 @@ for x in $TOP/vendor/commotio/products/commotio*.mk; do
   done
   rm -f .inoverrides
   file=`get_device_path $x`
-  if ! grep -q PRODUCT_BUILD_PROP_OVERRIDES $file; then
+  if [ "$file" != "" ] && ! grep -q PRODUCT_BUILD_PROP_OVERRIDES $file; then
     rm -f $RESULT $AFTER
     continue
   fi
