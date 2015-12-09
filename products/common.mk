@@ -83,8 +83,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=6.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B97 \
-    ro.goo.version=97
+    ro.modversion=Commotio-B98 \
+    ro.goo.version=98
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=MDB08M BUILD_ID=MDB08M BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
