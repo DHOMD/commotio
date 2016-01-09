@@ -86,9 +86,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=Commotio-B100 \
     ro.goo.version=100
 
-# Version information used on all builds
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=MDB08M BUILD_ID=MDB08M BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_EST_DATE=$(shell date +"%s")
-
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
     vendor/vanir/proprietary/common/xbin/sysro:system/xbin/sysro \
@@ -184,6 +181,7 @@ PRODUCT_PACKAGES += \
     wget \
     unzip \
     7z \
+    lib7z \
     bzip2 \
     zip \
     unrar \
