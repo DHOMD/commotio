@@ -45,7 +45,7 @@ ifndef CM_PLATFORM_REV
   CM_PLATFORM_REV := 0
 endif
 ifndef CM_PLATFORM_SDK_VERSION
-  CM_PLATFORM_SDK_VERSION := 4
+  CM_PLATFORM_SDK_VERSION := 5
 endif
 
 # CyanogenMod Platform Internal
@@ -83,13 +83,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=6.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B100 \
-    ro.goo.version=100
+    ro.modversion=Commotio-B101 \
+    ro.goo.version=101
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
     vendor/vanir/proprietary/common/xbin/sysro:system/xbin/sysro \
-    vendor/vanir/proprietary/common/xbin/cronlogger:system/xbin/cronlogger \
     vendor/vanir/proprietary/common/xbin/vanirflash:system/xbin/vanirflash \
     vendor/vanir/proprietary/common/init.vanir.rc:root/init.vanir.rc \
     vendor/vanir/proprietary/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh \
@@ -114,11 +113,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/commotio/proprietary/system/etc/init.d/03dhokernel:system/etc/init.d/03dhokernel \
-    vendor/vanir/proprietary/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory \
-    vendor/vanir/proprietary/common/etc/cron/root:system/etc/cron/cron.d/root \
-    vendor/vanir/proprietary/common/etc/cron/cron.minutely/00nicetweaks:/system/etc/cron/cron.minutely/00nicetweaks \
-    vendor/vanir/proprietary/common/etc/cron/cron.daily/00sqlitespeed:/system/etc/cron/cron.daily/00sqlitespeed
+    vendor/commotio/proprietary/system/etc/init.d/98cmplxth3ory:system/etc/init.d/98cmplxth3ory
 
 # system and persistent /data boot.d Tweaks - triggered when ro.boot_complete is set to 1
 PRODUCT_COPY_FILES += \
