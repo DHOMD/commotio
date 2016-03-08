@@ -37,6 +37,9 @@ PRODUCT_PACKAGES += \
     QuickBoot \
     init.vanir.quickboot.rc
 
+#Java 1.8
+#    EXPERIMENTAL_USE_JAVA8 := true
+
 # FUCKING DISGUSTING SHIT
 ifndef CM_PLATFORM_REV
   # For internal SDK revisions that are hotfixed/patched
@@ -83,8 +86,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=6.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B102 \
-    ro.goo.version=102
+    ro.modversion=Commotio-B103 \
+    ro.goo.version=103
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
