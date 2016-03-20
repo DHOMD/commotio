@@ -1,5 +1,6 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
+91_HACK:= true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \

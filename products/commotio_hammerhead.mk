@@ -1,5 +1,6 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
+91_HACK:= true
 
 # Run these first or they will not stick
 PRODUCT_PROPERTY_OVERRIDES += \
