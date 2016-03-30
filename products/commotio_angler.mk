@@ -4,15 +4,15 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-angler
 
-# Inherit vanir phone stuff
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
-
 PRODUCT_COPY_FILES += \
     vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
+
+# Inherit vanir phone stuff
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
+$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/angler/overlay-cm
 

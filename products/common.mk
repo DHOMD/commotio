@@ -246,6 +246,11 @@ PRODUCT_PACKAGES += \
     utility_mkbootimg \
     utility_unpackbootimg
 
+# Webview is fucked, so add it here
+PRODUCT_PACKAGES += \
+    webview \
+    libwebviewchromium
+
 # Allow installing apps that require cm permissions from the play store 
 -include vendor/cyngn/product.mk
 
