@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     IndecentXposure \
     LatinIME \
+    LiveLockScreenService \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
