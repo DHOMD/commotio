@@ -4,15 +4,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/common
 # DSPManager and NFC
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/vanir/config/cmsdk_common.mk)
 
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 
-# CM Platform Library Resource Package
+# Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
-    org.cyanogenmod.platform \
-    org.cyanogenmod.platform-res \
-    org.cyanogenmod.platform.xml
+    librsjni
 
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
@@ -20,14 +19,13 @@ PRODUCT_PACKAGES += \
     Email \
     ExactCalculator \
     IndecentXposure \
-    LatinIME \
     LiveLockScreenService \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
     SoundRecorder \
     Trebuchet \
-    toybox \
+    WeatherProvider \
     CMSettingsProvider
 
 #    Terminal \
@@ -40,22 +38,6 @@ PRODUCT_PACKAGES += \
 
 #Java 1.8
 #    EXPERIMENTAL_USE_JAVA8 := true
-
-# FUCKING DISGUSTING SHIT
-ifndef CM_PLATFORM_REV
-  # For internal SDK revisions that are hotfixed/patched
-  # Reset after each CM_PLATFORM_SDK_VERSION release
-  # If you are doing a release and this is NOT 0, you are almost certainly doing it wrong
-  CM_PLATFORM_REV := 0
-endif
-ifndef CM_PLATFORM_SDK_VERSION
-  CM_PLATFORM_SDK_VERSION := 5
-endif
-
-# CyanogenMod Platform Internal
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION) \
-  ro.cm.build.version.plat.rev=$(CM_PLATFORM_REV)
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
