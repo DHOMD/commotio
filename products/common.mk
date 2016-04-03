@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/afterboot:system/bin/afterboot \
     vendor/vanir/proprietary/common/etc/boot.d/00vanirnice:system/etc/boot.d/00vanirnice
 
-
 # Backup Tools
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/automagic.sh:install/bin/automagic.sh \
@@ -125,21 +124,16 @@ PRODUCT_PACKAGES += \
     su \
     BluetoothExt
 
-# CM Hardware Abstraction Framework
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
-
 # Optional CM packages
 PRODUCT_PACKAGES += \
-    Development \
+    SoundRecorder \
+    ScreenCast \
     libemoji
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
+    libffmpeg_extractor \
+    libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
