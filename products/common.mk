@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
     init.vanir.quickboot.rc
 
 #Java 1.8
-#    EXPERIMENTAL_USE_JAVA8 := true
+EXPERIMENTAL_USE_JAVA8 := true
 
 # Build Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -69,8 +69,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=6.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B104 \
-    ro.goo.version=104
+    ro.modversion=Commotio-B105 \
+    ro.goo.version=105
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
