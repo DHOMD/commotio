@@ -31,6 +31,11 @@ PRODUCT_PACKAGES += \
 #    Terminal \
 #    VanirUpdater
 
+# Weather
+PRODUCT_PACKAGES += \
+    OpenWeatherMapProvider \
+    WundergroundWeatherProvider
+
 # QuickBoot (included automagically for non-oppo qcom devices)
 PRODUCT_PACKAGES += \
     QuickBoot \
