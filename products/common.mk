@@ -16,15 +16,16 @@ PRODUCT_PACKAGES += \
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
     AudioFX \
+    DataUsageProvider \
     Email \
     ExactCalculator \
+    Trebuchet \
     IndecentXposure \
     LiveLockScreenService \
     LockClock \
     LiveWallpapersPicker \
     Profiles \
     SoundRecorder \
-    Trebuchet \
     WeatherProvider \
     CMSettingsProvider
 
@@ -74,8 +75,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=6.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B107 \
-    ro.goo.version=107
+    ro.modversion=Commotio-B108 \
+    ro.goo.version=108
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
