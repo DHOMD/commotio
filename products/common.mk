@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     DataUsageProvider \
     Email \
     ExactCalculator \
-    Trebuchet \
+    Gello \
     IndecentXposure \
     LiveLockScreenService \
     LockClock \
