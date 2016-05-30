@@ -234,6 +234,23 @@ PRODUCT_PACKAGES += \
     webview \
     libwebviewchromium
 
+# Gello is fucked, so add it here
+PRODUCT_PACKAGES += \
+    libgiga_client \
+    libicui18n.cr \
+    libicuuc.cr \
+    libsta \
+    libstlport_shared \
+    libswe \
+    libsweadrenoext_22_plugin \
+    libsweadrenoext_23_plugin \
+    libsweadrenoext_plugin \
+    libswecore \
+    libswenetxt_plugin \
+    libsweskia \
+    libswev8 \
+    libswewebrefiner
+
 # Allow installing apps that require cm permissions from the play store 
 -include vendor/cyngn/product.mk
 
