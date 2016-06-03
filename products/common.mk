@@ -26,8 +26,14 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Profiles \
     SoundRecorder \
+    Trebuchet \
     WeatherProvider \
     CMSettingsProvider
+
+# Gello and it's complex nature, to get it work:
+# cd external/gello_build && . gello_build.sh --depot
+# The following line will do the rest
+WITH_GELLO_SOURCE := true
 
 #    Terminal \
 #    VanirUpdater
