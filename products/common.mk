@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
     Profiles \
     SoundRecorder \
     Trebuchet \
+    WallpaperPicker \
     WeatherProvider \
     CMSettingsProvider
 
