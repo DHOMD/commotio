@@ -9,6 +9,10 @@ $(call inherit-product, vendor/vanir/config/cmsdk_common.mk)
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/vanir/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
