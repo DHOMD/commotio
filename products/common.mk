@@ -140,7 +140,8 @@ PRODUCT_PACKAGES += \
     CMAudioService \
     LatinIME \
     su \
-    BluetoothExt
+    BluetoothExt \
+    ThemeManagerService
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
