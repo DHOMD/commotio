@@ -86,8 +86,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=6.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B112 \
-    ro.goo.version=112
+    ro.modversion=Commotio-B114 \
+    ro.goo.version=114
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
@@ -137,6 +137,7 @@ endif
 # Required CM packages
 PRODUCT_PACKAGES += \
     Camera \
+    CMAudioService \
     LatinIME \
     su \
     BluetoothExt
