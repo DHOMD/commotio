@@ -141,7 +141,9 @@ PRODUCT_PACKAGES += \
     LatinIME \
     su \
     BluetoothExt \
-    ThemeManagerService
+    ThemeManagerService \
+    HexoLibre \
+    WeatherManagerService
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
