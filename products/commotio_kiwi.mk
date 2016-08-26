@@ -1,6 +1,9 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.rom=commotio-kiwi
+
 # Boot Animation
 PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
