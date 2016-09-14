@@ -1,1 +1,1 @@
-../../../../build/tools/releasetools/sign_target_files_apks.py
+/mnt/dho/spinner/L5/build/tools/releasetools/sign_target_files_apks.py

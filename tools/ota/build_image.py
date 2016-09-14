@@ -1,1 +1,1 @@
-../../../../build/tools/releasetools/build_image.py
+/mnt/dho/spinner/L5/build/tools/releasetools/build_image.py

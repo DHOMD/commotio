@@ -1,1 +1,1 @@
-../../../../build/tools/releasetools/edify_generator.py
+/mnt/dho/spinner/L5/build/tools/releasetools/edify_generator.py

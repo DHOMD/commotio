@@ -1,1 +1,1 @@
-../../../../build/tools/releasetools/make_recovery_patch.py
+/mnt/dho/spinner/L5/build/tools/releasetools/make_recovery_patch.py
