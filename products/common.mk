@@ -20,10 +20,8 @@ PRODUCT_PACKAGES += \
 # Build packages included in manifest
 PRODUCT_PACKAGES += \
     AudioFX \
-    DataUsageProvider \
     Email \
     ExactCalculator \
-    Gello \
     IndecentXposure \
     LiveLockScreenService \
     LockClock \
@@ -31,7 +29,6 @@ PRODUCT_PACKAGES += \
     Profiles \
     SoundRecorder \
     Trebuchet \
-    WallpaperPicker \
     WeatherProvider \
     CMSettingsProvider
 
@@ -141,7 +138,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     su \
     BluetoothExt \
-    ThemeManagerService \
     HexoLibre \
     WeatherManagerService
 
@@ -152,14 +148,14 @@ PRODUCT_PACKAGES += \
     libemoji
 
 # Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
+#PRODUCT_PACKAGES += \
+#    libffmpeg_extractor \
+#    libffmpeg_omx \
+#    media_codecs_ffmpeg.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    media.sf.omx-plugin=libffmpeg_omx.so \
+#    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
@@ -235,10 +231,10 @@ PRODUCT_PACKAGES += \
     openvpn
 
 # Theme engine
-PRODUCT_PACKAGES += \
-    aapt \
-    ThemeChooser \
-    ThemesProvider
+# PRODUCT_PACKAGES += \
+#    aapt \
+#    ThemeChooser \
+#    ThemesProvider
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
