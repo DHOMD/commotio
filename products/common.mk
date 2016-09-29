@@ -254,6 +254,12 @@ PRODUCT_PACKAGES += \
 # Allow compiling on Jenkins
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
+ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
+    PRODUCT_EXTRA_RECOVERY_KEYS += \
+        vendor/vanir/build/target/product/security/cm \
+        vendor/vanir/build/target/product/security/cm-devkey
+endif
+
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
