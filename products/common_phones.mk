@@ -13,3 +13,6 @@ PRODUCT_PACKAGES += \
 
 # Audio Packages
 include frameworks/base/data/sounds/AudioPackage7.mk
+
+# Ring Ring
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
