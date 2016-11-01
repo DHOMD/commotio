@@ -83,8 +83,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vanir.base=7.0 \
     ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B118 \
-    ro.goo.version=118
+    ro.modversion=Commotio-B119 \
+    ro.goo.version=119
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
