@@ -1,9 +1,7 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.goo.rom=commotio-m7spr
+PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true ro.goo.rom=commotio-m7spr
 
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/cdma.mk)

@@ -1,12 +1,10 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-n3
+PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-n3
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES += vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/oppo/n3/n3.mk)

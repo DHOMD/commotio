@@ -1,13 +1,10 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.goo.rom=commotio-oneplus2
+PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true ro.goo.rom=commotio-oneplus2
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES += vendor/vanir/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/oneplus/oneplus2/full_oneplus2.mk)
@@ -27,8 +24,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
 
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=oneplus2 \
-    PRODUCT_NAME=OnePlus2 \
-    BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:6.0.0/MRA58K/1436933040:user/release-keys \
-    PRIVATE_BUILD_DESC="OnePlus2-user 6.0.0 MDB08M 28 dev-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=OnePlus2 PRODUCT_NAME=OnePlus2
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840920:user/release-keys PRIVATE_BUILD_DESC="OnePlus2-user 6.0.1 MMB29M 20 dev-keys"

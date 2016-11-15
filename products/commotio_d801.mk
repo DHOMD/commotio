@@ -1,9 +1,7 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.goo.rom=commotio-d801
+PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true ro.goo.rom=commotio-d801
 
 # Inherit device configuration
 $(call inherit-product, device/lge/d801/d801.mk)

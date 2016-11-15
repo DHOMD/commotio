@@ -4,15 +4,13 @@ DHO_VENDOR := commotio
 KERNEL_SPAM := CM-AOSP 3.4.0-g8e41961
 
 # Run these first or they will not stick
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-flo
+PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-flo
 
 # Tablet Overlays no radios
-    PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)

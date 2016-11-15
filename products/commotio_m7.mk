@@ -1,9 +1,7 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.goo.rom=commotio-m7
+PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true ro.goo.rom=commotio-m7
 
 $(call inherit-product, vendor/commotio/products/multi_m7-common.mk)
 
