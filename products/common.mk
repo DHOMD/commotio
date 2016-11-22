@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     IndecentXposure \
     openvpn
 
-#    Terminal \
 #    VanirUpdater
 
 
@@ -183,17 +182,20 @@ include vendor/vanir/config/cmsdk_common.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \
-    CMAudioService \
-    Development \
     BluetoothExt \
+    CMAudioService \
+    CMParts \
     Profiles \
     WeatherManagerService
+
+#    Development \
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
     libemoji \
-    Terminal \
-    LiveWallpapersPicker
+    LiveWallpapersPicker \
+    PhotoTable \
+    Terminal
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -201,17 +203,18 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Trebuchet \
     AudioFX \
-    LockClock \
+    CMFileManager \
     CMSettingsProvider \
     ExactCalculator \
+    Launcher3 \
     LiveLockScreenService \
-    WeatherProvider \
-    WallpaperPicker \
+    LockClock \
+    Screencast \
     SoundRecorder \
-    Screencast
+    Trebuchet \
+    WallpaperPicker \
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -219,26 +222,25 @@ PRODUCT_PACKAGES += \
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
-    libsepol \
-    mke2fs \
-    tune2fs \
-    nano \
-    htop \
-    mkfs.ntfs \
-    fsck.ntfs \
-    mount.ntfs \
-    gdbserver \
-    micro_bench \
-    oprofiled \
-    sqlite3 \
-    strace \
-    pigz \
     7z \
-    lib7z \
     bash \
     bzip2 \
     curl \
+    fsck.ntfs \
+    gdbserver \
+    htop \
+    lib7z \
+    libsepol \
+    micro_bench \
+    mke2fs \
+    mkfs.ntfs \
+    mount.ntfs \
+    oprofiled \
+    pigz \
     powertop \
+    sqlite3 \
+    strace \
+    tune2fs \
     unrar \
     unzip \
     vim \
