@@ -207,7 +207,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
-    DataUsageProvider \
     WallpaperPicker \
     SoundRecorder \
     Screencast
