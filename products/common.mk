@@ -91,7 +91,8 @@ PRODUCT_PACKAGES += \
 
 # Build Vanir packages
 PRODUCT_PACKAGES += \
-    IndecentXposure
+    IndecentXposure \
+    openvpn
 
 #    Terminal \
 #    VanirUpdater
@@ -164,10 +165,6 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
-
-# This is CM!ish
-PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # Theme engine
 PRODUCT_PACKAGES += \
@@ -300,9 +297,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Allow compiling on Jenkins
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
-
-# Allow installing apps that require cm permissions from the play store 
--include vendor/cyngn/product.mk
 
 # Any other Vanir calls?
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
