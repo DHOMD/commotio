@@ -170,10 +170,13 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
 # Theme engine
-PRODUCT_PACKAGES += \
-    aapt \
-    ThemeChooser \
-    ThemesProvider
+#PRODUCT_PACKAGES += \
+#    aapt \
+#    ThemeChooser \
+#    ThemesProvider
+
+# Is this needed?
+#     ThemeManagerService \
 
 # CMSDK
 include vendor/vanir/config/cmsdk_common.mk
@@ -184,7 +187,6 @@ PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
     Profiles \
-    ThemeManagerService \
     WeatherManagerService
 
 # Optional CM packages
