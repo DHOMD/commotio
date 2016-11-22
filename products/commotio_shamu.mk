@@ -8,7 +8,6 @@ PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1440x2560.zip:
 
 # Inherit Vanir phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)

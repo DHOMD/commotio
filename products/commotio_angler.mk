@@ -10,7 +10,6 @@ $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
 # Inherit vanir phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/angler/overlay-cm
 
