@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/whitelist:system/addon.d/whitelist
 endif
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/vanir/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # Optional CM packages
 PRODUCT_PACKAGES += \
     Camera \
