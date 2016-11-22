@@ -5,11 +5,6 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_
 #A Theory in fixing random breaks
 PRODUCT_BRAND ?= commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=CanisMajor.ogg \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg \
-
 # Commotio files
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/commotio/overlay/commotio
@@ -22,8 +17,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \
     ro.config.alarm_alert=Cesium.ogg \
+
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.delay=50 \
-    persist.sys.dun.override=0 \
     persist.sys.camera-sound=0 
 
 # Video - Photo
