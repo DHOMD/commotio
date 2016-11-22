@@ -12,6 +12,9 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 # Inherit device configuration
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
+# It's a Nexus
+PRODUCT_IS_A_NEXUS := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := shamu
 PRODUCT_NAME := commotio_shamu
