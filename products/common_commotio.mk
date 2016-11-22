@@ -2,6 +2,9 @@
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_target_files
 
+#A Theory in fixing random breaks
+PRODUCT_BRAND ?= commotio
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=CanisMajor.ogg \
     ro.config.notification_sound=Proxima.ogg \
