@@ -2,6 +2,11 @@
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_target_files
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=CanisMajor.ogg \
+    ro.config.notification_sound=Proxima.ogg \
+    ro.config.alarm_alert=Cesium.ogg \
+
 # Commotio files
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/commotio/overlay/commotio

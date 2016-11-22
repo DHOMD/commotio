@@ -3,7 +3,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/common
 
 # DSPManager and NFC
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
-$(call inherit-product, vendor/vanir/config/cmsdk_common.mk)
 ifneq ($(PRODUCT_IS_A_NEXUS), true)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 endif
@@ -11,41 +10,10 @@ endif
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
 
-# Backup Services whitelist
-PRODUCT_COPY_FILES += \
-    vendor/vanir/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
-
-# Include librsjni explicitly to workaround GMS issue
-PRODUCT_PACKAGES += \
-    librsjni
-
-# Build packages included in manifest
-PRODUCT_PACKAGES += \
-    AudioFX \
-    Email \
-    ExactCalculator \
-    IndecentXposure \
-    LiveLockScreenService \
-    LockClock \
-    LiveWallpapersPicker \
-    Profiles \
-    SoundRecorder \
-    Trebuchet \
-    WeatherProvider \
-    CMSettingsProvider
-
 # Gello and it's complex nature, to get it work:
 # cd external/gello_build && . gello_build.sh --depot
 # The following line will do the rest
 WITH_GELLO_SOURCE := true
-
-#    Terminal \
-#    VanirUpdater
-
-# Weather
-PRODUCT_PACKAGES += \
-    OpenWeatherMapProvider \
-    WundergroundWeatherProvider
 
 # QuickBoot (included automagically for non-oppo qcom devices)
 PRODUCT_PACKAGES += \
@@ -55,27 +23,10 @@ PRODUCT_PACKAGES += \
 #Java 1.8
 EXPERIMENTAL_USE_JAVA8 := true
 
-# Build Properties
+# Build Properties Legacy???
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.error.receiver.system.apps=com.google.android.feedback \
     ro.com.google.locationfeatures=1 \
-    ro.setupwizard.mode=OPTIONAL \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.config.ringtone=CanisMajor.ogg \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg \
-    ro.build.selinux=1
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
+    ro.setupwizard.mode=OPTIONAL
 
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -83,7 +34,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lge.proximity.delay=20 \
     mot.proximity.delay=20 \
     ro.vanir.base=7.0 \
-    ro.rommanager.developerid=DHO \
     ro.goo.developerid=DHO \
     ro.modversion=Commotio-B119 \
     ro.goo.version=119
@@ -133,65 +83,168 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/whitelist:system/addon.d/whitelist
 endif
 
-# Required CM packages
-PRODUCT_PACKAGES += \
-    Camera \
-    CMAudioService \
-    LatinIME \
-    su \
-    BluetoothExt \
-    HexoLibre \
-    WeatherManagerService
-
 # Optional CM packages
 PRODUCT_PACKAGES += \
-    SoundRecorder \
-    ScreenCast \
-    libemoji
+    Camera \
+    LatinIME \
+    HexoLibre
 
-# Stagefright FFMPEG plugin
+# Build Vanir packages
 PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
+    IndecentXposure
+
+#    Terminal \
+#    VanirUpdater
+
+
+## STREAMING DMESG?
+PRODUCT_PACKAGES += \
+    klogripper
+
+## FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
+PRODUCT_PACKAGES += \
+    utility_mkbootimg \
+    utility_unpackbootimg
+
+
+ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
+    PRODUCT_EXTRA_RECOVERY_KEYS += \
+        vendor/vanir/build/target/product/security/cm \
+        vendor/vanir/build/target/product/security/cm-devkey
+endif
+
+
+#
+#
+#
+#
+#
+
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
+    keyguard.no_require_sim=true \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.setupwizard.enterprise_mode=1 \
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.com.android.dataroaming=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
+ifneq ($(TARGET_BUILD_VARIANT),user)
+# Thank you, please drive thru!
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
+endif
+
+ifneq ($(TARGET_BUILD_VARIANT),eng userdebug)
+# Enable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
     vendor/vanir/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+
+# Enable SIP+VoIP on all targets
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Enable wireless Xbox 360 controller support
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+
+# This is CM!ish
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+
+# Theme engine
+PRODUCT_PACKAGES += \
+    aapt \
+    ThemeChooser \
+    ThemesProvider
+
+# CMSDK
+include vendor/vanir/config/cmsdk_common.mk
+
+# Required CM packages
+PRODUCT_PACKAGES += \
+    CMAudioService \
+    Development \
+    BluetoothExt \
+    Profiles \
+    ThemeManagerService \
+    WeatherManagerService
+
+# Optional CM packages
+PRODUCT_PACKAGES += \
+    libemoji \
+    Terminal \
+    LiveWallpapersPicker
+
+# Include librsjni explicitly to workaround GMS issue
+PRODUCT_PACKAGES += \
+    librsjni
+
+# Custom CM packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    Trebuchet \
+    AudioFX \
+    LockClock \
+    CMSettingsProvider \
+    ExactCalculator \
+    LiveLockScreenService \
+    WeatherProvider \
+    DataUsageProvider \
+    WallpaperPicker \
+    SoundRecorder \
+    Screencast
+
+# Exchange support
+PRODUCT_PACKAGES += \
+    Exchange2
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
     libsepol \
     mke2fs \
     tune2fs \
+    nano \
+    htop \
     mkfs.ntfs \
     fsck.ntfs \
     mount.ntfs \
-    bash \
-    vim \
-    wget \
-    unzip \
-    7z \
-    lib7z \
-    bzip2 \
-    zip \
-    unrar \
-    nano \
-    htop \
     gdbserver \
     micro_bench \
     oprofiled \
-    procmem \
-    procrank \
     sqlite3 \
     strace \
+    pigz \
+    7z \
+    lib7z \
+    bash \
+    bzip2 \
     curl \
-    pigz
+    powertop \
+    unrar \
+    unzip \
+    vim \
+    wget \
+    zip
 
+# Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
 PRODUCT_PACKAGES += \
     charger_res_images \
@@ -200,6 +253,7 @@ PRODUCT_PACKAGES += \
     libhealthd.cm
 endif
 
+# ExFAT support
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
 TARGET_USES_EXFAT := true
@@ -207,11 +261,6 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat
-endif
-
-ifneq ($(TARGET_ARCH),arm64)
-PRODUCT_PACKAGES += \
-    powertop
 endif
 
 # Openssh
@@ -228,41 +277,35 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-# openvpwn
+# Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
-    openvpn
+    libffmpeg_extractor \
+    libffmpeg_omx \
+    media_codecs_ffmpeg.xml
 
-# Theme engine
-# PRODUCT_PACKAGES += \
-#    aapt \
-#    ThemeChooser \
-#    ThemesProvider
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so
 
-PRODUCT_COPY_FILES += \
-    vendor/vanir/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
-
-## STREAMING DMESG?
+# These packages are excluded from user builds
+ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
-    klogripper
+    procmem \
+    procrank \
+    su
+endif
 
-## FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
-PRODUCT_PACKAGES += \
-    utility_mkbootimg \
-    utility_unpackbootimg
-
-# Allow installing apps that require cm permissions from the play store 
--include vendor/cyngn/product.mk
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=0
 
 # Allow compiling on Jenkins
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
-ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
-    PRODUCT_EXTRA_RECOVERY_KEYS += \
-        vendor/vanir/build/target/product/security/cm \
-        vendor/vanir/build/target/product/security/cm-devkey
-endif
+# Allow installing apps that require cm permissions from the play store 
+-include vendor/cyngn/product.mk
 
+# Any other Vanir calls?
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
-$(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call prepend-product-if-exists, vendor/extra/product.mk)
 
 
