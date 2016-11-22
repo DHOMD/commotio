@@ -13,6 +13,9 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/angler/overlay-cm
 
+# It's a Nexus
+PRODUCT_IS_A_NEXUS := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := commotio_angler
 PRODUCT_BRAND := google

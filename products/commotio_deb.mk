@@ -18,6 +18,8 @@ $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/deb/full_deb.mk)
 
+# It's a Nexus
+PRODUCT_IS_A_NEXUS := true
 
 # Setup device specific product configuration.
 PRODUCT_NAME := commotio_deb

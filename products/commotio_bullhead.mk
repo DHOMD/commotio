@@ -12,6 +12,9 @@ PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:
 # Inherit device configuration
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 
+# It's a Nexus
+PRODUCT_IS_A_NEXUS := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := commotio_bullhead
 PRODUCT_BRAND := google

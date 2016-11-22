@@ -15,6 +15,9 @@ $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 # CM Overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/flounder/overlay-cm
 
+# It's a Nexus
+PRODUCT_IS_A_NEXUS := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flounder
 PRODUCT_NAME := commotio_flounder

@@ -14,6 +14,9 @@ PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1280x800.zip:s
 # Tablet Overlays no radios
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
+# It's a Nexus
+PRODUCT_IS_A_NEXUS := true
+
 # Inherit AOSP device configuration for Manta.
 $(call inherit-product, device/samsung/manta/full_manta.mk)
 

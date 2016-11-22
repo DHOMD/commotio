@@ -7,3 +7,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
+
+# It's a not a Nexus, but it has a dream!
+PRODUCT_IS_A_NEXUS := true

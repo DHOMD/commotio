@@ -3,8 +3,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/common
 
 # DSPManager and NFC
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
-$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 $(call inherit-product, vendor/vanir/config/cmsdk_common.mk)
+ifneq ($(PRODUCT_IS_A_NEXUS), true)
+$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
+endif
 
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
