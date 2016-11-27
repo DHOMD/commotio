@@ -1,19 +1,11 @@
 # Vanir files
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/common
 
-# DSPManager and NFC
+# Audio
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
-ifneq ($(PRODUCT_IS_A_NEXUS), true)
-$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
-endif
 
 # Add some tones (if this grows to more than like... 5 ringtones and 5 notifications, old ones will be dropped)
 $(call inherit-product, vendor/vanir/proprietary/ringtones/VanirRingtones.mk)
-
-# Gello and it's complex nature, to get it work:
-# cd external/gello_build && . gello_build.sh --depot
-# The following line will do the rest
-WITH_GELLO_SOURCE := true
 
 # QuickBoot (included automagically for non-oppo qcom devices)
 PRODUCT_PACKAGES += \
@@ -37,6 +29,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.developerid=DHO \
     ro.modversion=Commotio-B120 \
     ro.goo.version=120
+
+# Gello and it's complex nature, to get it work:
+# cd external/gello_build && . gello_build.sh --depot
+# The following line will do the rest
+WITH_GELLO_SOURCE := true
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
@@ -90,8 +87,7 @@ PRODUCT_COPY_FILES += \
 # Optional CM packages
 PRODUCT_PACKAGES += \
     Camera \
-    LatinIME \
-    HexoLibre
+    LatinIME
 
 # Build Vanir packages
 PRODUCT_PACKAGES += \
@@ -172,7 +168,8 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    aapt \
 #    ThemeChooser \
-#    ThemesProvider
+#    ThemesProvider \
+#    HexoLibre
 
 # Is this needed?
 #     ThemeManagerService \
