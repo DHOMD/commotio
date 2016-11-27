@@ -48,7 +48,6 @@ PRODUCT_COPY_FILES += \
 ifeq ($(VANIR_FAILSAFE),)
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/xbin/hunter:system/xbin/hunter \
     vendor/vanir/proprietary/common/xbin/testinitd:system/xbin/testinitd \
     vendor/vanir/proprietary/common/xbin/vanircheckcpu:system/xbin/vanircheckcpu \
     vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice
@@ -92,16 +91,13 @@ PRODUCT_PACKAGES += \
 # Build Vanir packages
 PRODUCT_PACKAGES += \
     IndecentXposure \
+    klogripper \
     openvpn
 
 #    VanirUpdater
 
 
-## STREAMING DMESG?
-PRODUCT_PACKAGES += \
-    klogripper
-
-## FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
+# FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
 PRODUCT_PACKAGES += \
     utility_mkbootimg \
     utility_unpackbootimg
@@ -120,8 +116,6 @@ endif
 #
 #
 
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
