@@ -304,6 +304,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Allow compiling on Jenkins
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
+PRODUCT_PACKAGES += \
+	commotioanimation.zip
+
 # Any other Vanir calls?
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
 $(call prepend-product-if-exists, vendor/extra/product.mk)
