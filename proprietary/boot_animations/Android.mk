@@ -15,7 +15,7 @@
 #
 
 define build-bootanimation
-    sh vendor/commotio/proprietary/bootanimation/generate-bootanimation.sh \
+    sh vendor/commotio/proprietary/boot_animations/generate-bootanimation.sh \
     $(TARGET_SCREEN_WIDTH) \
     $(TARGET_SCREEN_HEIGHT) \
     $(TARGET_BOOTANIMATION_HALF_RES)
