@@ -5,6 +5,10 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := vendor/commotio/tools/ota/ota_from_
 #A Theory in fixing random breaks
 PRODUCT_BRAND ?= commotio
 
+#A Theory in fixing Boot Animation
+BOOT_ANIMATION_VENDOR ?= commotio
+PRODUCT_PACKAGES += bootanimation.zip
+
 # Commotio files
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/commotio/overlay/commotio
