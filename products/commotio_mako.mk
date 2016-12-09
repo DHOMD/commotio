@@ -9,9 +9,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.fast.dormancy.rule=0 \
     ro.goo.rom=commotio-mako
 
-# Boot animation
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/768x1280.zip:system/media/bootanimation.zip
+# Boot Animation
+TARGET_SCREEN_WIDTH := 768
+TARGET_SCREEN_HEIGHT := 1280
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)

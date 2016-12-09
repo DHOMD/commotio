@@ -4,7 +4,8 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-shamu
 
 # Boot Animation
-#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2560
 
 # Inherit Vanir phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)

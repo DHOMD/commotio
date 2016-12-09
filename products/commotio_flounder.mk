@@ -4,7 +4,8 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true persist.sys.isUsbOtgEnabled=true ro.goo.rom=commotio-flounder
 
 # Boot Animation
-#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1536x2048.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 1536
+TARGET_SCREEN_HEIGHT := 2048
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/full_flounder.mk)

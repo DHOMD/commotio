@@ -6,8 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-d851
 
 # Boot Animation
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2560
 
 # Inherit device configuration
 $(call inherit-product, device/lge/d851/full_d851.mk)

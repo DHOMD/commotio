@@ -8,8 +8,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 $(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+# Boot Animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 # Inherit device configuration
 $(call inherit-product, device/oneplus/onyx/onyx.mk)

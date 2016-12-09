@@ -6,8 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
 # Boot Animation
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/720x1280.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
 
 # Inherit commotio common Phone stuff.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)

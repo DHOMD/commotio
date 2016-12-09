@@ -4,8 +4,8 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-yuga
 
 # Boot Animation
-#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
-#
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 # Vanir configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)

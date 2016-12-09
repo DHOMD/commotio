@@ -4,7 +4,8 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-h815
 
 # Boot Animation
-#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2560
 
 # Inherit device configuration
 $(call inherit-product, device/lge/h815/full_h815.mk)

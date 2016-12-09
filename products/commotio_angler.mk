@@ -3,7 +3,9 @@ DHO_VENDOR := commotio
 
 PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-angler
 
-#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
+# Boot Animation
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2560
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)

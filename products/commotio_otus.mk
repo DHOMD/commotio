@@ -5,8 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-otus
 
 # Boot Animation
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/540x960.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 540
+TARGET_SCREEN_HEIGHT := 960
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/otus/full_otus.mk)

@@ -5,8 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-himawhl
 
 # Boot Animation
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 # Inherit device configuration
 $(call inherit-product, device/htc/himawhl/full_himawhl.mk)

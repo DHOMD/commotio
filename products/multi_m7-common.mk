@@ -2,8 +2,8 @@
 KERNEL_SPAM := WHY DOESNT THIS JUST WORK AMGGGG #not related to the kernel... but this build step didn't work anyways, so lulpwned.
 
 # Boot Animation
-#PRODUCT_COPY_FILES += \
-#    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 # OPT OUT of moto blobs
 QCOM_FORCE_NONMOTO_DALVIK := true
