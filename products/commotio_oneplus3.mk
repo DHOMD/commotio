@@ -4,7 +4,7 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-oneplus3
 
 # Boot Animation
-PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)

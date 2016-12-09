@@ -10,7 +10,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-flo
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Boot Animation
-PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1280x1920.zip:system/media/bootanimation.zip
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)

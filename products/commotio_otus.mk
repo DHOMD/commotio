@@ -5,8 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-otus
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/boot_animations/540x960.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/commotio/proprietary/boot_animations/540x960.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/otus/full_otus.mk)

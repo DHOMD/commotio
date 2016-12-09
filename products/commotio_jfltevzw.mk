@@ -5,8 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-jfltevzw
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device repo
 $(call inherit-product, device/samsung/jfltevzw/full_jfltevzw.mk)

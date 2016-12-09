@@ -9,7 +9,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-hammerhead
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # Copy VANIR files
-PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)

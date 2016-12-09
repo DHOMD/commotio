@@ -12,8 +12,8 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 $(call inherit-product, vendor/commotio/products/cdma.mk)
 
 # Vanir Product Overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/commotio/proprietary/boot_animations/800x1280.zip:system/media/bootanimation.zip 
+#PRODUCT_PACKAGE_OVERLAYS += \
+#    vendor/commotio/proprietary/boot_animations/800x1280.zip:system/media/bootanimation.zip 
 
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/htc/jewel/jewel.mk)

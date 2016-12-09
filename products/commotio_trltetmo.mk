@@ -7,8 +7,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/samsung/trltetmo/full_trltetmo.mk)
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
 
 # Inherit common phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)

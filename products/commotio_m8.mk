@@ -6,8 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-m8
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/commotio/proprietary/boot_animations/1080x1920.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/htc/m8/full_m8.mk)

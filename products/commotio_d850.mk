@@ -6,8 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-d850
 
 # Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/commotio/proprietary/boot_animations/1440x2560.zip:system/media/bootanimation.zip
 
 # Inherit device configuration
 $(call inherit-product, device/lge/d850/full_d850.mk)
