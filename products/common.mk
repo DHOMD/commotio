@@ -177,8 +177,10 @@ PRODUCT_PACKAGES += \
     CMAudioService \
     CMParts \
     Profiles \
+    Trebuchet \
     WeatherManagerService
 
+#    Launcher3 \  -- not present ATM
 #    Development \
 
 # Optional CM packages
@@ -198,7 +200,6 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
     ExactCalculator \
-    Launcher3 \
     LiveLockScreenService \
     LockClock \
     Screencast \
