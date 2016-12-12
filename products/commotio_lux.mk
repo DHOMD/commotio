@@ -1,8 +1,7 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.rom=commotio-lux
+PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-lux
 
 # Boot Animation
 TARGET_SCREEN_WIDTH := 1080

@@ -1,13 +1,7 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.config.vc_call_vol_steps=7 \
-    ring.delay=0 \
-    ro.telephony.call_ring.delay=50 \
-    ro.ril.fast.dormancy.rule=0 \
-    ro.goo.rom=commotio-mako
+PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true ro.config.vc_call_vol_steps=7 ring.delay=0 ro.telephony.call_ring.delay=50 ro.ril.fast.dormancy.rule=0 ro.goo.rom=commotio-mako
 
 # Boot Animation
 TARGET_SCREEN_WIDTH := 768
