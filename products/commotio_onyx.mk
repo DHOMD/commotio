@@ -4,16 +4,18 @@ DHO_VENDOR := commotio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.goo.rom=commotio-onyx
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit vanir phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
-$(call inherit-product, vendor/vanir/config/nfc_enhanced.mk)
 
 # Boot Animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
 # Inherit device configuration
-$(call inherit-product, device/oneplus/onyx/onyx.mk)
+$(call inherit-product, device/oneplus/onyx/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := commotio_onyx
