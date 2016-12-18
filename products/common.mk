@@ -92,7 +92,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     IndecentXposure \
     klogripper \
-    openvpn
+    openvpn \
+    VpnDialogs
 
 #    VanirUpdater
 
