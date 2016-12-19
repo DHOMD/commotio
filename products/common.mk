@@ -111,6 +111,16 @@ ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
 endif
 
 
+# Keyboard Files
+ifeq ($(TARGET_ARCH),arm64)
+    PRODUCT_COPY_FILES += \
+        vendor/vanir/proprietary/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+else
+    PRODUCT_COPY_FILES += \
+        vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+endif
+
+
 #
 #
 #
