@@ -38,4 +38,4 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
 TARGET_PREBUILT_KERNEL := false
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=flounder BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/NMF26F/3425388:user/release-keys PRIVATE_BUILD_DESC="volantis-user 7.1.1 NMF26F 3425388 release-keys" BUILD_ID=NMF26F
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=flounder BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/NMF26F/3425388:user/release-keys PRIVATE_BUILD_DESC="volantis-user 7.1.1 NMF26F 3425388 release-keys"
