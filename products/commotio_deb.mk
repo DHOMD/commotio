@@ -10,14 +10,19 @@ PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-deb
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_radio
 
 # Boot Animation
-TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1200
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit common product files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
 
-# Inherit AOSP device configuration for grouper
-$(call inherit-product, device/asus/deb/full_deb.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit device configuration
+$(call inherit-product, device/asus/deb/device.mk)
+$(call inherit-product-if-exists, vendor/asus/deb/device-vendor.mk)
 
 # It's a Nexus
 PRODUCT_IS_A_NEXUS := true
