@@ -33,7 +33,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Gello and it's complex nature, to get it work:
 # cd external/gello_build && . gello_build.sh --depot
 # The following line will do the rest
-WITH_GELLO_SOURCE := true
+# WITH_GELLO_SOURCE := true
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
