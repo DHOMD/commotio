@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
 # Audio Packages
 include frameworks/base/data/sounds/AudioPackage7.mk
 
+# IMS Default Permission
 PRODUCT_COPY_FILES += \
     vendor/vanir/config/permissions/qcom_ims.xml:system/etc/default-permissions/qcom_ims.xml
 
