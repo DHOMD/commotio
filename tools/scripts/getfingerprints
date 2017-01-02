@@ -16,7 +16,8 @@ get_device_path() {
   device=`get_mkfile_variable $1 PRODUCT_NAME`
   for x in `cat $1 | grep inherit-product | grep device | cut -d ',' -f 2 | sed 's/)//g'`; do
     cmmk=$TOP/`dirname $x`/cm.mk
-    [ -e $cmmk ] && echo $cmmk
+    lineagemk=$TOP/`dirname $x`/lineage.mk
+    if [ -e $lineagemk ]; then echo $lineagemk; else [ -e $cmmk ] && echo $cmmk; fi
   done
 }
 
@@ -115,5 +116,3 @@ for x in $TOP/vendor/commotio/products/commotio_*.mk; do
   fi
   rm -f $RESULT $AFTER $md5tmp
 done
-
-
