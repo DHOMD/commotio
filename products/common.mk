@@ -12,6 +12,11 @@ PRODUCT_PACKAGES += \
     QuickBoot \
     init.vanir.quickboot.rc
 
+VANIR_VERSION:=7.0
+Vanir_BUILD:=$(VANIR_VERSION)
+CM_VERSION:=$(VANIR_VERSION)
+LINEAGE_VERSION:=$(VANIR_VERSION)
+
 #Java 1.8
 EXPERIMENTAL_USE_JAVA8 := true
 
@@ -92,6 +97,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     IndecentXposure \
     klogripper \
+    masquerade \
     openvpn \
     VpnDialogs
 
