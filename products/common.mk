@@ -12,8 +12,8 @@ PRODUCT_PACKAGES += \
     QuickBoot \
     init.vanir.quickboot.rc
 
-VANIR_VERSION:=7.0
-Vanir_BUILD:=$(VANIR_VERSION)
+VANIR_VERSION:=7.1
+Vanir_BUILD:=$(VANIR_VERSION)-$(shell date +".%m%d%y")
 CM_VERSION:=$(VANIR_VERSION)
 LINEAGE_VERSION:=$(VANIR_VERSION)
 
@@ -32,8 +32,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     ro.vanir.base=7.0 \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B124 \
-    ro.goo.version=124
+    ro.modversion=Commotio-B126 \
+    ro.goo.version=126
 
 # Gello and it's complex nature, to get it work:
 # cd external/gello_build && . gello_build.sh --depot
@@ -88,18 +88,25 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/vanir/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
-# Optional CM packages
+# Always build packages
 PRODUCT_PACKAGES += \
     Camera \
     LatinIME
 
 # Build Vanir packages
 PRODUCT_PACKAGES += \
+    gello \
     IndecentXposure \
     klogripper \
     masquerade \
     openvpn \
     VpnDialogs
+
+# Build Substratium packages
+PRODUCT_PACKAGES += \
+    aapt \
+    aopt
+#    masquerade
 
 #    VanirUpdater
 
