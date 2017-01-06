@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     gello \
     IndecentXposure \
     klogripper \
-    masquerade \
     openvpn \
     VpnDialogs
 
