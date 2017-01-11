@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio 
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
