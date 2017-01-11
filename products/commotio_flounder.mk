@@ -1,23 +1,18 @@
 #Squisher Choosing
 DHO_VENDOR := commotio
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.cpp.duplication=false \
-    ro.goo.rom=commotio-flounder
+PRODUCT_PROPERTY_OVERRIDES += persist.camera.cpp.duplication=false ro.goo.rom=commotio-flounder
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1536
 TARGET_SCREEN_HEIGHT := 2048
 
 # Make CM related stuffs
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    Snap \
-    Gello
+PRODUCT_PACKAGES += com.android.nfc_extras Snap Gello
 
 # Inherit common commotio files.
 $(call inherit-product, vendor/commotio/products/common_tabs.mk)
-PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio 
+PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/tab_no_radio
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
@@ -45,7 +40,4 @@ PRODUCT_NAME := commotio_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=flounder \
-    BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/N4F26M/3562722:user/release-keys \
-    PRIVATE_BUILD_DESC="volantis-user 7.1.1 N4F26M 3562722 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=flounder BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/N4F26M/3562722:user/release-keys PRIVATE_BUILD_DESC="volantis-user 7.1.1 N4F26M 3562722 release-keys"
