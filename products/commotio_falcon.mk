@@ -1,6 +1,3 @@
-# Release name
-PRODUCT_RELEASE_NAME := falcon
-
 #Squisher Choosing
 DHO_VENDOR := commotio
 
@@ -12,11 +9,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 
-# Inherit common phone stuff
-$(call inherit-product, vendor/commotio/products/common_phones.mk)
+# Inherit from those products. Most annoying first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/falcon/full_falcon.mk)
+
+# Inherit common phone stuff
+$(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 # device name
 PRODUCT_BRAND := motorola
