@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/rangelib.py
+../../../../build/tools/releasetools/rangelib.py

@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/target_files_diff.py
+../../../../build/tools/releasetools/target_files_diff.py

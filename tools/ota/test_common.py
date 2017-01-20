@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/test_common.py
+../../../../build/tools/releasetools/test_common.py

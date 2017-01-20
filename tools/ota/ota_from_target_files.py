@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/ota_from_target_files.py
+../../../../build/tools/releasetools/ota_from_target_files.py

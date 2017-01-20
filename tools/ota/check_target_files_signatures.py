@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/check_target_files_signatures.py
+../../../../build/tools/releasetools/check_target_files_signatures.py

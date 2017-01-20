@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/img_from_target_files.py
+../../../../build/tools/releasetools/img_from_target_files.py

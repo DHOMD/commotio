@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/sparse_img.py
+../../../../build/tools/releasetools/sparse_img.py

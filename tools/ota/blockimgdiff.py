@@ -1,1 +1,1 @@
-/mnt/dho/spinner/L5/build/tools/releasetools/blockimgdiff.py
+../../../../build/tools/releasetools/blockimgdiff.py

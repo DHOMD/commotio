@@ -7,17 +7,22 @@ PRODUCT_PROPERTY_OVERRIDES += ro.goo.rom=commotio-marlin
 TARGET_SCREEN_WIDTH := 1440
 TARGET_SCREEN_HEIGHT := 2560
 
-# Inherit aosp_marlin
-$(call inherit-product, device/google/marlin/aosp_marlin.mk)
-
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# Inherit Marlin
+$(call inherit-product, device/google/marlin/aosp_marlin.mk)
+-include device/google/marlin/marlin/device-lineage.mk
+
 PRODUCT_NAME := commotio_marlin
-PRODUCT_DEVICE := marlin
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel XL
-PRODUCT_MANUFACTURER := Google
+TARGET_MANUFACTURER := HTC
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
-# Device Fingerprint
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=marlin BUILD_FINGERPRINT="google/marlin/marlin:7.1.1/NMF26Q/3537182:user/release-keys" PRIVATE_BUILD_DESC="marlin-user 7.1.1 NMF26Q 3537182 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=marlin \
+    BUILD_FINGERPRINT="google/marlin/marlin:7.1.1/NMF26Q/3537182:user/release-keys" \
+    PRIVATE_BUILD_DESC="marlin-user 7.1.1 NMF26Q 3537182 release-keys"
+
+$(call inherit-product-if-exists, vendor/google/marlin/marlin-vendor.mk)
