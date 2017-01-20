@@ -32,8 +32,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     ro.vanir.base=7.0 \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B126 \
-    ro.goo.version=126
+    ro.modversion=Commotio-B127 \
+    ro.goo.version=127
 
 # Gello and it's complex nature, to get it work:
 # cd external/gello_build && . gello_build.sh --depot
@@ -105,8 +105,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     aapt \
     aopt
-#    masquerade
 
+#    masquerade
 #    VanirUpdater
 
 # FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
