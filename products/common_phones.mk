@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
 include frameworks/base/data/sounds/AudioPackage7.mk
 
 # IMS Default Permission
-PRODUCT_COPY_FILES += \
-    vendor/vanir/config/permissions/qcom_ims.xml:system/etc/default-permissions/qcom_ims.xml
+#PRODUCT_COPY_FILES += \
+#    vendor/vanir/config/permissions/qcom_ims.xml:system/etc/default-permissions/qcom_ims.xml
 
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
