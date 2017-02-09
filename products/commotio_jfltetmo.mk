@@ -8,6 +8,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
+# Inherit from those products. Most annoying first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit device repo
 $(call inherit-product, device/samsung/jfltetmo/full_jfltetmo.mk)
 
@@ -19,3 +22,7 @@ VZW_UNIFIED := true
 
 #Tagging
 PRODUCT_NAME := commotio_jfltetmo
+PRODUCT_DEVICE := jfltetmo
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := SGH-M919
