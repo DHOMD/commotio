@@ -13,6 +13,9 @@ $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 # Inherit vanir phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# AptX will not work in /vendor if vendor images
+#$(call inherit-product, vendor/qcom/binaries/bluetooth/bluetooth-vendor.mk)
+
 DEVICE_PACKAGE_OVERLAYS += device/huawei/angler/overlay-cm
 
 # It's a Nexus
