@@ -18,6 +18,9 @@ $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
 # Inherit common oneplus2 files.
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# AptX b/c we can
+$(call inherit-product, vendor/qcom/binaries/bluetooth/bluetooth-vendor.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := commotio_oneplus2
 PRODUCT_BRAND := OnePlus

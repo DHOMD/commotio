@@ -17,6 +17,9 @@ $(call inherit-product, device/xiaomi/libra/device.mk)
 # Inherit vanir phone stuff
 $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
+# AptX b/c we can
+$(call inherit-product, vendor/qcom/binaries/bluetooth/bluetooth-vendor.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := commotio_libra
 PRODUCT_DEVICE := libra
