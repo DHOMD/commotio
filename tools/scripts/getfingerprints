@@ -6,14 +6,16 @@ TOP=`cd $TOP && pwd`
 
 get_mkfile_variable() {
   value=""
-  for x in `cat $1 | sed 's/:=/=/g' | grep $2`; do
+  for x in `cat $1 | sed 's/:=/=/g' | grep -m 1 $2`; do
     value="`echo $x | cut -d '=' -f 2`"
   done
   echo $value
 }
 
 get_device_path() {
-  device=`get_mkfile_variable $1 PRODUCT_NAME`
+  device=`get_mkfile_variable $1 PRODUCT_NAME | sed 's/commotio_//g'`
+#  echo $device 1>&2
+  if [ "$device" = "sailfish" ]; then echo $TOP/device/google/sailfish/lineage.mk; return 0; fi
   for x in `cat $1 | grep inherit-product | grep device | cut -d ',' -f 2 | sed 's/)//g'`; do
     cmmk=$TOP/`dirname $x`/cm.mk
     lineagemk=$TOP/`dirname $x`/lineage.mk
