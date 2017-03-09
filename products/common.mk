@@ -106,9 +106,9 @@ PRODUCT_PACKAGES += \
 # Build Substratium packages
 PRODUCT_PACKAGES += \
     aapt \
-    aopt
+    aopt \
+    ThemeInterfacer
 
-#    masquerade
 #    VanirUpdater
 
 # FOR HOTFIXING KERNELS MAINTAINED BY BUNGHOLES
