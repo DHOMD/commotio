@@ -1,6 +1,8 @@
 # Vanir files
 PRODUCT_PACKAGE_OVERLAYS += vendor/vanir/overlay/common
 
+PRODUCT_SIZE := full
+
 # Audio
 $(call inherit-product, vendor/vanir/products/media_sexificators.mk)
 
@@ -172,16 +174,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Theme engine
-#PRODUCT_PACKAGES += \
-#    aapt \
-#    ThemeChooser \
-#    ThemesProvider \
-#    HexoLibre
-
-# Is this needed?
-#     ThemeManagerService \
-
 # CMSDK
 include vendor/vanir/config/cmsdk_common.mk
 
@@ -303,7 +295,7 @@ PRODUCT_PACKAGES += \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
-telephony-ext
+    telephony-ext
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -321,6 +313,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
 	commotioanimation.zip
+
+PRODUCT_PACKAGES += \
+    keys-migration.sh
 
 # Any other Vanir calls?
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
