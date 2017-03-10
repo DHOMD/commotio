@@ -34,8 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     ro.vanir.base=7.0 \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B131 \
-    ro.goo.version=131
+    ro.modversion=Commotio-B132 \
+    ro.goo.version=132
 
 # Gello and it's complex nature, to get it work:
 # cd external/gello_build && . gello_build.sh --depot
