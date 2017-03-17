@@ -183,11 +183,11 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
     CMParts \
+    CustomTiles \
     Profiles \
     Trebuchet \
     WeatherManagerService
 
-#    Launcher3 \  -- not present ATM
 #    Development \
 
 # Optional CM packages
