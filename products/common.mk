@@ -80,6 +80,7 @@ PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/bin/automagic.sh:install/bin/automagic.sh \
     vendor/vanir/proprietary/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/vanir/proprietary/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/vanir/proprietary/common/bin/11-hotword.sh:system/addon.d/11-hotword.sh \
     vendor/vanir/proprietary/common/bin/50-vanir.sh:system/addon.d/50-vanir.sh \
     vendor/vanir/proprietary/common/bin/71-calendar.sh:system/addon.d/71-calendar.sh \
     vendor/vanir/proprietary/common/bin/blacklist:system/addon.d/blacklist \
