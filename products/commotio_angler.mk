@@ -18,6 +18,9 @@ $(call inherit-product, vendor/commotio/products/common_phones.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/angler/overlay-cm
 
+# AptX Nexus style
+$(call inherit-product, vendor/qcom/binaries/bluetooth/bluetooth-system.mk)
+
 # It's a Nexus
 PRODUCT_IS_A_NEXUS := true
 
