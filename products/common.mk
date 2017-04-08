@@ -303,8 +303,7 @@ PRODUCT_BOOT_JARS += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
-    procrank \
-    su
+    procrank
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -320,6 +319,7 @@ PRODUCT_PACKAGES += \
     keys-migration.sh
 
 # Any other Vanir calls?
+$(call inherit-product, vendor/vanir/prebuilt/magisk/config.mk)
 $(call inherit-product-if-exists, vendor/vanir-private/Private.mk)
 $(call prepend-product-if-exists, vendor/extra/product.mk)
 
