@@ -6,6 +6,11 @@ $(call inherit-product, vendor/commotio/products/common.mk)
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
+
+# Sensitive Phone Numbers list
+PRODUCT_COPY_FILES += \
+    vendor/vanir/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
+
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     messaging \
@@ -13,9 +18,3 @@ PRODUCT_PACKAGES += \
 
 # Audio Packages
 include frameworks/base/data/sounds/AudioPackage7.mk
-
-# IMS Default Permission
-#PRODUCT_COPY_FILES += \
-#    vendor/vanir/config/permissions/qcom_ims.xml:system/etc/default-permissions/qcom_ims.xml
-
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
