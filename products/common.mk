@@ -34,13 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     ro.vanir.base=7.0 \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B136 \
-    ro.goo.version=136
-
-# Gello and it's complex nature, to get it work:
-# cd external/gello_build && . gello_build.sh --depot
-# The following line will do the rest
-# WITH_GELLO_SOURCE := true
+    ro.modversion=Commotio-B137 \
+    ro.goo.version=137
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
@@ -99,7 +94,7 @@ PRODUCT_PACKAGES += \
 
 # Build Vanir packages
 PRODUCT_PACKAGES += \
-    gello \
+    Jelly \
     IndecentXposure \
     klogripper \
     openvpn \
