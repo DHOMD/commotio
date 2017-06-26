@@ -181,10 +181,9 @@ PRODUCT_PACKAGES += \
     CMParts \
     CustomTiles \
     Profiles \
-    Launcher3 \
+    Trebuchet \
     WeatherManagerService
 
-#    Trebuchet \
 #    Development \
 
 # Optional CM packages
