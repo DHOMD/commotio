@@ -20,6 +20,6 @@ PRODUCT_MODEL := Pixel XL
 TARGET_MANUFACTURER := HTC
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=marlin BUILD_FINGERPRINT=google/marlin/marlin:7.1.2/NJH47B/4021576:user/release-keys PRIVATE_BUILD_DESC="marlin-user 7.1.2 NJH47B 4021576 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=marlin BUILD_FINGERPRINT=google/marlin/marlin:7.1.2/NJH47D/4045516:user/release-keys PRIVATE_BUILD_DESC="marlin-user 7.1.2 NJH47D 4045516 release-keys"
 
 $(call inherit-product-if-exists, vendor/google/marlin/marlin-vendor.mk)
