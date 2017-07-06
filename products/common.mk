@@ -34,8 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mot.proximity.delay=20 \
     ro.vanir.base=7.0 \
     ro.goo.developerid=DHO \
-    ro.modversion=Commotio-B138 \
-    ro.goo.version=138
+    ro.modversion=Commotio-B139 \
+    ro.goo.version=139
 
 PRODUCT_COPY_FILES += \
     vendor/vanir/proprietary/common/xbin/sysrw:system/xbin/sysrw \
