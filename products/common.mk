@@ -179,7 +179,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
     CMParts \
-    CustomTiles \
     Profiles \
     Trebuchet \
     WeatherManagerService
