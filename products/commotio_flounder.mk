@@ -40,4 +40,4 @@ PRODUCT_NAME := commotio_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=flounder BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/N9F27C/3938480:user/release-keys PRIVATE_BUILD_DESC="volantis-user 7.1.1 N9F27C 3938480 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=flounder BUILD_FINGERPRINT=google/volantis/flounder:7.1.1/N9F27F/4072790:user/release-keys PRIVATE_BUILD_DESC="volantis-user 7.1.1 N9F27F 4072790 release-keys"
