@@ -95,7 +95,6 @@ PRODUCT_PACKAGES += \
 # Build Vanir packages
 PRODUCT_PACKAGES += \
     Jelly \
-    IndecentXposure \
     klogripper \
     openvpn \
     VpnDialogs
