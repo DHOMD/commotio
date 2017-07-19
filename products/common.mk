@@ -50,7 +50,6 @@ PRODUCT_COPY_FILES += \
 ifeq ($(VANIR_FAILSAFE),)
 # Blobs common to all devices
 PRODUCT_COPY_FILES += \
-    vendor/vanir/proprietary/common/xbin/magfix:system/xbin/magfix \
     vendor/vanir/proprietary/common/xbin/testinitd:system/xbin/testinitd \
     vendor/vanir/proprietary/common/xbin/vanircheckcpu:system/xbin/vanircheckcpu \
     vendor/commotio/proprietary/system/xbin/vanirnice:system/xbin/vanirnice
