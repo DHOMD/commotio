@@ -115,6 +115,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/vanir/build/target/product/security/lineage
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/vanir/config/twrp.mk
+endif
+
 # Keyboard Files
     PRODUCT_COPY_FILES += vendor/vanir/proprietary/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
     PRODUCT_PACKAGES += Latinimegoogle
