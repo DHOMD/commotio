@@ -206,7 +206,6 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
     ExactCalculator \
-    LiveLockScreenService \
     LockClock \
     Recorder \
     WallpaperPicker \
